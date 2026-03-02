@@ -35,15 +35,26 @@ const Gallery = () => {
             <main className="min-h-screen bg-brand-bg pb-24">
                 {/* Header */}
                 <section className="py-24 bg-brand-bg-alt text-center border-b border-brand-text/5">
-                    <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="container mx-auto px-4"
+                    >
                         <h1 className="text-5xl font-extrabold text-brand-text mb-6">Inside <span className="text-gradient">YOGANESH</span></h1>
                         <p className="text-brand-text-muted max-w-2xl mx-auto">Explore our premium facilities, vibrant community, and dynamic classes.</p>
-                    </div>
+                    </motion.div>
                 </section>
 
                 {/* Filters */}
                 <section className="container mx-auto px-4 py-12">
-                    <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-10%" }}
+                        transition={{ duration: 0.6 }}
+                        className="flex flex-wrap justify-center gap-4 mb-12"
+                    >
                         {categories.map((cat) => (
                             <button
                                 key={cat}
@@ -56,7 +67,7 @@ const Gallery = () => {
                                 {cat}
                             </button>
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/* Masonry-style Grid */}
                     <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
