@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
     { name: 'Home', path: '/' },
@@ -29,25 +30,34 @@ const Navbar = () => {
         setIsOpen(false)
     }, [location.pathname])
 
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+    }, [isOpen])
+
     return (
         <header
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-bg-alt/90 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
                 }`}
         >
-            <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <div className="container mx-auto px-4 md:px-8 flex justify-between items-center relative z-50">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold tracking-wider text-brand-text">
-                    <span className="text-brand-red-light">YOG</span>ANESH
+                <Link to="/" className="text-2xl font-black tracking-widest text-brand-text z-50 relative group">
+                    <span className="text-brand-red-light group-hover:text-brand-red-dark transition-colors">YOG</span>ANESH
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center space-x-8">
-                    <ul className="flex space-x-6">
+                <nav className="hidden md:flex items-center space-x-12">
+                    <ul className="flex space-x-8">
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <Link
                                     to={link.path}
-                                    className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-brand-red-light ${location.pathname === link.path ? 'text-brand-red-light' : 'text-brand-text-muted'
+                                    className={`text-sm font-bold uppercase tracking-widest transition-colors hover:text-brand-red-light ${location.pathname === link.path ? 'text-brand-red-light' : 'text-brand-text-muted'
                                         }`}
                                 >
                                     {link.name}
@@ -57,7 +67,7 @@ const Navbar = () => {
                     </ul>
                     <Link
                         to="/contact"
-                        className="bg-gradient-primary text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                        className="bg-brand-red-dark text-white px-8 py-3 rounded-full font-extrabold uppercase tracking-widest text-sm hover:bg-brand-red-light hover:shadow-[0_10px_20px_rgba(192,0,0,0.2)] transition-all hover:-translate-y-0.5"
                     >
                         Enquire Now
                     </Link>
@@ -65,7 +75,7 @@ const Navbar = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-brand-text text-2xl focus:outline-none z-50"
+                    className="md:hidden text-brand-text text-3xl focus:outline-none z-50 relative hover:text-brand-red-light transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <HiX /> : <HiMenu />}
@@ -73,40 +83,54 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div
-                className={`fixed inset-0 bg-brand-bg/95 backdrop-blur-lg flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
-                    } md:hidden`}
-            >
-                <ul className="flex flex-col space-y-8 text-center mb-8">
-                    {navLinks.map((link) => (
-                        <li key={link.name}>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="fixed inset-0 h-[100dvh] w-full bg-brand-bg/95 backdrop-blur-xl flex flex-col items-center justify-center z-40 md:hidden"
+                    >
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(192,0,0,0.05),transparent_70%)] pointer-events-none"></div>
+
+                        <ul className="flex flex-col space-y-8 text-center mb-12 relative z-10 w-full px-6">
+                            {navLinks.map((link, i) => (
+                                <motion.li 
+                                    key={link.name}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 + (i * 0.05) }}
+                                    className="border-b border-brand-text/5 pb-6 last:border-0"
+                                >
+                                    <Link
+                                        to={link.path}
+                                        className={`text-3xl font-black tracking-tight hover:text-brand-red-light transition-colors ${location.pathname === link.path ? 'text-brand-red-light' : 'text-brand-text'}`}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.li>
+                            ))}
+                        </ul>
+                        
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.4 }}
+                            className="relative z-10"
+                        >
                             <Link
-                                to={link.path}
-                                className="text-2xl font-semibold tracking-wider text-brand-text hover:text-brand-red-light transition-colors"
+                                to="/contact"
+                                className="bg-brand-red-dark text-white px-10 py-5 rounded-full font-black text-xl tracking-widest uppercase hover:bg-brand-red-light hover:shadow-[0_15px_30px_rgba(192,0,0,0.3)] transition-all inline-block"
                                 onClick={() => setIsOpen(false)}
                             >
-                                {link.name}
+                                Enquire Now
                             </Link>
-                        </li>
-                    ))}
-                    <li>
-                        <Link
-                            to="/contact"
-                            className="text-2xl font-semibold tracking-wider text-brand-text hover:text-brand-red-light transition-colors"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
-                <Link
-                    to="/contact"
-                    className="bg-gradient-primary text-white px-8 py-3 rounded-full font-bold text-lg hover:opacity-90 transition-opacity"
-                    onClick={() => setIsOpen(false)}
-                >
-                    Enquire Now
-                </Link>
-            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     )
 }
