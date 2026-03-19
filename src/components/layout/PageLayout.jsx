@@ -18,7 +18,7 @@ const PageLayout = ({ children }) => {
     ].includes(location.pathname);
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-full max-w-[100vw] overflow-x-hidden relative">
             {!isDivisionPage && <Navbar />}
             <main className={`flex-grow ${!isDivisionPage ? 'pt-[72px]' : ''}`}>
                 {children}
