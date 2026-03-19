@@ -1,77 +1,102 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaArrowRight } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
     return (
-        <footer className="bg-brand-bg-alt pt-16 pb-8 border-t border-brand-text/5">
-            <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <footer className="bg-brand-bg-alt relative border-t border-brand-text/5 overflow-hidden">
+            
+            {/* Massive Parallax Brand Watermark */}
+            <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">
+                <span className="text-[120px] md:text-[250px] lg:text-[400px] font-black tracking-tighter text-brand-text whitespace-nowrap">
+                    YOGANESH
+                </span>
+            </div>
+
+            {/* Glowing Top Border Line */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red-light/30 to-transparent"></div>
+
+            <div className="container mx-auto px-4 md:px-8 relative z-10 pt-24 pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+                    
                     {/* Brand Col */}
-                    <div className="md:col-span-1">
-                        <Link to="/" className="text-3xl font-bold tracking-wider text-brand-text block mb-4">
-                            <span className="text-brand-red-light">YOG</span>ANESH
+                    <div className="lg:col-span-4 pr-0 lg:pr-12">
+                        <Link to="/" className="text-4xl font-extrabold tracking-tight text-brand-text block mb-6 group">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">YOG</span>ANESH
                         </Link>
-                        <p className="text-brand-text-muted text-sm leading-relaxed mb-6">
-                            A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent.
+                        <p className="text-brand-text-muted text-base leading-relaxed mb-8">
+                            A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent. We engineer your ultimate transformation.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors hover:text-white">
-                                <FaInstagram />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors hover:text-white">
-                                <FaFacebookF />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors hover:text-white">
-                                <FaYoutube />
-                            </a>
+                            {[FaInstagram, FaFacebookF, FaYoutube].map((Icon, i) => (
+                                <motion.a 
+                                    key={i}
+                                    href="#" 
+                                    whileHover={{ y: -5, scale: 1.1 }}
+                                    className="w-12 h-12 rounded-[1rem] bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors duration-300 hover:text-white shadow-sm border border-brand-text/5"
+                                >
+                                    <Icon className="text-xl" />
+                                </motion.a>
+                            ))}
                         </div>
                     </div>
 
                     {/* Quick Links */}
-                    <div>
-                        <h4 className="text-brand-text font-semibold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
-                        <ul className="space-y-3">
-                            <li><Link to="/about" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">About Us</Link></li>
-                            <li><Link to="/divisions" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Our Divisions</Link></li>
-                            <li><Link to="/gallery" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Gallery</Link></li>
-                            <li><Link to="/testimonials" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Testimonials</Link></li>
-                            <li><Link to="/contact" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Contact Us</Link></li>
+                    <div className="lg:col-span-2">
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Discover</h4>
+                        <ul className="space-y-4">
+                            {['About Us', 'Our Divisions', 'Gallery', 'Testimonials'].map((link, i) => (
+                                <li key={i}>
+                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group">
+                                        <FaArrowRight className="mr-2 text-brand-red-light opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                        <span className="-translate-x-4 group-hover:translate-x-0 transition-transform duration-300">{link}</span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Divisions */}
-                    <div>
-                        <h4 className="text-brand-text font-semibold mb-6 uppercase tracking-wider text-sm">Divisions</h4>
-                        <ul className="space-y-3 flex flex-col">
-                            <li><Link to="/health-institute" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Health Institute</Link></li>
-                            <li><Link to="/yoga-classes" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Yoga Classes</Link></li>
-                            <li><Link to="/fitness-classes" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Fitness Classes</Link></li>
-                            <li><Link to="/wellness-center" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Wellness Center</Link></li>
-                            <li><Link to="/dance-classes" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Dance Classes</Link></li>
-                            <li><Link to="/music-classes" className="text-brand-text-muted hover:text-brand-text transition-colors text-sm">Music Classes</Link></li>
+                    <div className="lg:col-span-3">
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Divisions</h4>
+                        <ul className="space-y-4 flex flex-col">
+                            {['Health Institute', 'Yoga Classes', 'Fitness Classes', 'Wellness Center', 'Dance Classes'].map((link, i) => (
+                                <li key={i}>
+                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-text/10 mr-3 group-hover:bg-brand-red-light group-hover:scale-150 transition-all duration-300"></span>
+                                        {link}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Contact Details */}
-                    <div>
-                        <h4 className="text-brand-text font-semibold mb-6 uppercase tracking-wider text-sm">Contact</h4>
-                        <ul className="space-y-4">
-                            <li className="flex items-start text-sm text-brand-text-muted">
-                                <span className="text-brand-red-light mr-3 mt-1">📍</span>
-                                <span>901, 902 NMS ICON Building,<br />Opp Bamandongari Railway station,<br />Ulwe, Navi Mumbai</span>
+                    <div className="lg:col-span-3">
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Headquarters</h4>
+                        <ul className="space-y-6">
+                            <li className="flex items-start text-sm text-brand-text-muted group">
+                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
+                                    <FaMapMarkerAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                </div>
+                                <span className="pt-1 leading-relaxed">901, 902 NMS ICON Building,<br />Opp Bamandongari station,<br />Ulwe, Navi Mumbai</span>
                             </li>
-                            <li className="flex items-center text-sm text-brand-text-muted">
-                                <span className="text-brand-red-light mr-3">📞</span>
-                                <a href="tel:+918422923924" className="hover:text-brand-text transition-colors">+91 8422923924</a>
+                            <li className="flex items-center text-sm text-brand-text-muted group">
+                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
+                                    <FaPhoneAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                </div>
+                                <a href="tel:+918422923924" className="hover:text-brand-red-light transition-colors font-semibold tracking-wide">+91 8422923924</a>
                             </li>
-                            <li className="flex items-center text-sm text-brand-text-muted">
-                                <span className="text-brand-red-light mr-3">✉️</span>
-                                <a href="mailto:yogamudrafitnessclasses@gmail.com" className="hover:text-brand-text transition-colors">yogamudrafitnessclasses@gmail.com</a>
+                            <li className="flex items-center text-sm text-brand-text-muted group">
+                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
+                                    <FaEnvelope className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                </div>
+                                <a href="mailto:yogamudrafitnessclasses@gmail.com" className="hover:text-brand-red-light transition-colors">yogamudra@gmail.com</a>
                             </li>
                             <li>
-                                <a href="https://wa.me/918422923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-brand-text-muted hover:text-[#25D366] transition-colors mt-2">
-                                    <FaWhatsapp className="mr-2 text-lg" /> Chat on WhatsApp
+                                <a href="https://wa.me/918422923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-brand-text-muted hover:text-[#25D366] transition-colors mt-2 group">
+                                    <FaWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" /> Chat on WhatsApp
                                 </a>
                             </li>
                         </ul>
@@ -79,13 +104,13 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-brand-text-muted text-xs mb-4 md:mb-0">
-                        © {new Date().getFullYear()} YOGANESH. All rights reserved.
+                <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center relative z-10">
+                    <p className="text-brand-text-muted text-xs mb-4 md:mb-0 font-medium tracking-wide">
+                        © {new Date().getFullYear()} YOGANESH. Engineered for Results. All rights reserved.
                     </p>
-                    <div className="flex space-x-6">
-                        <Link to="/privacy-policy" className="text-brand-text-muted text-xs hover:text-brand-text transition-colors">Privacy Policy</Link>
-                        <Link to="/terms" className="text-brand-text-muted text-xs hover:text-brand-text transition-colors">Terms of Service</Link>
+                    <div className="flex space-x-8">
+                        <Link to="/privacy-policy" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Privacy Policy</Link>
+                        <Link to="/terms" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Terms of Service</Link>
                     </div>
                 </div>
             </div>

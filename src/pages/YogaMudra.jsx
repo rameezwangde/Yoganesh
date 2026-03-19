@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion } from 'framer-motion'
-import { FaLeaf, FaYinYang, FaHeartbeat, FaSpa } from 'react-icons/fa'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaLeaf, FaYinYang, FaHeartbeat, FaSpa, FaClock, FaCheckCircle, FaStar, FaPlay } from 'react-icons/fa'
+import TiltWrapper from '../components/ui/TiltWrapper'
 import { HiMenu, HiX } from 'react-icons/hi'
 
 const YogaMudra = () => {
@@ -64,9 +65,11 @@ const YogaMudra = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex items-center justify-between py-4">
                             {/* Back Button */}
-                            <Link to="/divisions" className="flex items-center text-brand-text-muted hover:text-brand-red-light transition-colors font-bold text-sm tracking-widest uppercase">
-                                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                                Back
+                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-colors font-bold text-sm tracking-widest uppercase">
+                                <div className="w-8 h-8 rounded-full bg-brand-bg-alt border border-brand-text/10 flex items-center justify-center mr-3 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all duration-300">
+                                    <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                                </div>
+                                Divisions
                             </Link>
 
                             {/* Desktop Nav */}
@@ -116,65 +119,89 @@ const YogaMudra = () => {
                     </div>
                 </nav>
 
-                {/* HERO SECTION - innovative text catching attention */}
-                <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden border-b border-brand-text/5 pt-20 pb-32">
-                    {/* Background Elements */}
+                {/* PREMIUM LIGHT THEME HERO SECTION */}
+                <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden border-b border-brand-text/5 pt-20 pb-20 lg:pb-32">
+                    {/* Immersive Background */}
                     <div className="absolute inset-0 z-0">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" alt="Yoga Mudra Hero" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent"></div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/40 to-brand-bg opacity-90"></div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&w=2000&auto=format&fit=crop" 
+                            alt="Yoga Mudra Premium Hero" 
+                            className="absolute inset-0 w-full h-full object-cover scale-105" 
+                        />
+                        {/* High-end editorial overlay: fades to solid brand color on the left/top, transparent on right/bottom */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/90 to-brand-bg/30"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/50 via-transparent to-brand-bg"></div>
+                        
+                        {/* Subtle theme glows */}
+                        <div className="absolute top-0 right-1/4 w-[40vw] h-[40vw] bg-brand-red-light/10 rounded-full blur-[100px] -translate-y-1/2"></div>
+                        <div className="absolute bottom-1/4 left-0 w-[50vw] h-[50vw] bg-brand-text/5 rounded-full blur-[120px] -translate-x-1/4"></div>
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center">
+                    <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -40 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="inline-block mb-8 px-8 py-3 border border-brand-red-dark/30 rounded-full bg-black/40 backdrop-blur-md shadow-[0_0_30px_rgba(192,0,0,0.3)]"
+                            className="lg:col-span-7 xl:col-span-6 pt-10"
                         >
-                            <span className="text-white font-bold text-sm md:text-lg uppercase tracking-[0.4em]">
-                                Welcome To
-                            </span>
-                        </motion.div>
-
-                        <motion.h1 
-                            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="text-6xl md:text-8xl lg:text-[7rem] font-black mb-10 leading-[1.1] tracking-tighter"
-                        >
-                            <div className="text-white drop-shadow-2xl mb-2">YOGA MUDRA</div>
-                            <div className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light drop-shadow-[0_0_30px_rgba(192,0,0,0.5)] bg-[length:200%_auto] animate-gradient">
-                                FITNESS CLASSES
+                            <div className="inline-flex items-center gap-3 mb-8 px-6 py-2.5 rounded-full bg-white/60 border border-brand-red-light/20 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+                                <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
+                                <span className="text-brand-text font-bold text-xs tracking-[0.2em] uppercase">
+                                    Welcome To
+                                </span>
                             </div>
-                        </motion.h1>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-                            className="relative group mt-4 inline-block"
-                        >
-                            <div className="absolute -inset-3 bg-gradient-to-r from-brand-red-light to-brand-red-dark rounded-2xl blur-lg opacity-40 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
-                            <div className="relative px-10 py-5 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl text-3xl md:text-5xl font-extrabold text-white tracking-wide shadow-2xl transform transition hover:scale-105 duration-300">
-                                <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-400">365 Days</span> <span className="text-brand-red-light drop-shadow-md">Yoga.</span>
+                            <h1 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black mb-8 leading-[1.05] tracking-tight text-brand-text">
+                                Yoganesh
+                                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">
+                                    Fitness Classes
+                                </span>
+                            </h1>
+
+                            <p className="text-brand-text-muted text-lg sm:text-xl font-medium leading-relaxed mb-10 max-w-xl">
+                                Transform your mind, body, and soul with our expert-led sessions. Join our holistic community and discover the power of wellness every single day.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row items-center gap-6">
+                                <button className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-brand-red-light to-brand-red-dark text-white font-bold rounded-full shadow-[0_10px_30px_rgba(59,130,246,0.25)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(59,130,246,0.35)] transition-all duration-300">
+                                    Start Your Journey
+                                </button>
+                                <div className="flex items-center gap-4 group cursor-pointer">
+                                    <div className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center border border-brand-red-light/10 group-hover:scale-110 transition-transform">
+                                        <FaLeaf className="text-brand-red-light text-xl" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-brand-text font-black tracking-wide">365 Days Yoga</span>
+                                        <span className="text-brand-text-muted text-xs font-medium uppercase tracking-widest">Consistency is Key</span>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
+                        
+                        <div className="lg:col-span-5 xl:col-span-6 hidden lg:flex justify-end relative">
+                            {/* Premium Editorial Image Card (Optional visual element to compliment the background) */}
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+                                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                                className="relative w-full max-w-md"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-red-light to-brand-red-dark rounded-[2.5rem] rotate-3 opacity-20 blur-xl"></div>
+                                <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl aspect-[4/5] group">
+                                    <div className="absolute inset-0 bg-brand-text/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
+                                        alt="Yoga Masterclass" 
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" 
+                                    />
+                                    <div className="absolute bottom-6 left-6 right-6 z-20 bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                        <h3 className="text-brand-text font-black text-lg">Expert Guidance</h3>
+                                        <p className="text-brand-text-muted text-sm font-medium mt-1">Personalized attention for every pose.</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
-
-                    {/* Floating ambient orbs */}
-                    <motion.div 
-                         initial={{ opacity: 0 }}
-                         animate={{ opacity: 0.3 }}
-                         transition={{ duration: 2, delay: 1 }}
-                         className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red-dark rounded-full blur-[150px] pointer-events-none"
-                    />
-                    <motion.div 
-                         initial={{ opacity: 0 }}
-                         animate={{ opacity: 0.2 }}
-                         transition={{ duration: 2, delay: 1.5 }}
-                         className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-brand-red-light rounded-full blur-[200px] pointer-events-none"
-                    />
                 </section>
 
                 {/* NEW ABOUT US SECTION */}
@@ -234,7 +261,7 @@ const YogaMudra = () => {
                                     { number: "17", text: "Award Achieve" }
                                 ].map((stat, idx) => (
                                     <div key={idx} className="bg-brand-bg-alt border border-brand-text/5 rounded-[2rem] p-6 md:p-8 text-center hover:border-brand-red-light/30 hover:shadow-[0_10px_30px_rgba(192,0,0,0.1)] transition-all duration-300">
-                                        <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-white mb-2">{stat.number}</div>
+                                        <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark mb-2">{stat.number}</div>
                                         <div className="text-brand-text-muted font-bold tracking-wide uppercase text-xs md:text-sm">{stat.text}</div>
                                     </div>
                                 ))}
@@ -307,11 +334,13 @@ const YogaMudra = () => {
                                 <p>
                                     Join our community to experience personalized guidance, mindful practices, and holistic well-being. Whether you're a beginner or an advanced yogi, our sessions nurture your body, mind, and soul for a healthier lifestyle.
                                 </p>
-                                <img 
-                                    src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/round-e1750972067386-1024x504.jpg" 
-                                    alt="Yoga Mudra Focus" 
-                                    className="w-full h-48 object-cover rounded-2xl mt-8 border border-brand-text/5 shadow-lg opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                                />
+                                <TiltWrapper intensity={15} scaleOnHover={1.05}>
+                                    <img 
+                                        src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/round-e1750972067386-1024x504.jpg" 
+                                        alt="Yoga Mudra Focus" 
+                                        className="w-full h-48 object-cover rounded-2xl mt-8 border border-brand-text/5 shadow-lg opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                    />
+                                </TiltWrapper>
                             </motion.div>
                         </div>
 
@@ -347,7 +376,7 @@ const YogaMudra = () => {
                                 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-text tracking-tight mb-8"
                             >
                                 Yoga Life for Greater <br/>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-white drop-shadow-[0_0_25px_rgba(192,0,0,0.5)]">Self Control</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark drop-shadow-[0_4px_10px_rgba(59,130,246,0.3)]">Self Control</span>
                             </motion.h2>
                             {/* Decorative Line under title */}
                             <motion.div 
@@ -361,14 +390,12 @@ const YogaMudra = () => {
                     </div>
 
                     {/* FULL-WIDTH INFINITE SCROLLING MARQUEE */}
-                    <div className="relative w-full py-16 overflow-hidden z-10" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+                    <div className="relative w-full py-16 overflow-hidden z-10 group group-hover-pause" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
                         <div className="flex w-max space-x-8 pr-8">
                             {[...Array(2)].map((_, arrayIndex) => (
-                                <motion.div 
+                                <div 
                                     key={arrayIndex}
-                                    className="flex shrink-0 space-x-8"
-                                    animate={{ x: ["0%", "-100%"] }}
-                                    transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
+                                    className="flex shrink-0 space-x-8 animate-marquee"
                                 >
                                     {[
                                         { 
@@ -424,7 +451,7 @@ const YogaMudra = () => {
                                             </p>
                                         </div>
                                     ))}
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -938,6 +965,47 @@ const YogaMudra = () => {
                     </div>
                 </section>
 
+                {/* PARALLAX CTA BANNER */}
+                <section className="relative py-32 md:py-48 mt-12 mb-12 overflow-hidden group">
+                    {/* Fixed Background Image for Parallax Effect */}
+                    <div className="absolute inset-0 w-full h-full bg-fixed bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop')" }}></div>
+                    
+                    {/* Dark/Gradient Overlays to ensure text readability */}
+                    <div className="absolute inset-0 bg-brand-text/60 mix-blend-multiply transition-colors duration-700 group-hover:bg-brand-text/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-brand-bg"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-red-dark/40 to-brand-red-light/40 opacity-60 mix-blend-overlay"></div>
+
+                    <div className="container mx-auto px-4 relative z-10">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="max-w-4xl mx-auto text-center"
+                        >
+                            <span className="inline-block py-1 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs tracking-[0.3em] font-bold uppercase mb-6 shadow-xl">
+                                Your Time Is Now
+                            </span>
+                            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-2xl">
+                                Transform Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-white drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Mind & Body</span> Today
+                            </h2>
+                            <p className="text-white/90 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+                                Take the first step towards a healthier, happier you. Join our expert-led sessions and feel the difference from day one.
+                            </p>
+                            
+                            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+                                <button onClick={() => scrollToSection('contact')} className="px-10 py-4 bg-white text-brand-text hover:text-brand-red-dark font-black rounded-full shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 text-sm md:text-base uppercase tracking-wider relative overflow-hidden group/btn">
+                                    <span className="relative z-10">Book a Free Trial</span>
+                                    <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-brand-bg-alt to-white opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
+                                </button>
+                                <button onClick={() => scrollToSection('services')} className="px-10 py-4 border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm font-bold rounded-full transition-all duration-300 text-sm md:text-base uppercase tracking-wider hover:-translate-y-1">
+                                    Explore Classes
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+
                 {/* SECTION: CONTACT US */}
                 <section id="contact" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden">
                     {/* Background decorations */}
@@ -951,14 +1019,16 @@ const YogaMudra = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="relative w-full h-[300px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl mb-12 group"
+                                className="mb-12"
                             >
-                                <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
-                                <img 
-                                    src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/group-e1750968404152.jpg" 
-                                    alt="Yoga Mudra Focus Group" 
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out"
-                                />
+                                <TiltWrapper intensity={20} scaleOnHover={1.03} className="relative w-full h-[300px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group block">
+                                    <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
+                                    <img 
+                                        src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/group-e1750968404152.jpg" 
+                                        alt="Yoga Mudra Focus Group" 
+                                        className="w-full h-full object-cover transform transition-transform duration-[2s] ease-out"
+                                    />
+                                </TiltWrapper>
                             </motion.div>
 
                             {/* Info Cards Grid */}
