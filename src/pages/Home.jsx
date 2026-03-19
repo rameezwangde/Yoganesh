@@ -2,11 +2,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import HeroSection from '../components/home/HeroSection'
+import VideoTourSection from '../components/home/VideoTourSection'
 import StorySection from '../components/home/StorySection'
 import ScrollStorytelling from '../components/home/ScrollStorytelling'
 import FeaturesSection from '../components/home/FeaturesSection'
 import TestimonialsSection from '../components/home/TestimonialsSection'
 import PathSection from '../components/home/PathSection'
+import InstagramFeed from '../components/home/InstagramFeed'
 import CtaBanner from '../components/home/CtaBanner'
 
 const Home = () => {
@@ -22,11 +24,13 @@ const Home = () => {
 
             <div className="w-full">
                 <HeroSection />
+                <VideoTourSection />
                 <StorySection />
                 <ScrollStorytelling />
                 <FeaturesSection />
                 <TestimonialsSection />
                 <PathSection />
+                <InstagramFeed />
                 <CtaBanner />
             </div>
         </>

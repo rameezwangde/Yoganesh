@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams, Navigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 import divHealthImg from '../assets/images/div_health.png'
 import divYogaImg from '../assets/images/div_yoga.png'
@@ -131,6 +132,7 @@ const DivisionTemplate = () => {
     const { divisionId } = useParams()
     const data = divisionData[divisionId]
     const [activeSection, setActiveSection] = useState('overview')
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     useEffect(() => {
         if (!data) return;
@@ -193,17 +195,53 @@ const DivisionTemplate = () => {
                 </section>
 
                 {/* Secondary Division Navbar */}
-                <nav className="sticky top-20 z-40 bg-brand-bg border-b border-brand-text/10 shadow-lg backdrop-blur-md bg-opacity-95">
-                    <div className="container mx-auto px-4 overflow-x-auto hide-scrollbar">
-                        <ul className="flex items-center space-x-8 md:space-x-12 py-4 whitespace-nowrap justify-start md:justify-center">
+                <nav className="sticky top-0 z-50 bg-brand-bg border-b border-brand-text/10 shadow-lg backdrop-blur-md bg-opacity-95 transition-all duration-300">
+                    <div className="container mx-auto px-4">
+                        <div className="flex items-center justify-between py-4">
+                            {/* Back Button */}
+                            <Link to="/divisions" className="flex items-center text-brand-text-muted hover:text-brand-red-light transition-colors font-bold text-sm tracking-widest uppercase">
+                                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                                Back
+                            </Link>
+
+                            {/* Desktop Nav */}
+                            <ul className="hidden md:flex items-center space-x-12">
+                                {data.navItems.map((item) => (
+                                    <li key={item.id}>
+                                        <button
+                                            onClick={() => scrollToSection(item.id)}
+                                            className={`text-sm font-bold uppercase tracking-wider transition-colors pb-1 border-b-2 ${activeSection === item.id
+                                                ? 'text-brand-red-light border-brand-red-light'
+                                                : 'text-brand-text/60 border-transparent hover:text-brand-text'
+                                                }`}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            {/* Mobile Hamburger Toggle */}
+                            <button 
+                                className="md:hidden text-brand-text text-2xl focus:outline-none"
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            >
+                                {isMobileMenuOpen ? <HiX /> : <HiMenu />}
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Mobile Menu Dropdown */}
+                    <div className={`md:hidden transition-all duration-300 overflow-hidden bg-brand-bg-alt ${isMobileMenuOpen ? 'max-h-64 border-b border-brand-text/5' : 'max-h-0 border-transparent'}`}>
+                        <ul className="flex flex-col px-4 py-2">
                             {data.navItems.map((item) => (
-                                <li key={item.id}>
+                                <li key={item.id} className="py-3 border-b border-brand-text/5 last:border-0 relative">
                                     <button
-                                        onClick={() => scrollToSection(item.id)}
-                                        className={`text-sm font-bold uppercase tracking-wider transition-colors pb-1 border-b-2 ${activeSection === item.id
-                                            ? 'text-brand-red-light border-brand-red-light'
-                                            : 'text-brand-text/60 border-transparent hover:text-brand-text'
-                                            }`}
+                                        onClick={() => {
+                                            scrollToSection(item.id);
+                                            setIsMobileMenuOpen(false);
+                                        }}
+                                        className={`w-full text-left font-bold tracking-wider relative z-10 uppercase text-sm ${activeSection === item.id ? 'text-brand-red-light' : 'text-brand-text'}`}
                                     >
                                         {item.label}
                                     </button>

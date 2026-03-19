@@ -30,7 +30,7 @@ const FloatingWhatsApp = () => {
 
             {/* WhatsApp FAB */}
             <a
-                href="https://wa.me/918779241367"
+                href="https://wa.me/918422923924"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_14px_rgba(37,211,102,0.4)] transition-transform hover:scale-110"

@@ -24,7 +24,7 @@ const CtaBanner = () => {
                         Book a Trial Class
                     </Link>
                     <a
-                        href="https://wa.me/918779241367"
+                        href="https://wa.me/918422923924"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-8 py-4 rounded-full border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center w-full sm:w-auto"

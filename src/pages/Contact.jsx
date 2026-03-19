@@ -101,9 +101,9 @@ const Contact = () => {
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Our Location</h4>
                                                 <p className="text-brand-text-muted leading-relaxed">
-                                                    123 Wellness Avenue,<br />
-                                                    Fitness District, Floor 2<br />
-                                                    City, Country 10001
+                                                    901, 902 NMS ICON Building,<br />
+                                                    Opp Bamandongari Railway station<br />
+                                                    Ulwe, Navi Mumbai
                                                 </p>
                                             </div>
                                         </div>
@@ -114,7 +114,7 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Phone Number</h4>
-                                                <a href="tel:+918779241367" className="text-brand-text-muted hover:text-brand-text transition-colors block">+91 877 924 1367</a>
+                                                <a href="tel:+918422923924" className="text-brand-text-muted hover:text-brand-text transition-colors block">+91 8422923924</a>
                                             </div>
                                         </div>
 
@@ -124,13 +124,13 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Email Address</h4>
-                                                <a href="mailto:info@yoganesh.com" className="text-brand-text-muted hover:text-brand-text transition-colors block">info@yoganesh.com</a>
+                                                <a href="mailto:yogamudrafitnessclasses@gmail.com" className="text-brand-text-muted hover:text-brand-text transition-colors block">yogamudrafitnessclasses@gmail.com</a>
                                             </div>
                                         </div>
 
                                         <div className="pt-4">
                                             <a
-                                                href="https://wa.me/918779241367"
+                                                href="https://wa.me/918422923924"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center space-x-3 px-8 py-4 rounded-full bg-[#25D366]/10 text-[#25D366] font-bold border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white transition-colors"

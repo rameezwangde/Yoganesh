@@ -13,6 +13,7 @@ import DivisionTemplate from './pages/DivisionTemplate'
 import Gallery from './pages/Gallery'
 import Testimonials from './pages/Testimonials'
 import Contact from './pages/Contact'
+import YogaMudra from './pages/YogaMudra'
 
 // ScrollToTop strictly for routing transitions
 const ScrollToTop = () => {
@@ -38,6 +39,8 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Custom Yoga Mudra Division Page */}
+            <Route path="/yoga-classes" element={<YogaMudra />} />
             {/* Catch specific divisions */}
             <Route path="/:divisionId" element={<DivisionTemplate />} />
           </Routes>

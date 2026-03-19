@@ -59,18 +59,18 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start text-sm text-brand-text-muted">
                                 <span className="text-brand-red-light mr-3 mt-1">📍</span>
-                                <span>123 Wellness Avenue,<br />Fitness District,<br />City, Country</span>
+                                <span>901, 902 NMS ICON Building,<br />Opp Bamandongari Railway station,<br />Ulwe, Navi Mumbai</span>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted">
                                 <span className="text-brand-red-light mr-3">📞</span>
-                                <a href="tel:+918779241367" className="hover:text-brand-text transition-colors">+91 877 924 1367</a>
+                                <a href="tel:+918422923924" className="hover:text-brand-text transition-colors">+91 8422923924</a>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted">
                                 <span className="text-brand-red-light mr-3">✉️</span>
-                                <a href="mailto:info@yoganesh.com" className="hover:text-brand-text transition-colors">info@yoganesh.com</a>
+                                <a href="mailto:yogamudrafitnessclasses@gmail.com" className="hover:text-brand-text transition-colors">yogamudrafitnessclasses@gmail.com</a>
                             </li>
                             <li>
-                                <a href="https://wa.me/918779241367" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-brand-text-muted hover:text-[#25D366] transition-colors mt-2">
+                                <a href="https://wa.me/918422923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-brand-text-muted hover:text-[#25D366] transition-colors mt-2">
                                     <FaWhatsapp className="mr-2 text-lg" /> Chat on WhatsApp
                                 </a>
                             </li>
