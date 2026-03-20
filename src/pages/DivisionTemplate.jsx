@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { FaCheck, FaArrowRight } from 'react-icons/fa'
 import TiltWrapper from '../components/ui/TiltWrapper'
@@ -135,6 +135,9 @@ const DivisionTemplate = () => {
     const data = divisionData[divisionId]
     const [activeSection, setActiveSection] = useState('overview')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const { scrollY } = useScroll()
+    const heroY = useTransform(scrollY, [0, 800], [0, 300])
+    const opacityY = useTransform(scrollY, [0, 300], [1, 0])
 
     useEffect(() => {
         if (!data) return;
@@ -185,6 +188,7 @@ const DivisionTemplate = () => {
                     {/* Parallax Background */}
                     <div className="absolute inset-0 z-0 bg-brand-text">
                         <motion.img
+                            style={{ y: heroY }}
                             initial={{ scale: 1.1 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
@@ -205,7 +209,10 @@ const DivisionTemplate = () => {
                         </span>
                     </div>
 
-                    <div className="container mx-auto px-4 z-10 relative flex flex-col items-center text-center">
+                    <motion.div 
+                        style={{ opacity: opacityY }}
+                        className="container mx-auto px-4 z-10 relative flex flex-col items-center text-center"
+                    >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -234,7 +241,7 @@ const DivisionTemplate = () => {
                         >
                             "{data.tagline}"
                         </motion.p>
-                    </div>
+                    </motion.div>
                 </section>
 
                 {/* Secondary Division Navbar - Cooler Floating Pill */}
@@ -325,13 +332,20 @@ const DivisionTemplate = () => {
                     <div className="absolute bottom-[20%] left-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(192,0,0,0.02),transparent_60%)] pointer-events-none"></div>
 
                     {/* OVERVIEW SECTION */}
-                    <section id="overview" className="py-24 md:py-32 scroll-mt-20">
+                    <motion.section 
+                        id="overview" 
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-10%" }}
+                        className="py-24 md:py-32 scroll-mt-20"
+                    >
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 <motion.div
                                     initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, margin: "-10%" }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.8 }}
                                     className="w-full lg:w-1/2 space-y-8"
                                 >
@@ -341,11 +355,11 @@ const DivisionTemplate = () => {
                                         {data.overview}
                                     </p>
                                 </motion.div>
-
+ 
                                 <motion.div
                                     initial={{ opacity: 0, x: 40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, margin: "-10%" }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.8 }}
                                     className="w-full lg:w-1/2"
                                 >
@@ -363,35 +377,48 @@ const DivisionTemplate = () => {
                                 </motion.div>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* PROGRAMS SECTION */}
-                    <section id="programs" className="py-24 md:py-32 scroll-mt-20 border-y border-brand-text/5 relative overflow-hidden">
+                    <motion.section 
+                        id="programs" 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, margin: "-10%" }}
+                        className="py-24 md:py-32 scroll-mt-20 border-y border-brand-text/5 relative overflow-hidden"
+                    >
                         {/* Mesh background */}
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(192,0,0,0.04),transparent_50%)]"></div>
-
+ 
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-                            <div className="text-center mb-20 max-w-3xl mx-auto">
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                                className="text-center mb-20 max-w-3xl mx-auto"
+                            >
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Programs & Offerings</h2>
                                 <p className="text-brand-text-muted text-xl">Expert-led structures designed for absolute progression.</p>
-                            </div>
-
+                            </motion.div>
+ 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {data.programs.map((prog, i) => (
                                     <motion.div
                                         key={i}
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true, margin: "-10%" }}
-                                        transition={{ delay: i * 0.15, duration: 0.6 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: i * 0.15, duration: 0.6, ease: "easeOut" }}
                                         className="h-full"
                                     >
                                         <TiltWrapper intensity={8} scaleOnHover={1.02} className="h-full">
                                             <div className="h-full bg-brand-bg-alt border border-brand-text/5 p-10 rounded-[2.5rem] shadow-lg hover:shadow-[0_20px_40px_rgba(192,0,0,0.1)] hover:border-brand-red-light/30 transition-all duration-500 flex flex-col group relative overflow-hidden">
-
+ 
                                                 {/* Hover Glow */}
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red-dark/10 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-
+ 
                                                 <div className="flex flex-col mb-4 relative z-10">
                                                     <h4 className="text-2xl font-extrabold text-brand-text mb-4 group-hover:text-brand-red-light transition-colors duration-300">{prog.name}</h4>
                                                     <span className="text-xs font-bold tracking-widest uppercase px-4 py-2 bg-brand-bg border border-brand-text/10 text-brand-red-light rounded-full inline-block w-fit shadow-inner group-hover:border-brand-red-light/40 transition-colors">
@@ -405,28 +432,41 @@ const DivisionTemplate = () => {
                                 ))}
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* BENEFITS SECTION */}
-                    <section id="benefits" className="py-24 md:py-32 scroll-mt-20">
+                    <motion.section 
+                        id="benefits" 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="py-24 md:py-32 scroll-mt-20"
+                    >
                         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-                            <div className="text-center mb-20">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                                className="text-center mb-20"
+                            >
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Why Choose Us</h2>
-                            </div>
-
+                            </motion.div>
+ 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {data.benefits.map((benefit, i) => (
                                     <motion.div
                                         key={i}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true, margin: "-10%" }}
+                                        initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
                                         transition={{ delay: i * 0.1, duration: 0.5 }}
                                     >
                                         <div className="flex items-center p-6 sm:p-8 bg-brand-bg border border-brand-text/5 rounded-3xl hover:border-brand-red-light/20 hover:bg-brand-bg-alt transition-all duration-300 group shadow-sm hover:shadow-[0_15px_30px_rgba(192,0,0,0.06)] relative overflow-hidden">
                                             {/* Line accent on hover */}
                                             <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-red-light scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300"></div>
-
+ 
                                             <div className="w-14 h-14 rounded-2xl bg-brand-red-dark/10 flex items-center justify-center text-brand-red-light shrink-0 shadow-inner mr-6 group-hover:bg-brand-red-light group-hover:text-white transition-colors duration-300">
                                                 <FaCheck className="text-xl" />
                                             </div>
@@ -436,45 +476,58 @@ const DivisionTemplate = () => {
                                 ))}
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
 
                     {/* ENQUIRY CTA SECTION */}
-                    <section id="enquiry" className="py-24 md:py-32 scroll-mt-20 relative border-t border-brand-text/5">
+                    <motion.section 
+                        id="enquiry" 
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, margin: "-10%" }}
+                        className="py-24 md:py-32 scroll-mt-20 relative border-t border-brand-text/5"
+                    >
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(192,0,0,0.05),transparent_70%)] z-0"></div>
-
+ 
                         <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
                             <TiltWrapper intensity={3} scaleOnHover={1.01}>
-                                <div className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-10 md:p-16 relative overflow-hidden group">
-
+                                <motion.div 
+                                    initial={{ opacity: 0, scale: 0.98 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 1, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                    className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-10 md:p-16 relative overflow-hidden group"
+                                >
+ 
                                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red-dark/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
-
+ 
                                     <div className="text-center mb-12 relative z-10">
                                         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Ready to Begin?</h2>
                                         <p className="text-xl text-brand-text-muted">Book a consultation or request more information about {data.title}.</p>
                                     </div>
-
+ 
                                     <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                            <div>
+                                            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
                                                 <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Full Name</label>
                                                 <input type="text" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="John Doe" />
-                                            </div>
-                                            <div>
+                                            </motion.div>
+                                            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
                                                 <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Phone Number</label>
                                                 <input type="tel" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="+1 234 567 890" />
-                                            </div>
+                                            </motion.div>
                                         </div>
-
-                                        <div>
+ 
+                                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }}>
                                             <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Email Address</label>
                                             <input type="email" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="john@example.com" />
-                                        </div>
-
-                                        <div>
+                                        </motion.div>
+ 
+                                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} viewport={{ once: true }}>
                                             <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Message (Optional)</label>
                                             <textarea rows="4" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner resize-none" placeholder={`I'd like to book a session for ${data.title}...`}></textarea>
-                                        </div>
-
+                                        </motion.div>
+ 
                                         <div className="text-center pt-8">
                                             <button
                                                 type="submit"
@@ -487,11 +540,11 @@ const DivisionTemplate = () => {
                                             </button>
                                         </div>
                                     </form>
-
-                                </div>
+ 
+                                </motion.div>
                             </TiltWrapper>
                         </div>
-                    </section>
+                    </motion.section>
                 </div>
             </main>
         </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import heroImage from '../../assets/images/hero_wellness.png'
 
@@ -44,6 +44,11 @@ const HeroSection = () => {
         mouseY.set(0);
     };
 
+    // Background Scroll Parallax
+    const { scrollY } = useScroll();
+    const bgY = useTransform(scrollY, [0, 800], [0, 250]);
+    const bgOpacity = useTransform(scrollY, [0, 500], [1, 0.5]);
+
     // Magnetic Button Logic
     const btnX = useMotionValue(0);
     const btnY = useMotionValue(0);
@@ -82,7 +87,10 @@ const HeroSection = () => {
             className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-bg transition-all duration-1000"
         >
             {/* Background Decorative Elements */}
-            <div className="absolute inset-0 pointer-events-none z-0">
+            <motion.div 
+                style={{ y: bgY, opacity: bgOpacity }}
+                className="absolute inset-0 pointer-events-none z-0"
+            >
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -95,7 +103,7 @@ const HeroSection = () => {
                     transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                     className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-red-light/20 rounded-full blur-[150px]"
                 />
-            </div>
+            </motion.div>
 
             <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
                 {/* Left Column */}
