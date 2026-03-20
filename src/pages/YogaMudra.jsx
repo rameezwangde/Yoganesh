@@ -60,63 +60,87 @@ const YogaMudra = () => {
 
             <main className="bg-brand-bg text-brand-text min-h-screen">
                 
-                {/* Custom Yoga Mudra Navbar (Secondary Nav) */}
-                <nav className="sticky top-0 z-50 bg-brand-bg/95 border-b border-brand-text/10 shadow-lg backdrop-blur-md transition-all duration-300">
-                    <div className="container mx-auto px-4">
-                        <div className="flex items-center justify-between py-4">
-                            {/* Back Button */}
-                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-colors font-bold text-sm tracking-widest uppercase">
-                                <div className="w-8 h-8 rounded-full bg-brand-bg-alt border border-brand-text/10 flex items-center justify-center mr-3 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all duration-300">
-                                    <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                {/* Secondary Division Navbar - Cooler Floating Pill */}
+                <nav className="sticky top-6 z-50 px-4 pointer-events-none">
+                    <div className="container mx-auto max-w-4xl pointer-events-auto">
+                        <motion.div 
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] px-2 md:px-6 py-2 flex items-center justify-between"
+                        >
+                            {/* Improved Back Button */}
+                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-all font-bold text-xs tracking-widest uppercase mr-4">
+                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all shadow-sm">
+                                    <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                                 </div>
-                                Divisions
+                                <span className="hidden sm:inline">Back</span>
                             </Link>
 
-                            {/* Desktop Nav */}
-                            <ul className="hidden md:flex items-center space-x-12">
+                            {/* Desktop Nav with Sliding Active Indicator */}
+                            <ul className="hidden lg:flex items-center bg-brand-bg-alt/30 rounded-full p-1 border border-brand-text/5">
                                 {navItems.map((item) => (
-                                    <li key={item.id}>
+                                    <li key={item.id} className="relative">
                                         <button
                                             onClick={() => scrollToSection(item.id)}
-                                            className={`text-[15px] font-bold tracking-wide transition-colors pb-1 border-b-2 ${activeSection === item.id
-                                                ? 'text-brand-red-light border-brand-red-light'
-                                                : 'text-brand-text/70 border-transparent hover:text-brand-text'
-                                                }`}
+                                            className={`relative z-10 px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${
+                                                activeSection === item.id ? 'text-white' : 'text-brand-text/50 hover:text-brand-text'
+                                            }`}
                                         >
                                             {item.label}
                                         </button>
+                                        {activeSection === item.id && (
+                                            <motion.div 
+                                                layoutId="pill-active-yoga"
+                                                className="absolute inset-0 bg-brand-red-light rounded-full z-0 shadow-[0_5px_15px_rgba(192,0,0,0.2)]"
+                                                transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+                                            />
+                                        )}
                                     </li>
                                 ))}
                             </ul>
 
                             {/* Mobile Hamburger Toggle */}
-                            <button 
-                                className="md:hidden text-brand-text text-2xl focus:outline-none"
+                            <button
+                                className="lg:hidden w-10 h-10 flex items-center justify-center text-brand-text text-xl focus:outline-none rounded-full bg-brand-bg-alt border border-brand-text/5"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 {isMobileMenuOpen ? <HiX /> : <HiMenu />}
                             </button>
-                        </div>
+                        </motion.div>
                     </div>
 
-                    {/* Mobile Menu Dropdown */}
-                    <div className={`md:hidden transition-all duration-300 overflow-hidden bg-brand-bg-alt ${isMobileMenuOpen ? 'max-h-64 border-b border-brand-text/5' : 'max-h-0 border-transparent'}`}>
-                        <ul className="flex flex-col px-4 py-2">
-                            {navItems.map((item) => (
-                                <li key={item.id} className="py-3 border-b border-brand-text/5 last:border-0 relative">
-                                    <button
-                                        onClick={() => {
-                                            scrollToSection(item.id);
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        className={`w-full text-left font-bold tracking-wider relative z-10 ${activeSection === item.id ? 'text-brand-red-light' : 'text-brand-text'}`}
-                                    >
-                                        {item.label}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Mobile Menu Dropdown - Also Glassmorphic */}
+                    <AnimatePresence>
+                        {isMobileMenuOpen && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0, scale: 0.95 }}
+                                animate={{ height: 'auto', opacity: 1, scale: 1 }}
+                                exit={{ height: 0, opacity: 0, scale: 0.95 }}
+                                transformTemplate={({ scale }) => `scale(${scale})`}
+                                className="lg:hidden absolute top-20 left-4 right-4 overflow-hidden bg-white/90 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl p-4"
+                            >
+                                <ul className="flex flex-col gap-2">
+                                    {navItems.map((item) => (
+                                        <li key={item.id}>
+                                            <button
+                                                onClick={() => {
+                                                    scrollToSection(item.id);
+                                                    setIsMobileMenuOpen(false);
+                                                }}
+                                                className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${
+                                                    activeSection === item.id 
+                                                        ? 'bg-brand-red-light text-white shadow-lg' 
+                                                        : 'bg-brand-bg-alt/50 text-brand-text-muted'
+                                                }`}
+                                            >
+                                                {item.label}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </nav>
 
                 {/* PREMIUM LIGHT THEME HERO SECTION */}

@@ -179,18 +179,18 @@ const DivisionTemplate = () => {
             </Helmet>
 
             <main className="bg-brand-bg text-brand-text min-h-screen overflow-hidden">
-                
+
                 {/* Cinematic Hero */}
                 <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
                     {/* Parallax Background */}
                     <div className="absolute inset-0 z-0 bg-brand-bg-alt">
-                        <motion.img 
+                        <motion.img
                             initial={{ scale: 1.1 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
-                            src={data.img} 
-                            alt={data.title} 
-                            className="absolute inset-0 w-full h-full object-cover opacity-30" 
+                            src={data.img}
+                            alt={data.title}
+                            className="absolute inset-0 w-full h-full object-cover opacity-30"
                         />
                         {/* Dramatic Lighting Overlay */}
                         <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent"></div>
@@ -215,7 +215,7 @@ const DivisionTemplate = () => {
                             <span className="text-sm font-bold tracking-widest uppercase text-white/90">Ecosystem Division</span>
                         </motion.div>
 
-                        <motion.h1 
+                        <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -224,8 +224,8 @@ const DivisionTemplate = () => {
                             YOGANESH <br className="md:hidden" />
                             <span className="text-brand-red-light mix-blend-screen">{data.title}</span>
                         </motion.h1>
-                        
-                        <motion.p 
+
+                        <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
@@ -236,63 +236,78 @@ const DivisionTemplate = () => {
                     </div>
                 </section>
 
-                {/* Secondary Division Navbar */}
-                <nav className="sticky top-0 z-50 bg-brand-bg/95 border-b border-brand-text/10 shadow-[0_10px_30px_rgba(0,0,0,0.1)] backdrop-blur-xl transition-all duration-300">
-                    <div className="container mx-auto px-4">
-                        <div className="flex items-center justify-between py-4">
-                            {/* Upgraded Back Button */}
-                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-colors font-bold text-sm tracking-widest uppercase">
-                                <div className="w-8 h-8 rounded-full bg-brand-bg-alt border border-brand-text/10 flex items-center justify-center mr-3 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all duration-300 shadow-sm">
-                                    <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                {/* Secondary Division Navbar - Cooler Floating Pill */}
+                <nav className="sticky top-6 z-50 px-4 pointer-events-none">
+                    <div className="container mx-auto max-w-4xl pointer-events-auto">
+                        <motion.div 
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] px-2 md:px-6 py-2 flex items-center justify-between"
+                        >
+                            {/* Improved Back Button */}
+                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-all font-bold text-xs tracking-widest uppercase mr-4">
+                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all shadow-sm">
+                                    <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                                 </div>
-                                Divisions
+                                <span className="hidden sm:inline">Back</span>
                             </Link>
 
-                            {/* Desktop Nav */}
-                            <ul className="hidden md:flex items-center space-x-12">
+                            {/* Desktop Nav with Sliding Active Indicator */}
+                            <ul className="hidden md:flex items-center bg-brand-bg-alt/30 rounded-full p-1 border border-brand-text/5">
                                 {data.navItems.map((item) => (
-                                    <li key={item.id}>
+                                    <li key={item.id} className="relative">
                                         <button
                                             onClick={() => scrollToSection(item.id)}
-                                            className={`text-sm font-bold uppercase tracking-widest transition-colors pb-1 border-b-2 ${activeSection === item.id
-                                                ? 'text-brand-red-light border-brand-red-light'
-                                                : 'text-brand-text-muted border-transparent hover:text-brand-text'
-                                                }`}
+                                            className={`relative z-10 px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${
+                                                activeSection === item.id ? 'text-white' : 'text-brand-text/50 hover:text-brand-text'
+                                            }`}
                                         >
                                             {item.label}
                                         </button>
+                                        {activeSection === item.id && (
+                                            <motion.div 
+                                                layoutId="pill-active"
+                                                className="absolute inset-0 bg-brand-red-light rounded-full z-0 shadow-[0_5px_15px_rgba(192,0,0,0.2)]"
+                                                transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+                                            />
+                                        )}
                                     </li>
                                 ))}
                             </ul>
 
                             {/* Mobile Hamburger Toggle */}
-                            <button 
-                                className="md:hidden text-brand-text text-2xl focus:outline-none"
+                            <button
+                                className="md:hidden w-10 h-10 flex items-center justify-center text-brand-text text-xl focus:outline-none rounded-full bg-brand-bg-alt border border-brand-text/5"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 {isMobileMenuOpen ? <HiX /> : <HiMenu />}
                             </button>
-                        </div>
+                        </motion.div>
                     </div>
 
-                    {/* Mobile Menu Dropdown */}
+                    {/* Mobile Menu Dropdown - Also Glassmorphic */}
                     <AnimatePresence>
                         {isMobileMenuOpen && (
-                            <motion.div 
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                className="md:hidden overflow-hidden bg-brand-bg-alt border-b border-brand-text/5"
+                            <motion.div
+                                initial={{ height: 0, opacity: 0, scale: 0.95 }}
+                                animate={{ height: 'auto', opacity: 1, scale: 1 }}
+                                exit={{ height: 0, opacity: 0, scale: 0.95 }}
+                                transformTemplate={({ scale }) => `scale(${scale})`}
+                                className="md:hidden absolute top-20 left-4 right-4 overflow-hidden bg-white/90 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl p-4"
                             >
-                                <ul className="flex flex-col px-4 py-2">
+                                <ul className="flex flex-col gap-2">
                                     {data.navItems.map((item) => (
-                                        <li key={item.id} className="py-3 border-b border-brand-text/5 last:border-0 relative">
+                                        <li key={item.id}>
                                             <button
                                                 onClick={() => {
                                                     scrollToSection(item.id);
                                                     setIsMobileMenuOpen(false);
                                                 }}
-                                                className={`w-full text-left font-bold tracking-widest uppercase text-sm ${activeSection === item.id ? 'text-brand-red-light' : 'text-brand-text'}`}
+                                                className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${
+                                                    activeSection === item.id 
+                                                        ? 'bg-brand-red-light text-white shadow-lg' 
+                                                        : 'bg-brand-bg-alt/50 text-brand-text-muted'
+                                                }`}
                                             >
                                                 {item.label}
                                             </button>
@@ -314,7 +329,7 @@ const DivisionTemplate = () => {
                     <section id="overview" className="py-24 md:py-32 scroll-mt-20">
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-10%" }}
@@ -327,8 +342,8 @@ const DivisionTemplate = () => {
                                         {data.overview}
                                     </p>
                                 </motion.div>
-                                
-                                <motion.div 
+
+                                <motion.div
                                     initial={{ opacity: 0, x: 40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-10%" }}
@@ -355,13 +370,13 @@ const DivisionTemplate = () => {
                     <section id="programs" className="py-24 md:py-32 scroll-mt-20 border-y border-brand-text/5 relative overflow-hidden">
                         {/* Mesh background */}
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(192,0,0,0.04),transparent_50%)]"></div>
-                        
+
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                             <div className="text-center mb-20 max-w-3xl mx-auto">
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Programs & Offerings</h2>
                                 <p className="text-brand-text-muted text-xl">Expert-led structures designed for absolute progression.</p>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {data.programs.map((prog, i) => (
                                     <motion.div
@@ -374,7 +389,7 @@ const DivisionTemplate = () => {
                                     >
                                         <TiltWrapper intensity={8} scaleOnHover={1.02} className="h-full">
                                             <div className="h-full bg-brand-bg-alt border border-brand-text/5 p-10 rounded-[2.5rem] shadow-lg hover:shadow-[0_20px_40px_rgba(192,0,0,0.1)] hover:border-brand-red-light/30 transition-all duration-500 flex flex-col group relative overflow-hidden">
-                                                
+
                                                 {/* Hover Glow */}
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red-dark/10 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
@@ -399,7 +414,7 @@ const DivisionTemplate = () => {
                             <div className="text-center mb-20">
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Why Choose Us</h2>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {data.benefits.map((benefit, i) => (
                                     <motion.div
@@ -412,7 +427,7 @@ const DivisionTemplate = () => {
                                         <div className="flex items-center p-6 sm:p-8 bg-brand-bg border border-brand-text/5 rounded-3xl hover:border-brand-red-light/20 hover:bg-brand-bg-alt transition-all duration-300 group shadow-sm hover:shadow-[0_15px_30px_rgba(192,0,0,0.06)] relative overflow-hidden">
                                             {/* Line accent on hover */}
                                             <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-red-light scale-y-0 group-hover:scale-y-100 transform origin-bottom transition-transform duration-300"></div>
-                                            
+
                                             <div className="w-14 h-14 rounded-2xl bg-brand-red-dark/10 flex items-center justify-center text-brand-red-light shrink-0 shadow-inner mr-6 group-hover:bg-brand-red-light group-hover:text-white transition-colors duration-300">
                                                 <FaCheck className="text-xl" />
                                             </div>
@@ -431,7 +446,7 @@ const DivisionTemplate = () => {
                         <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
                             <TiltWrapper intensity={3} scaleOnHover={1.01}>
                                 <div className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-10 md:p-16 relative overflow-hidden group">
-                                    
+
                                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red-dark/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
 
                                     <div className="text-center mb-12 relative z-10">
@@ -462,8 +477,8 @@ const DivisionTemplate = () => {
                                         </div>
 
                                         <div className="text-center pt-8">
-                                            <button 
-                                                type="submit" 
+                                            <button
+                                                type="submit"
                                                 className="inline-flex flex-col items-center justify-center px-12 py-5 rounded-[2rem] bg-brand-red-dark text-white font-extrabold text-lg tracking-widest uppercase hover:bg-brand-red-light hover:shadow-[0_20px_40px_rgba(192,0,0,0.3)] transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-auto"
                                             >
                                                 <div className="flex items-center">
