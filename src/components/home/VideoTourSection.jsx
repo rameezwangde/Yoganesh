@@ -12,7 +12,7 @@ const VideoTourSection = () => {
     useEffect(() => {
         if (videoRef.current) {
             videoRef.current.play().catch(error => {
-                console.log("Autoplay was prevented by browser, waiting for user interaction.", error)
+                // Autoplay was prevented by browser, waiting for user interaction.
                 setIsPlaying(false)
             });
         }
