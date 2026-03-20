@@ -183,18 +183,19 @@ const DivisionTemplate = () => {
                 {/* Cinematic Hero */}
                 <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
                     {/* Parallax Background */}
-                    <div className="absolute inset-0 z-0 bg-brand-bg-alt">
+                    <div className="absolute inset-0 z-0 bg-brand-text">
                         <motion.img
                             initial={{ scale: 1.1 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
                             src={data.img}
                             alt={data.title}
-                            className="absolute inset-0 w-full h-full object-cover opacity-30"
+                            className="absolute inset-0 w-full h-full object-cover opacity-50"
                         />
-                        {/* Dramatic Lighting Overlay */}
-                        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent"></div>
-                        <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-multiply"></div>
+                        {/* Dramatic Lighting Overlays */}
+                        <div className="absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent"></div>
+                        <div className="absolute inset-0 bg-brand-red-dark/20 mix-blend-multiply"></div>
+                        <div className="absolute inset-0 bg-black/40"></div>
                     </div>
 
                     {/* Massive Division Watermark */}
@@ -209,27 +210,27 @@ const DivisionTemplate = () => {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
-                            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/10 mb-8 shadow-2xl"
+                            className="inline-flex items-center space-x-3 bg-white/20 backdrop-blur-xl px-8 py-3 rounded-full border border-white/20 mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
                         >
-                            <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
-                            <span className="text-sm font-bold tracking-widest uppercase text-white/90">Ecosystem Division</span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-brand-red-light shadow-[0_0_10px_#3B82F6]"></span>
+                            <span className="text-xs font-black tracking-[0.3em] uppercase text-white">Ecosystem Division</span>
                         </motion.div>
 
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-6xl md:text-8xl font-black mb-6 tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-lg"
+                            className="text-6xl md:text-9xl font-black mb-8 tracking-tighter text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                         >
                             YOGANESH <br className="md:hidden" />
-                            <span className="text-brand-red-light mix-blend-screen">{data.title}</span>
+                            <span className="text-brand-red-light drop-shadow-[0_10px_20px_rgba(59,130,246,0.3)]">{data.title}</span>
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-2xl md:text-3xl font-extrabold text-white/80 tracking-wide max-w-3xl"
+                            className="text-2xl md:text-4xl font-black text-white px-8 py-3 bg-brand-red-light/10 backdrop-blur-sm border-x border-brand-red-light/30 tracking-tight max-w-4xl italic"
                         >
                             "{data.tagline}"
                         </motion.p>
@@ -239,7 +240,7 @@ const DivisionTemplate = () => {
                 {/* Secondary Division Navbar - Cooler Floating Pill */}
                 <nav className="sticky top-6 z-50 px-4 pointer-events-none">
                     <div className="container mx-auto max-w-4xl pointer-events-auto">
-                        <motion.div 
+                        <motion.div
                             initial={{ y: -20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] px-2 md:px-6 py-2 flex items-center justify-between"
@@ -258,14 +259,13 @@ const DivisionTemplate = () => {
                                     <li key={item.id} className="relative">
                                         <button
                                             onClick={() => scrollToSection(item.id)}
-                                            className={`relative z-10 px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${
-                                                activeSection === item.id ? 'text-white' : 'text-brand-text/50 hover:text-brand-text'
-                                            }`}
+                                            className={`relative z-10 px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${activeSection === item.id ? 'text-white' : 'text-brand-text/50 hover:text-brand-text'
+                                                }`}
                                         >
                                             {item.label}
                                         </button>
                                         {activeSection === item.id && (
-                                            <motion.div 
+                                            <motion.div
                                                 layoutId="pill-active"
                                                 className="absolute inset-0 bg-brand-red-light rounded-full z-0 shadow-[0_5px_15px_rgba(192,0,0,0.2)]"
                                                 transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
@@ -303,11 +303,10 @@ const DivisionTemplate = () => {
                                                     scrollToSection(item.id);
                                                     setIsMobileMenuOpen(false);
                                                 }}
-                                                className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${
-                                                    activeSection === item.id 
-                                                        ? 'bg-brand-red-light text-white shadow-lg' 
-                                                        : 'bg-brand-bg-alt/50 text-brand-text-muted'
-                                                }`}
+                                                className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${activeSection === item.id
+                                                    ? 'bg-brand-red-light text-white shadow-lg'
+                                                    : 'bg-brand-bg-alt/50 text-brand-text-muted'
+                                                    }`}
                                             >
                                                 {item.label}
                                             </button>
