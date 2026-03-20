@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -71,7 +71,7 @@ const ScrollStorytelling = () => {
                 <div className="hidden md:flex w-1/2 h-screen sticky top-0 items-center justify-center py-24 pr-16 lg:pr-24 perspective-1000">
                     <div className="w-full aspect-[4/5] relative rounded-[2.5rem] overflow-hidden bg-brand-bg-alt shadow-2xl border border-brand-text/5 group transform-gpu z-0">
                         
-                        <AnimatePresence mode="wait">
+                        <AnimatePresence mode="popLayout">
                             <motion.img 
                                 key={activeIndex}
                                 src={divisions[activeIndex].img}
@@ -88,7 +88,7 @@ const ScrollStorytelling = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 z-10"></div>
                         <div className="absolute inset-0 bg-brand-red-dark/10 opacity-60 z-10"></div>
                         
-                        <AnimatePresence mode="wait">
+                        <AnimatePresence mode="popLayout">
                             <motion.div 
                                 key={`icon-${activeIndex}`}
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -132,7 +132,7 @@ const ScrollStorytelling = () => {
     )
 }
 
-const StoryBlock = ({ div, index, setActiveIndex, isActive }) => {
+const StoryBlock = memo(({ div, index, setActiveIndex, isActive }) => {
     return (
         <motion.div
             onViewportEnter={() => setActiveIndex(index)}
@@ -185,6 +185,8 @@ const StoryBlock = ({ div, index, setActiveIndex, isActive }) => {
             </motion.div>
         </motion.div>
     )
-}
+})
+
+StoryBlock.displayName = 'StoryBlock'
 
 export default ScrollStorytelling
