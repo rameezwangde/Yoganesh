@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import FloatingWhatsApp from '../ui/FloatingWhatsApp'
+import BreathingBackground from '../ui/BreathingBackground'
 
 const PageLayout = ({ children }) => {
     const location = useLocation();
@@ -19,6 +20,7 @@ const PageLayout = ({ children }) => {
 
     return (
         <div className="flex flex-col min-h-screen w-full max-w-[100vw] overflow-x-hidden relative">
+            <BreathingBackground />
             {!isDivisionPage && <Navbar />}
             <main className={`flex-grow ${!isDivisionPage ? 'pt-[72px]' : ''}`}>
                 {children}

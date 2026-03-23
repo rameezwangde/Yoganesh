@@ -44,10 +44,11 @@ const HeroSection = () => {
         mouseY.set(0);
     };
 
-    // Background Scroll Parallax
+    // Background Scroll Parallax - Smoothed for mobile
     const { scrollY } = useScroll();
-    const bgY = useTransform(scrollY, [0, 800], [0, 250]);
-    const bgOpacity = useTransform(scrollY, [0, 500], [1, 0.5]);
+    const smoothScrollY = useSpring(scrollY, { stiffness: 100, damping: 30, restDelta: 0.001 });
+    const bgY = useTransform(smoothScrollY, [0, 800], [0, 250]);
+    const bgOpacity = useTransform(smoothScrollY, [0, 500], [1, 0.5]);
 
     // Magnetic Button Logic
     const btnX = useMotionValue(0);
@@ -87,7 +88,7 @@ const HeroSection = () => {
             className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-bg transition-all duration-1000"
         >
             {/* Background Decorative Elements */}
-            <motion.div 
+            <motion.div
                 style={{ y: bgY, opacity: bgOpacity }}
                 className="absolute inset-0 pointer-events-none z-0"
             >
@@ -114,7 +115,7 @@ const HeroSection = () => {
                     className="flex flex-col items-start text-left"
                 >
                     <motion.div variants={itemVariants} className="inline-block mb-6 px-5 py-2 border border-brand-red-dark/40 rounded-full bg-brand-red-dark/10 backdrop-blur-md relative overflow-hidden group shadow-[0_0_15px_rgba(192,0,0,0.15)]">
-                        <motion.div 
+                        <motion.div
                             animate={{ x: ["-100%", "200%"] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1 }}
                             className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
@@ -193,21 +194,21 @@ const HeroSection = () => {
                         <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg/60 via-transparent to-brand-red-light/20 z-10 mix-blend-multiply transition-opacity duration-700 pointer-events-none"></div>
 
                         {/* Animated 3D Depth Image */}
-                        <motion.img 
+                        <motion.img
                             style={{
                                 x: useTransform(springX, [-0.5, 0.5], [-20, 20]),
                                 y: useTransform(springY, [-0.5, 0.5], [-20, 20]),
                                 scale: 1.1
                             }}
-                            src={heroImage} 
-                            alt="YOGANESH Cinematic Integration" 
-                            className="absolute inset-0 w-full h-full object-cover z-0" 
-                            loading="eager" 
+                            src={heroImage}
+                            alt="YOGANESH Cinematic Integration"
+                            className="absolute inset-0 w-full h-full object-cover z-0"
+                            loading="eager"
                         />
                     </motion.div>
 
                     {/* Badge 1: Holistic Approach */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
@@ -219,7 +220,7 @@ const HeroSection = () => {
                         className="absolute bottom-6 left-2 sm:left-6 md:left-auto md:-left-8 z-30 bg-white/90 backdrop-blur-2xl p-5 md:p-6 rounded-2xl border border-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_45px_rgba(192,0,0,0.15)] transition-shadow duration-300 pointer-events-auto"
                     >
                         <div className="flex items-center space-x-5">
-                            <motion.div 
+                            <motion.div
                                 animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                                 className="w-14 h-14 bg-gradient-to-br from-brand-red-light to-brand-red-dark rounded-full flex items-center justify-center shadow-[0_5px_15px_rgba(192,0,0,0.3)] shrink-0"

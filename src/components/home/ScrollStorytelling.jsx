@@ -1,5 +1,5 @@
-import React, { useState, memo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState, memo, useRef } from 'react'
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 import divHealthImg from '../../assets/images/div_health.png'
@@ -139,12 +139,12 @@ const StoryBlock = memo(({ div, index, setActiveIndex, isActive }) => {
             viewport={{ amount: 0.5, margin: "-10% 0px -10% 0px" }}
             className={`min-h-[70vh] md:min-h-[85vh] flex flex-col justify-center py-16 transition-opacity duration-500 will-change-opacity ${isActive ? 'opacity-100' : 'opacity-30 md:opacity-20 hover:opacity-100'}`}
         >
-            {/* Mobile Visual Representation */}
+            {/* Mobile Visual Representation with Parallax */}
             <div className="md:hidden w-full aspect-square rounded-3xl overflow-hidden relative mb-10 shadow-xl border border-brand-text/5 transform-gpu">
-                <img src={div.img} className="w-full h-full object-cover" alt={div.title} loading="lazy" />
-                <div className="absolute inset-0 bg-black/40 z-10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent z-10 opacity-90"></div>
-                <div className="absolute inset-0 flex items-center justify-center z-20">
+                <MobileParallaxImage src={div.img} title={div.title} />
+                <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent z-11 opacity-90 pointer-events-none"></div>
+                <div className="absolute inset-0 flex items-center justify-center z-12 pointer-events-none">
                     <span className="text-white/50 text-[100px] font-bold">{div.icon}</span>
                 </div>
             </div>
@@ -186,6 +186,28 @@ const StoryBlock = memo(({ div, index, setActiveIndex, isActive }) => {
         </motion.div>
     )
 })
+
+const MobileParallaxImage = ({ src, title }) => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+    
+    const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+    const smoothY = useSpring(y, { stiffness: 100, damping: 30 });
+
+    return (
+        <motion.img 
+            ref={ref}
+            src={src} 
+            style={{ y: smoothY, scale: 1.2 }}
+            className="w-full h-full object-cover" 
+            alt={title} 
+            loading="lazy" 
+        />
+    );
+};
 
 StoryBlock.displayName = 'StoryBlock'
 
