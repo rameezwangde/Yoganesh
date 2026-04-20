@@ -68,7 +68,7 @@ const Navbar = () => {
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center relative z-50">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-black tracking-widest text-brand-text z-50 relative group">
-                    <span className="text-brand-red-light group-hover:text-brand-red-dark transition-colors">YOG</span>ANESH
+                    <span className="text-brand-red-light group-hover:text-brand-red-dark transition-colors">YOGA</span>NESH
                 </Link>
 
                 {/* Desktop Nav */}

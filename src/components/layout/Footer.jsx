@@ -10,7 +10,7 @@ const Footer = () => {
             {/* Massive Parallax Brand Watermark */}
             <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">
                 <span className="text-[120px] md:text-[250px] lg:text-[400px] font-black tracking-tighter text-brand-text whitespace-nowrap">
-                    YOGANESH
+                    
                 </span>
             </div>
 
@@ -23,7 +23,7 @@ const Footer = () => {
                     {/* Brand Col */}
                     <div className="lg:col-span-4 pr-0 lg:pr-12">
                         <Link to="/" className="text-4xl font-extrabold tracking-tight text-brand-text block mb-6 group">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">YOG</span>ANESH
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">YOGA</span>NESH
                         </Link>
                         <p className="text-brand-text-muted text-base leading-relaxed mb-8">
                             A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent. We engineer your ultimate transformation.
@@ -112,7 +112,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center relative z-10">
                     <p className="text-brand-text-muted text-xs mb-4 md:mb-0 font-medium tracking-wide">
-                        © {new Date().getFullYear()} YOGANESH. Engineered for Results. All rights reserved.
+                        © {new Date().getFullYear()}. Engineered for Results. All rights reserved.
                     </p>
                     <div className="flex space-x-8">
                         <Link to="/privacy-policy" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Privacy Policy</Link>
