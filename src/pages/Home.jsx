@@ -6,7 +6,6 @@ import VideoTourSection from '../components/home/VideoTourSection'
 import FeaturesSection from '../components/home/FeaturesSection'
 import TestimonialsSection from '../components/home/TestimonialsSection'
 import PathSection from '../components/home/PathSection'
-import InstagramFeed from '../components/home/InstagramFeed'
 import CtaBanner from '../components/home/CtaBanner'
 
 const Home = () => {
@@ -26,7 +25,6 @@ const Home = () => {
                 <PathSection />
                 <FeaturesSection />
                 <TestimonialsSection />
-                <InstagramFeed />
                 <CtaBanner />
             </div>
         </>
