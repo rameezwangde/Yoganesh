@@ -26,7 +26,7 @@ const VideoTourSection = () => {
                             Studio Sanctuary
                         </span>
                     </motion.div>
-                    <motion.h2 
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -35,7 +35,7 @@ const VideoTourSection = () => {
                     >
                         Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Peace</span> Meets Practice
                     </motion.h2>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -47,7 +47,7 @@ const VideoTourSection = () => {
                 </div>
 
                 <TiltWrapper intensity={10} scaleOnHover={1.02}>
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.95, y: 30 }}
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
@@ -58,15 +58,15 @@ const VideoTourSection = () => {
                         <div className="absolute -inset-2 bg-gradient-to-r from-brand-red-light/20 via-brand-red-dark/10 to-brand-red-light/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-1000 -z-10"></div>
 
                         <div className="relative rounded-[2.5rem] overflow-hidden bg-black aspect-[21/9] md:aspect-video flex items-center justify-center">
-                            <img 
+                            <img
                                 src={yogaImage}
                                 alt="Serene Yoga Studio Sanctuary"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
-                            
+
                             {/* Subtle Overlay Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-                            
+
                             {/* Decorative Corner Element */}
                             <div className="absolute bottom-8 left-8 flex items-center space-x-4">
                                 <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
