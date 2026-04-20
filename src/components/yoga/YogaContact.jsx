@@ -1,8 +1,42 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaCheckCircle } from 'react-icons/fa'
 import TiltWrapper from '../ui/TiltWrapper'
 
 const YogaContact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, email, message } = formData;
+        
+        const textMessage = `*New Yoga Enquiry*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+        
+        const whatsappUrl = `https://wa.me/918422923924?text=${encodeURIComponent(textMessage)}`;
+        const mailtoUrl = `mailto:yoganeshfitnessclasses@gmail.com?subject=Yoga Enquiry - ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
+
+        window.open(whatsappUrl, '_blank');
+        setTimeout(() => {
+            window.location.href = mailtoUrl;
+        }, 500);
+
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+            setFormData({ name: '', email: '', message: '' });
+        }, 5000);
+    };
+
     const contactCards = [
         {
             icon: (
@@ -23,7 +57,7 @@ const YogaContact = () => {
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             ),
             title: "Email Address",
-            desc: "yogamudrafitnessclasses@gmail.com"
+            desc: "yoganeshfitnessclasses@gmail.com"
         }
     ]
 
@@ -93,7 +127,7 @@ const YogaContact = () => {
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                             </div>
                             <p className="text-brand-text-muted text-lg leading-relaxed font-medium">
-                                Feel free to connect and reach us at YogaMudraFitnessClasses for expert guidance on yoga, meditation, wellness tips, and personalized fitness plans tailored to your needs.
+                                Feel free to connect and reach us at YOGANESH Fitness Classes for expert guidance on yoga, meditation, wellness tips, and personalized fitness plans tailored to your needs.
                             </p>
                         </div>
 
@@ -119,12 +153,39 @@ const YogaContact = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-brand-text/5"
+                        className="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-brand-text/5 relative overflow-hidden"
                     >
+                        <AnimatePresence>
+                            {isSubmitted && (
+                                <motion.div 
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    className="absolute inset-0 z-20 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-10"
+                                >
+                                    <FaCheckCircle className="text-6xl text-[#25D366] mb-6" />
+                                    <h3 className="text-3xl font-black mb-4">Message Sent!</h3>
+                                    <p className="text-brand-text-muted text-lg mb-8 max-w-sm">
+                                        We are redirecting you to WhatsApp and Email to finalize your enquiry.
+                                    </p>
+                                    <button 
+                                        onClick={() => setIsSubmitted(false)}
+                                        className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-red-light transition-all"
+                                    >
+                                        Send Another
+                                    </button>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
                         <h3 className="text-3xl lg:text-4xl font-extrabold text-brand-text mb-10 text-center lg:text-left">Contact Us</h3>
-                        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="group">
                                 <input
+                                    required
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     type="text"
                                     placeholder="Your Name.."
                                     className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
@@ -132,6 +193,10 @@ const YogaContact = () => {
                             </div>
                             <div className="group">
                                 <input
+                                    required
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     type="email"
                                     placeholder="Your Email.."
                                     className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
@@ -139,6 +204,10 @@ const YogaContact = () => {
                             </div>
                             <div className="group">
                                 <textarea
+                                    required
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Enter Your Message.."
                                     rows="5"
                                     className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 resize-none font-medium"
@@ -159,3 +228,4 @@ const YogaContact = () => {
 }
 
 export default YogaContact
+

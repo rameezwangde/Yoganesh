@@ -47,7 +47,7 @@ const CtaBanner = () => {
                                         to="/contact"
                                         className="relative overflow-hidden flex items-center justify-center px-10 py-5 rounded-[2rem] bg-white text-brand-red-dark font-extrabold text-lg hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto group/btn shadow-xl"
                                     >
-                                        <span className="relative z-10">Book a Trial Class</span>
+                                        <span className="relative z-10">Contact Us</span>
                                         <FaArrowRight className="ml-3 relative z-10 group-hover/btn:translate-x-2 transition-transform duration-300" />
                                         <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
                                     </Link>

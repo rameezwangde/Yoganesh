@@ -9,6 +9,7 @@ const navLinks = [
     { name: 'Divisions', path: '/divisions' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Contact', path: '/contact' },
 ]
 
 const Navbar = () => {
@@ -149,7 +150,7 @@ const Navbar = () => {
                                 className="bg-brand-red-dark text-white px-12 py-5 rounded-full font-black text-xl tracking-widest uppercase hover:bg-brand-red-light shadow-2xl transition-all inline-block mt-4"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Book Session
+                                Contact Us
                             </Link>
                         </motion.div>
                     </motion.div>

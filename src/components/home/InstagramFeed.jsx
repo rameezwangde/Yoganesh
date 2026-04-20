@@ -35,12 +35,12 @@ const InstagramFeed = () => {
                         </div>
                         <h2 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-4">Follow Our Journey</h2>
                         <a 
-                            href="https://www.instagram.com/yogamudrafitnessclasses/" 
+                            href="https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-xl text-brand-text font-bold hover:text-brand-red-light transition-colors border-b-2 border-transparent hover:border-brand-red-light pb-1"
                         >
-                            @yogamudrafitnessclasses
+                            @yoganeshfitnessclasses
                         </a>
                         <p className="mt-6 text-brand-text-muted max-w-2xl mx-auto leading-relaxed">
                             Join our community online. We share daily tips, routine highlights, and moments from our classes directly to our Instagram feed.
@@ -62,7 +62,7 @@ const InstagramFeed = () => {
                         {marqueeItems.map((item, index) => (
                             <a
                                 key={`${item.id}-${index}`}
-                                href="https://www.instagram.com/yogamudrafitnessclasses/"
+                                href="https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="relative w-64 md:w-72 lg:w-80 aspect-[9/16] group overflow-hidden rounded-3xl shadow-xl shadow-brand-text/5 border border-brand-text/10 bg-black block shrink-0 hover:z-20 transform transition-transform"
@@ -107,7 +107,7 @@ const InstagramFeed = () => {
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
                         <a
-                            href="https://www.instagram.com/yogamudrafitnessclasses/"
+                            href="https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] text-white font-bold text-lg shadow-[0_4px_20px_rgba(253,29,29,0.3)] transition-all transform hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(253,29,29,0.5)]"

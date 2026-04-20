@@ -29,14 +29,20 @@ const Footer = () => {
                             A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent. We engineer your ultimate transformation.
                         </p>
                         <div className="flex space-x-4">
-                            {[FaInstagram, FaFacebookF, FaYoutube].map((Icon, i) => (
+                            {[
+                                { Icon: FaInstagram, link: "https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D" },
+                                { Icon: FaFacebookF, link: "#" },
+                                { Icon: FaYoutube, link: "#" }
+                            ].map((item, i) => (
                                 <motion.a 
                                     key={i}
-                                    href="#" 
+                                    href={item.link} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     whileHover={{ y: -5, scale: 1.1 }}
                                     className="w-12 h-12 rounded-[1rem] bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors duration-300 hover:text-white shadow-sm border border-brand-text/5"
                                 >
-                                    <Icon className="text-xl" />
+                                    <item.Icon className="text-xl" />
                                 </motion.a>
                             ))}
                         </div>
@@ -46,7 +52,7 @@ const Footer = () => {
                     <div className="lg:col-span-2">
                         <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Discover</h4>
                         <ul className="space-y-4">
-                            {['About Us', 'Our Divisions', 'Gallery', 'Testimonials'].map((link, i) => (
+                            {['About Us', 'Our Divisions', 'Gallery', 'Testimonials', 'Contact Us'].map((link, i) => (
                                 <li key={i}>
                                     <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group">
                                         <FaArrowRight className="mr-2 text-brand-red-light opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
@@ -92,7 +98,7 @@ const Footer = () => {
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
                                     <FaEnvelope className="text-brand-red-dark group-hover:text-white transition-colors" />
                                 </div>
-                                <a href="mailto:yogamudrafitnessclasses@gmail.com" className="hover:text-brand-red-light transition-colors">yogamudra@gmail.com</a>
+                                <a href="mailto:yoganeshfitnessclasses@gmail.com" className="hover:text-brand-red-light transition-colors">yoganeshfitnessclasses@gmail.com</a>
                             </li>
                             <li>
                                 <a href="https://wa.me/918422923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-brand-text-muted hover:text-[#25D366] transition-colors mt-2 group">

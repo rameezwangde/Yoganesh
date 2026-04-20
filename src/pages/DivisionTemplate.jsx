@@ -30,7 +30,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Services' },
             { id: 'benefits', label: 'Why Choose Us' },
-            { id: 'enquiry', label: 'Book Consultation' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     },
     'yoga-classes': {
@@ -49,7 +49,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Programs' },
             { id: 'benefits', label: 'Benefits' },
-            { id: 'enquiry', label: 'Enquire' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     },
     'fitness-classes': {
@@ -68,7 +68,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Programs' },
             { id: 'benefits', label: 'Transformations' },
-            { id: 'enquiry', label: 'Join Now' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     },
     'wellness-center': {
@@ -87,7 +87,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Treatments' },
             { id: 'benefits', label: 'Benefits' },
-            { id: 'enquiry', label: 'Book Session' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     },
     'dance-classes': {
@@ -106,7 +106,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Styles' },
             { id: 'benefits', label: 'Benefits' },
-            { id: 'enquiry', label: 'Enquire' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     },
     'music-classes': {
@@ -125,7 +125,7 @@ const divisionData = {
             { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Instruments' },
             { id: 'benefits', label: 'Benefits' },
-            { id: 'enquiry', label: 'Enquire' }
+            { id: 'enquiry', label: 'Contact Us' }
         ]
     }
 }
@@ -138,6 +138,40 @@ const DivisionTemplate = () => {
     const { scrollY } = useScroll()
     const heroY = useTransform(scrollY, [0, 800], [0, 300])
     const opacityY = useTransform(scrollY, [0, 300], [1, 0])
+
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+    });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, phone, email, message } = formData;
+        
+        const textMessage = `*New Division Enquiry: ${data.title}*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Message:* ${message || 'No additional message'}`;
+        
+        const whatsappUrl = `https://wa.me/918422923924?text=${encodeURIComponent(textMessage)}`;
+        const mailtoUrl = `mailto:yoganeshfitnessclasses@gmail.com?subject=Enquiry for ${data.title} - ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
+
+        window.open(whatsappUrl, '_blank');
+        setTimeout(() => {
+            window.location.href = mailtoUrl;
+        }, 500);
+
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+            setFormData({ name: '', phone: '', email: '', message: '' });
+        }, 5000);
+    };
 
     useEffect(() => {
         if (!data) return;
@@ -506,40 +540,97 @@ const DivisionTemplate = () => {
                                         <p className="text-xl text-brand-text-muted">Book a consultation or request more information about {data.title}.</p>
                                     </div>
  
-                                    <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
+                                    <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
                                                 <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Full Name</label>
-                                                <input type="text" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="John Doe" />
+                                                <input 
+                                                    required 
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    type="text" 
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" 
+                                                    placeholder="John Doe" 
+                                                />
                                             </motion.div>
                                             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
                                                 <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Phone Number</label>
-                                                <input type="tel" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="+1 234 567 890" />
+                                                <input 
+                                                    required 
+                                                    name="phone"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    type="tel" 
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" 
+                                                    placeholder="+91 84229 23924" 
+                                                />
                                             </motion.div>
                                         </div>
- 
+
                                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }}>
                                             <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Email Address</label>
-                                            <input type="email" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" placeholder="john@example.com" />
+                                            <input 
+                                                required 
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                type="email" 
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner" 
+                                                placeholder="john@example.com" 
+                                            />
                                         </motion.div>
- 
+
                                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} viewport={{ once: true }}>
                                             <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Message (Optional)</label>
-                                            <textarea rows="4" className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner resize-none" placeholder={`I'd like to book a session for ${data.title}...`}></textarea>
+                                            <textarea 
+                                                name="message"
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                rows="4" 
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner resize-none" 
+                                                placeholder={`I'd like to enquiry about ${data.title}...`}
+                                            ></textarea>
                                         </motion.div>
- 
+
                                         <div className="text-center pt-8">
                                             <button
                                                 type="submit"
                                                 className="inline-flex flex-col items-center justify-center px-12 py-5 rounded-[2rem] bg-brand-red-dark text-white font-extrabold text-lg tracking-widest uppercase hover:bg-brand-red-light hover:shadow-[0_20px_40px_rgba(192,0,0,0.3)] transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-auto"
                                             >
                                                 <div className="flex items-center">
-                                                    Submit Registration
+                                                    Submit Message
                                                     <FaArrowRight className="ml-3 text-sm" />
                                                 </div>
                                             </button>
                                         </div>
                                     </form>
+
+                                    {/* Success Overlay */}
+                                    <AnimatePresence>
+                                        {isSubmitted && (
+                                            <motion.div 
+                                                initial={{ opacity: 0, scale: 0.9 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                exit={{ opacity: 0, scale: 0.9 }}
+                                                className="absolute inset-0 z-20 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-10"
+                                            >
+                                                <div className="w-20 h-20 bg-[#25D366]/10 rounded-full flex items-center justify-center mb-6">
+                                                    <svg className="w-10 h-10 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                                </div>
+                                                <h3 className="text-3xl font-black mb-4">Request Sent!</h3>
+                                                <p className="text-brand-text-muted text-lg mb-8 max-w-sm">
+                                                    We are redirecting you to WhatsApp and your Email to finalize the enquiry for <strong>{data.title}</strong>.
+                                                </p>
+                                                <button 
+                                                    onClick={() => setIsSubmitted(false)}
+                                                    className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-red-light transition-all"
+                                                >
+                                                    Send Another
+                                                </button>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
  
                                 </motion.div>
                             </TiltWrapper>
