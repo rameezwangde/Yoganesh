@@ -212,10 +212,10 @@ const divisionData = {
         tagline: 'Kinetic Artistry. Cardio Flow.',
         overview: 'Dance is the ultimate expression of human movement. Our classes merge athletic demand with artistic freedom, creating a high-energy environment that builds coordination and cardiovascular endurance.',
         programs: [
-            { name: 'Classical & Grace', time: 'Ballet | Contemporary | Modern', desc: 'Build a foundation of technical precision and ethereal movement with our elite classical programs.' },
-            { name: 'Cultural Roots', time: 'Indian Classical | Folk', desc: 'Explore the divine rhythm and storytelling power of global heritage dances.' },
-            { name: 'Urban & Street', time: 'Hip Hop | Breakdancing', desc: 'Fast-paced, high-precision rhythmic movement set to the latest global beats.' },
-            { name: 'Latin Passion', time: 'Salsa | Tango | Flamenco', desc: 'Experience the infectious heat and intimate conversation of world-class partner dancing.' }
+            { name: 'Classical & Grace', time: 'Ballet | Contemporary | Modern', desc: 'Build a foundation of technical precision and ethereal movement with our elite classical programs.', img: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop', size: 'large', markers: ['Technical Precision', 'Core Strength', 'Ethereal Flow'] },
+            { name: 'Cultural Roots', time: 'Indian Classical | Folk', desc: 'Explore the divine rhythm and storytelling power of global heritage dances.', img: 'https://i.pinimg.com/originals/70/e3/5d/70e35dbed223120593f2b9064bbd4291.jpg', size: 'medium', markers: ['Storytelling', 'Spiritual Rhythm', 'Heritage'] },
+            { name: 'Urban & Street', time: 'Hip Hop | Breakdancing', desc: 'Fast-paced, high-precision rhythmic movement set to the latest global beats.', img: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop', size: 'medium', markers: ['Street Energy', 'Power Moves', 'Global Beats'] },
+            { name: 'Latin Passion', time: 'Salsa | Tango | Flamenco', desc: 'Experience the infectious heat and intimate conversation of world-class partner dancing.', img: 'https://tse2.mm.bing.net/th/id/OIP.0TrHxcSXccdNma7fBo5jOgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', size: 'large', markers: ['Partner Connection', 'Rhythmic Heat', 'Social Connectivity'] }
         ],
         uniqueSection: {
             title: 'The Global Gallery',
