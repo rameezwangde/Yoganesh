@@ -144,11 +144,11 @@ const divisionData = {
             desc: 'We track and optimize your progress through eight core pillars of human capability to ensure a balanced, bulletproof physique.',
             isLargeGrid: true,
             items: [
-                { label: 'Nutrition & Dietitian', detail: 'Personalized fueling strategies based on blood chemistry and goals.', img: divFitnessImg },
-                { label: 'CrossFit', detail: 'High-intensity functional movement for total athletic capability.', img: divFitnessImg },
-                { label: 'Pilates', detail: 'Deep core stabilization and postural alignment through fluid resistance.', img: divFitnessImg },
-                { label: 'Zumba', detail: 'High-energy rhythmic cardio blending world beats with athletic flow.', img: divFitnessImg },
-                { label: 'Aerial', detail: 'Gravity-defying strength and flexibility using silk hammocks.', img: divFitnessImg }
+                { label: 'Nutrition & Dietitian', detail: 'Personalized fueling strategies based on blood chemistry and goals.', img: 'https://th.bing.com/th/id/OIP.fdF8lQHdoMyYdEeGzTPsBgHaE7?w=291&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3' },
+                { label: 'CrossFit', detail: 'High-intensity functional movement for total athletic capability.', img: 'https://img.freepik.com/premium-photo/group-young-athletes-crossfit-gym-doing-variety-exercise-routines-while-trainer-other-members-group-cheer-them_378494-472.jpg?w=2000' },
+                { label: 'Pilates', detail: 'Deep core stabilization and postural alignment through fluid resistance.', img: 'https://img.freepik.com/premium-photo/people-stretching-pilates-reformers_126745-3577.jpg?w=2000' },
+                { label: 'Zumba', detail: 'High-energy rhythmic cardio blending world beats with athletic flow.', img: 'https://www.verywellfit.com/thmb/SaUyT2h2ujEDx4zCAU0ilFclWqI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4688722-GettyImages-950806258-06e1e050ab184f3694fd96017c9a42ee.jpg' },
+                { label: 'Aerial', detail: 'Gravity-defying strength and flexibility using silk hammocks.', img: 'https://tse3.mm.bing.net/th/id/OIP.Zjx_5qIQj2qW4oj5JsNJIQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' }
             ]
         },
         benefits: [
@@ -273,30 +273,30 @@ const divisionData = {
             desc: 'Explore our comprehensive conservatory featuring 23 distinct instruments, each with its own unique sonic signature and technical path.',
             isLargeGrid: true,
             items: [
-                { label: 'Guitar', detail: 'The versatile soul of modern music. For rhythmic and melodic freedom.', img: galleryStringsWest },
-                { label: 'Violin', detail: 'Elegant complexity and emotional depth. For technical excellence.', img: galleryStringsWest },
-                { label: 'Cello', detail: 'Profound resonance mimicking the human voice. For deep emotional impact.', img: galleryStringsWest },
-                { label: 'Piano', detail: 'The king of instruments, a complete musical foundation. For theory.', img: galleryKeys },
-                { label: 'Sitar', detail: 'The hypnotic, microtonal complexity of the East. For spiritual depth.', img: galleryStringsEast },
-                { label: 'Drums', detail: 'The raw power of heartbeat and timing. For physical musicians.', img: galleryRhythmWind },
-                { label: 'Keyboard', detail: 'The gateway to digital soundscapes and theory. For producers.', img: galleryKeys },
-                { label: 'Flute', detail: 'Ethereal breath control and soaring melodies. For grace.', img: galleryRhythmWind },
-                { label: 'Harmonium', detail: 'The spiritual heart of classical resonance. For vocalists.', img: galleryKeys },
-                { label: 'Octapad', detail: 'Precision electronic percussion. For tech-savvy beat makers.', img: galleryRhythmWind },
-                { label: 'Violin', detail: 'Elegant complexity and emotional depth. For technical excellence.', img: galleryStringsWest },
-                { label: 'Organ', detail: 'Majestic scale and harmonic richness. For grand sound lovers.', img: galleryKeys },
-                { label: 'Tuba', detail: 'The deep, brassy anchor of the low end. For foundations.', img: galleryRhythmWind },
-                { label: 'Viola', detail: 'The warm, mellow middle of the string family. For a rich, alto voice.', img: galleryStringsWest },
-                { label: 'Harp', detail: 'Celestial strings and shimmering arpeggios. For an intricate craft.', img: galleryStringsWest },
-                { label: 'Banjo', detail: 'Bright, percussive energy with a distinctive twang. For folk lovers.', img: galleryStringsWest },
-                { label: 'Ukulele', detail: 'Portable joy and bright, island-inspired tones. For beginners.', img: galleryStringsWest },
-                { label: 'Mandolin', detail: 'High-pitched, double-stringed rhythmic brilliance. For folk texture.', img: galleryStringsWest },
-                { label: 'Veena', detail: 'The divine instrument of pure celestial vibration. For masters.', img: galleryStringsEast },
-                { label: 'Sarangi', detail: 'The "voice of a hundred colors," a hauntingly vocal soul.', img: galleryStringsEast },
-                { label: 'Balalaika', detail: 'The triangular folk charm of Slavic heritage. For ethnic character.', img: galleryStringsEast },
-                { label: 'Synthesizer', detail: 'Boundless sonic exploration and sound design. For futurists.', img: galleryKeys },
-                { label: 'Accordion', detail: 'The portable orchestra of rhythm and melody. For folk lovers.', img: galleryKeys },
-                { label: 'Lute', detail: 'The ancient, delicate ancestor of the guitar. For early music lovers.', img: galleryStringsEast }
+                { label: 'Guitar', detail: 'The versatile soul of modern music. For rhythmic and melodic freedom.', img: 'https://cdn.mos.cms.futurecdn.net/C2845HQhUYoWYJK3zMkKiX.jpg' },
+                { label: 'Violin', detail: 'Elegant complexity and emotional depth. For technical excellence.', img: 'https://tse3.mm.bing.net/th/id/OIP.DZPXUi-Z_vNB8sdkIZNqlAHaEu?w=1332&h=850&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Cello', detail: 'Profound resonance mimicking the human voice. For deep emotional impact.', img: 'https://tse3.mm.bing.net/th/id/OIP.1-EUVFhsNUGeakY8vZvAbgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Piano', detail: 'The king of instruments, a complete musical foundation. For theory.', img: 'https://th.bing.com/th/id/OIP.rUTJG1rEeRhEiQfZaZnQowHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Sitar', detail: 'The hypnotic, microtonal complexity of the East. For spiritual depth.', img: 'https://www.amritmusic.com/wp-content/uploads/2024/09/Sitar.jpg' },
+                { label: 'Drums', detail: 'The raw power of heartbeat and timing. For physical musicians.', img: 'https://tse4.mm.bing.net/th/id/OIP.Db2OduDlTECdvkKAUy5brQHaE6?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Keyboard', detail: 'The gateway to digital soundscapes and theory. For producers.', img: 'https://tse2.mm.bing.net/th/id/OIP.Y3eiZHMW9B95Qth9m1i7WgHaEj?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Flute', detail: 'Ethereal breath control and soaring melodies. For grace.', img: 'https://th.bing.com/th/id/OIP.WSipvTy9x5qA2GjPKNr3agHaE1?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Harmonium', detail: 'The spiritual heart of classical resonance. For vocalists.', img: 'https://tse2.mm.bing.net/th/id/OIP.f4iyvjTXrblTzZETl70PtgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Octapad', detail: 'Precision electronic percussion. For tech-savvy beat makers.', img: 'https://static.roland.com/assets/images/products/gallery/octapad_spd-20_pro-bk_angle_gal.jpg' },
+
+                { label: 'Organ', detail: 'Majestic scale and harmonic richness. For grand sound lovers.', img: 'https://tse3.mm.bing.net/th/id/OIP.6XPrTNM4lggO9Mwn3E6LgwHaGO?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Tuba', detail: 'The deep, brassy anchor of the low end. For foundations.', img: 'https://tse3.mm.bing.net/th/id/OIP.gZORNxMFbK0wjnsQaVRNmQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Viola', detail: 'The warm, mellow middle of the string family. For a rich, alto voice.', img: 'https://th.bing.com/th/id/R.c69088499a505ad36da93bb82fe176df?rik=9jy9j94%2bP2Rq3Q&riu=http%3a%2f%2fwww.get-tuned.com%2fimages%2fviola.jpg&ehk=omC7tZSni8EaNtkfPqOgjzZaTHeaAPEtiESENJt7zF8%3d&risl=&pid=ImgRaw&r=0' },
+                { label: 'Harp', detail: 'Celestial strings and shimmering arpeggios. For an intricate craft.', img: 'https://tse3.mm.bing.net/th/id/OIP.jqtNkFwhkEnuZ2QwFOQvNQHaMK?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Banjo', detail: 'Bright, percussive energy with a distinctive twang. For folk lovers.', img: 'https://th.bing.com/th/id/OIP.Ks0g5iOfmdUe1OuLChegqgHaJH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Ukulele', detail: 'Portable joy and bright, island-inspired tones. For beginners.', img: 'https://tse4.mm.bing.net/th/id/OIP.zqs8GH1eGOZHt3pbjrSjTgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Mandolin', detail: 'High-pitched, double-stringed rhythmic brilliance. For folk texture.', img: 'https://www.bhphotovideo.com/images/images1000x1000/washburn_m1k_a_u_m1_pack_americana_series_1727073.jpg' },
+                { label: 'Veena', detail: 'The divine instrument of pure celestial vibration. For masters.', img: 'https://th.bing.com/th/id/R.56d966e5011f2d973067af4347550082?rik=ukNhl9M6SJfB5w&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fveena-png-the-sarasvati-veena-is-an-indian-plucked-string-instrument-it-is-named-after-the-hindu-849.jpg&ehk=ZT4y6PKnujb6ao2%2b%2f8VC30NDRSOKO59AHn84KwN0Tmw%3d&risl=&pid=ImgRaw&r=0' },
+                { label: 'Sarangi', detail: 'The "voice of a hundred colors," a hauntingly vocal soul.', img: 'https://2.bp.blogspot.com/__A2pwgFjGkQ/TFS-qwNMGFI/AAAAAAAAABE/Wvsrh9atoJU/s1600/Sarangi.JPG' },
+                { label: 'Balalaika', detail: 'The triangular folk charm of Slavic heritage. For ethnic character.', img: 'https://tse4.mm.bing.net/th/id/OIP.J7x4iWeyo3lhzyFPtt-9lQHaF-?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Synthesizer', detail: 'Boundless sonic exploration and sound design. For futurists.', img: 'https://tse4.mm.bing.net/th/id/OIP.uZlNs5-5OthWr0YqBtswfwHaDt?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Accordion', detail: 'The portable orchestra of rhythm and melody. For folk lovers.', img: 'https://tse3.mm.bing.net/th/id/OIP.W4QT43rl7IssicIXQrTqegHaHa?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Lute', detail: 'The ancient, delicate ancestor of the guitar. For early music lovers.', img: 'https://tse4.mm.bing.net/th/id/OIP.48EJj1rYtlHXlq2NgeEZXgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' }
             ]
         },
         benefits: [
@@ -1041,19 +1041,7 @@ const DivisionTemplate = () => {
                                                     </p>
                                                 </div>
 
-                                                {/* Secondary Detail Badge */}
-                                                <div className="mt-auto pt-6 flex items-center justify-between relative z-10">
-                                                    <div className="flex -space-x-2">
-                                                        {[1, 2, 3].map(n => (
-                                                            <div key={n} className="w-6 h-6 rounded-full border-2 border-white bg-blue-600/10 flex items-center justify-center">
-                                                                <div className="w-1 h-1 rounded-full bg-blue-600"></div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                    <div className="w-8 h-8 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                                                        <FaArrowRight className="text-blue-600 text-[10px] group-hover:text-white transition-colors" />
-                                                    </div>
-                                                </div>
+
 
                                                 {/* Sophisticated Glow */}
                                                 <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-600/5 blur-[50px] group-hover:bg-blue-600/10 rounded-full transition-all duration-700"></div>
