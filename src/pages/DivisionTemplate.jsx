@@ -224,22 +224,22 @@ const divisionData = {
             items: [
                 { label: 'Ballet', detail: 'The foundation of grace and technical precision. For discipline and ethereal movement.', img: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop' },
                 { label: 'Contemporary', detail: 'Artistic freedom merged with athletic technique. For expressive and versatile movers.', img: 'https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Bharatanatyam', detail: 'The mathematical precision of South Indian storytelling. For technical mastery.', img: 'https://images.unsplash.com/photo-1594145070006-25d8624d7751?q=80&w=2000&auto=format&fit=crop' },
+                { label: 'Bharatanatyam', detail: 'The mathematical precision of South Indian storytelling. For technical mastery.', img: 'https://i.pinimg.com/originals/70/e3/5d/70e35dbed223120593f2b9064bbd4291.jpg' },
                 { label: 'Hip Hop', detail: 'Urban culture, rhythmic bounce, and raw style. For street-level energy and flow.', img: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Salsa', detail: 'The infectious, rhythmic heat of Latin passion. For social connectivity.', img: 'https://images.unsplash.com/photo-1504609813442-a8924e83f73e?q=80&w=2000&auto=format&fit=crop' },
+                { label: 'Salsa', detail: 'The infectious, rhythmic heat of Latin passion. For social connectivity.', img: 'https://tse2.mm.bing.net/th/id/OIP.0TrHxcSXccdNma7fBo5jOgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
                 { label: 'Kathak', detail: 'The mesmerizing footwork and pirouettes of the North. For rhythmic complexity.', img: 'https://images.unsplash.com/photo-1612459284970-e8f027596582?q=80&w=2000&auto=format&fit=crop' },
                 { label: 'Jazz', detail: 'Explosive energy, syncopation, and personality. For performance-focused dancers.', img: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2000&auto=format&fit=crop' },
                 { label: 'Tango', detail: 'The dramatic, intimate conversation of two souls. For precision and intensity.', img: 'https://images.unsplash.com/photo-1516475429286-465d815a0df7?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Breakdancing', detail: 'The ultimate athletic fusion of power and rhythm. For strength and skill.', img: 'https://images.unsplash.com/photo-1537262344922-244d0f4a7c18?q=80&w=2000&auto=format&fit=crop' },
+                { label: 'Breakdancing', detail: 'The ultimate athletic fusion of power and rhythm. For strength and skill.', img: 'https://i.pinimg.com/originals/3e/4a/92/3e4a928b033aa558cf34e222baf2e15f.jpg' },
                 { label: 'Flamenco', detail: 'The powerful, rhythmic fire of Spanish tradition. For expressive strength.', img: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=2000&auto=format&fit=crop' },
                 { label: 'Belly Dance', detail: 'The fluid, isolated artistry of the torso. For core strength and grace.', img: 'https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Odissi', detail: 'The fluid, statuesque beauty of Eastern India. For sculptural poses.', img: 'https://images.unsplash.com/photo-1594145070006-25d8624d7751?q=80&w=2000&auto=format&fit=crop' },
+                { label: 'Odissi', detail: 'The fluid, statuesque beauty of Eastern India. For sculptural poses.', img: 'https://tse4.mm.bing.net/th/id/OIP.pQ0ve-G2vtKc9xrJMW8NjwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },
                 { label: 'Modern', detail: 'Exploring the ground and the soul through movement. For emotional expression.', img: 'https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=2000&auto=format&fit=crop' },
                 { label: 'Bhangra', detail: 'The explosive, joyful power of the harvest. For an intense cardio workout.', img: 'https://images.unsplash.com/photo-1563841930606-67e2bce48b78?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Garba', detail: 'The rhythmic, circular celebration of life. For community and cultural joy.', img: 'https://images.unsplash.com/photo-1594145070006-25d8624d7751?q=80&w=2000&auto=format&fit=crop' },
+                { label: 'Garba', detail: 'The rhythmic, circular celebration of life. For community and cultural joy.', img: 'https://tse2.mm.bing.net/th/id/OIP.4TyxYKzTCrVPONNK0NujQwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
                 { label: 'Ballroom', detail: 'Elegance, partner connection, and social grace. For coordination.', img: 'https://images.unsplash.com/photo-1516475429286-465d815a0df7?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Folk Dances', detail: 'The vibrant heartbeat of community and heritage. For group energy.', img: 'https://images.unsplash.com/photo-1561565551-7890a509923a?q=80&w=2000&auto=format&fit=crop' },
-                { label: 'Indian Classical', detail: 'A divine journey through rhythm and expression. For spiritual connection.', img: 'https://images.unsplash.com/photo-1594145070006-25d8624d7751?q=80&w=2000&auto=format&fit=crop' }
+                { label: 'Folk Dances', detail: 'The vibrant heartbeat of community and heritage. For group energy.', img: 'https://th.bing.com/th/id/OIP.B6Zsq9FuWaG30SYMdRb8uQHaLG?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Indian Classical', detail: 'A divine journey through rhythm and expression. For spiritual connection.', img: 'https://tse1.mm.bing.net/th/id/OIP.VRTBYLw1YdHxYCfA11OQZAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3' }
             ]
         },
         benefits: [
