@@ -91,10 +91,10 @@ const divisionData = {
         tagline: 'Ancient Wisdom. Modern Biology.',
         overview: 'Yoga at YOGANESH is more than just movement; it is a clinical approach to structural integrity and mental clarity. We bridge the gap between traditional asana and contemporary physiological optimization.',
         programs: [
-            { name: 'Vinyasa & Flow', time: 'Ashtanga | Power | Vinyasa', desc: 'High-energy, breath-synchronized sequences designed for cardiovascular flow and structural strength.' },
-            { name: 'Alignment & Therapy', time: 'Hatha | Iyengar | Restorative', desc: 'Precision-focused practices emphasizing skeletal alignment and neuromuscular restoration.' },
-            { name: 'Spiritual Science', time: 'Kundalini | Shuddhikriya', desc: 'Ancient cleansing and energetic protocols to optimize the nervous system and mental focus.' },
-            { name: 'Inclusive Wellness', time: 'Prenatal | Chair | Yin', desc: 'Accessible, specialized protocols for targeted recovery and specific life stages.' }
+            { name: 'Vinyasa & Flow', time: 'Ashtanga | Power | Vinyasa', desc: 'High-energy, breath-synchronized sequences designed for cardiovascular flow and structural strength.', size: 'medium', markers: ['Fluid Transitions', 'Metabolic Fire', 'Dynamic Power'], accent: 'from-orange-500/10 to-amber-500/5' },
+            { name: 'Alignment & Therapy', time: 'Hatha | Iyengar | Restorative', desc: 'Precision-focused practices emphasizing skeletal alignment and neuromuscular restoration.', size: 'medium', markers: ['Skeletal Integrity', 'Props & Precision', 'Spinal Health'], accent: 'from-blue-500/10 to-indigo-500/5' },
+            { name: 'Spiritual Science', time: 'Kundalini | Shuddhikriya', desc: 'Ancient cleansing and energetic protocols to optimize the nervous system and mental focus.', size: 'medium', markers: ['Pranayama Mastery', 'Neural Reset', 'Aura Cleansing'], accent: 'from-purple-500/10 to-fuchsia-500/5' },
+            { name: 'Inclusive Wellness', time: 'Prenatal | Chair | Yin', desc: 'Accessible, specialized protocols for targeted recovery and specific life stages.', size: 'medium', markers: ['Fascia Release', 'Nervous System Healing', 'Adaptive Protocols'], accent: 'from-emerald-500/10 to-teal-500/5' }
         ],
         uniqueSection: {
             title: 'The Asana Gallery',
@@ -134,10 +134,10 @@ const divisionData = {
         tagline: 'Engineered for Peak Performance.',
         overview: 'Elite conditioning is not random. It is calculated, progressive, and intense. Our fitness ecosystem is designed for those who demand measurable results and surgical precision in their training.',
         programs: [
-            { name: 'Strength & Power', time: 'Hypertrophy | Powerlifting', desc: 'Surgical muscle development and raw force production protocols.' },
-            { name: 'Endurance & Flow', time: 'Metabolic | Zumba | Aerial', desc: 'Optimizing aerobic capacity and rhythmic athleticism for total-body vitality.' },
-            { name: 'Core & Control', time: 'Pilates | Functional', desc: 'Building an unbreakable foundation of joint stability and postural integrity.' },
-            { name: 'Fuel & Recovery', time: 'Nutrition | Recovery Lab', desc: 'Personalized metabolic structuring and elite restoration cycles.' }
+            { name: 'Strength & Power', time: 'Hypertrophy | Powerlifting', desc: 'Surgical muscle development and raw force production protocols.', size: 'medium', markers: ['Massive Force', 'Skeletal Load', 'Elite Growth'], accent: 'from-red-500/10 to-orange-500/5' },
+            { name: 'Endurance & Flow', time: 'Metabolic | Zumba | Aerial', desc: 'Optimizing aerobic capacity and rhythmic athleticism for total-body vitality.', size: 'medium', markers: ['V02 Max', 'Agility Flow', 'Cardiac Engine'], accent: 'from-cyan-500/10 to-blue-500/5' },
+            { name: 'Core & Control', time: 'Pilates | Functional', desc: 'Building an unbreakable foundation of joint stability and postural integrity.', size: 'medium', markers: ['Spinal Support', 'Deep Stabilizers', 'Kinetic Link'], accent: 'from-indigo-500/10 to-purple-500/5' },
+            { name: 'Fuel & Recovery', time: 'Nutrition | Recovery Lab', desc: 'Personalized metabolic structuring and elite restoration cycles.', size: 'medium', markers: ['Metabolic Map', 'Macro Precision', 'Cellular Repair'], accent: 'from-rose-500/10 to-pink-500/5' }
         ],
         uniqueSection: {
             title: 'The Performance Matrix',
@@ -172,9 +172,9 @@ const divisionData = {
         tagline: 'The Science of Restoration.',
         overview: 'Recovery is the most underrated phase of performance. Our Wellness Center provides a sanctuary of advanced recovery technology to downshift your nervous system and accelerate cellular repair.',
         programs: [
-            { name: 'Neural Recovery Pods', time: 'Scheduled Sessions', desc: 'Combining infrared light therapy and sound frequencies to induce deep parasympathetic states.' },
-            { name: 'Contrast Therapy', time: 'Open Daily', desc: 'Alternating between advanced cryotherapy and sauna to stimulate systemic blood flow.' },
-            { name: 'Myofascial Release', time: 'Expert Assisted', desc: 'Clinical tissue manipulation to resolve adhesions and restore fluid movement.' }
+            { name: 'Neural Recovery', time: 'Scheduled Sessions', desc: 'Combining infrared light therapy and sound frequencies to induce deep parasympathetic states.', size: 'medium', markers: ['Infrared Tech', 'Delta Waves', 'Neural Reset'], accent: 'from-blue-500/10 to-cyan-500/5' },
+            { name: 'Contrast Therapy', time: 'Open Daily', desc: 'Alternating between advanced cryotherapy and sauna to stimulate systemic blood flow.', size: 'medium', markers: ['Cryo Protocol', 'Heat Shock', 'Vascular Pump'], accent: 'from-blue-700/10 to-red-700/5' },
+            { name: 'Myofascial Release', time: 'Expert Assisted', desc: 'Clinical tissue manipulation to resolve adhesions and restore fluid movement.', size: 'medium', markers: ['Tissue Health', 'Fascia Release', 'Range Restore'], accent: 'from-emerald-500/10 to-teal-500/5' }
         ],
         uniqueSection: {
             title: '8 Dimensions of Holistic Wellness',
@@ -212,10 +212,10 @@ const divisionData = {
         tagline: 'Kinetic Artistry. Cardio Flow.',
         overview: 'Dance is the ultimate expression of human movement. Our classes merge athletic demand with artistic freedom, creating a high-energy environment that builds coordination and cardiovascular endurance.',
         programs: [
-            { name: 'Classical & Grace', time: 'Ballet | Contemporary | Modern', desc: 'Build a foundation of technical precision and ethereal movement with our elite classical programs.', img: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop', size: 'large', markers: ['Technical Precision', 'Core Strength', 'Ethereal Flow'] },
+            { name: 'Classical & Grace', time: 'Ballet | Contemporary | Modern', desc: 'Build a foundation of technical precision and ethereal movement with our elite classical programs.', img: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop', size: 'medium', markers: ['Technical Precision', 'Core Strength', 'Ethereal Flow'] },
             { name: 'Cultural Roots', time: 'Indian Classical | Folk', desc: 'Explore the divine rhythm and storytelling power of global heritage dances.', img: 'https://i.pinimg.com/originals/70/e3/5d/70e35dbed223120593f2b9064bbd4291.jpg', size: 'medium', markers: ['Storytelling', 'Spiritual Rhythm', 'Heritage'] },
             { name: 'Urban & Street', time: 'Hip Hop | Breakdancing', desc: 'Fast-paced, high-precision rhythmic movement set to the latest global beats.', img: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop', size: 'medium', markers: ['Street Energy', 'Power Moves', 'Global Beats'] },
-            { name: 'Latin Passion', time: 'Salsa | Tango | Flamenco', desc: 'Experience the infectious heat and intimate conversation of world-class partner dancing.', img: 'https://tse2.mm.bing.net/th/id/OIP.0TrHxcSXccdNma7fBo5jOgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', size: 'large', markers: ['Partner Connection', 'Rhythmic Heat', 'Social Connectivity'] }
+            { name: 'Latin Passion', time: 'Salsa | Tango | Flamenco', desc: 'Experience the infectious heat and intimate conversation of world-class partner dancing.', img: 'https://tse2.mm.bing.net/th/id/OIP.0TrHxcSXccdNma7fBo5jOgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', size: 'medium', markers: ['Partner Connection', 'Rhythmic Heat', 'Social Connectivity'] }
         ],
         uniqueSection: {
             title: 'The Global Gallery',
@@ -263,10 +263,10 @@ const divisionData = {
         tagline: 'Cognitive Harmony.',
         overview: 'Music is not just a skill—it is a cognitive super-tool. Our music programs focus on the intersection of technical mastery and the therapeutic power of sound for mental health and brain plasticity.',
         programs: [
-            { name: 'Western Strings', time: 'Guitar | Violin | Cello | Viola', desc: 'From the versatile Guitar to the emotional depth of the Cello, master the art of the bow and pluck.' },
-            { name: 'Master Keys', time: 'Piano | Synth | Organ', desc: 'Build a complete musical foundation with the King of instruments and modern sound design.' },
-            { name: 'Eastern Roots', time: 'Sitar | Veena | Sarangi', desc: 'Explore the hypnotic, microtonal complexity and spiritual resonance of the East.' },
-            { name: 'Rhythm & Wind', time: 'Drums | Octapad | Flute', desc: 'Master the heartbeat of timing or the ethereal breath control of soaring melodies.' }
+            { name: 'Western Strings', time: 'Guitar | Violin | Cello | Viola', desc: 'From the versatile Guitar to the emotional depth of the Cello, master the art of the bow and pluck.', size: 'medium', markers: ['Bowing Tech', 'Plucking Control', 'Acoustic Body'], accent: 'from-amber-600/10 to-orange-600/5' },
+            { name: 'Master Keys', time: 'Piano | Synth | Organ', desc: 'Build a complete musical foundation with the King of instruments and modern sound design.', size: 'medium', markers: ['Keyboard Theory', 'Sound Synthesis', 'Grand Scale'], accent: 'from-slate-500/10 to-gray-500/5' },
+            { name: 'Eastern Roots', time: 'Sitar | Veena | Sarangi', desc: 'Explore the hypnotic, microtonal complexity and spiritual resonance of the East.', size: 'medium', markers: ['Raga Structure', 'Meend Mastery', 'Spiritual Depth'], accent: 'from-red-600/10 to-rose-600/5' },
+            { name: 'Rhythm & Wind', time: 'Drums | Octapad | Flute', desc: 'Master the heartbeat of timing or the ethereal breath control of soaring melodies.', size: 'medium', markers: ['Syncopation', 'Breath Control', 'Precision Beat'], accent: 'from-blue-400/10 to-indigo-400/5' }
         ],
         uniqueSection: {
             title: 'The Global Gallery',
@@ -678,10 +678,10 @@ const DivisionTemplate = () => {
                                         className={`group relative rounded-[3rem] overflow-hidden border border-brand-text/5 shadow-sm hover:shadow-2xl transition-all duration-700 ${prog.size === 'large' ? 'md:col-span-7 md:row-span-2' :
                                             prog.size === 'medium' ? 'md:col-span-5 md:row-span-1' :
                                                 'md:col-span-5 md:row-span-1'
-                                            }`}
+                                            } ${!prog.img ? `bg-gradient-to-br ${prog.accent} backdrop-blur-sm` : 'bg-brand-bg-alt'}`}
                                     >
                                         {/* Background Image Overlay */}
-                                        {prog.img && (
+                                        {prog.img ? (
                                             <div className="absolute inset-0 z-0 overflow-hidden">
                                                 <img
                                                     src={prog.img}
@@ -690,16 +690,22 @@ const DivisionTemplate = () => {
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-brand-bg/20 group-hover:from-brand-text/90 group-hover:via-brand-text/40 group-hover:to-transparent transition-all duration-700"></div>
                                             </div>
+                                        ) : (
+                                            /* Abstract Zen Glow for Non-Image Cards */
+                                            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                                                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${prog.accent} blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2`}></div>
+                                                <div className={`absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr ${prog.accent} blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2`}></div>
+                                            </div>
                                         )}
 
                                         <div className="relative z-10 p-10 h-full flex flex-col justify-between">
                                             <div>
                                                 <div className="flex items-center justify-between mb-8">
-                                                    <div className="px-4 py-1.5 bg-brand-bg rounded-full text-[9px] font-black uppercase tracking-widest text-brand-text border border-brand-text/5 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent transition-all">
+                                                    <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent'}`}>
                                                         {prog.time}
                                                     </div>
                                                     <div className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500">
-                                                        {i === 0 ? '🦾' : i === 1 ? '🔬' : '💊'}
+                                                        {i === 0 ? '🦾' : i === 1 ? '🔬' : i === 2 ? '💎' : '💊'}
                                                     </div>
                                                 </div>
 
@@ -718,14 +724,12 @@ const DivisionTemplate = () => {
                                                 {prog.markers && (
                                                     <div className="flex flex-wrap gap-2">
                                                         {prog.markers.map((marker, m) => (
-                                                            <span key={m} className="px-3 py-1 bg-brand-text/5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-brand-text-muted group-hover:bg-white/10 group-hover:text-blue-400 transition-all">
+                                                            <span key={m} className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${!prog.img ? 'bg-white/30 text-brand-text-muted group-hover:bg-white/60 group-hover:text-brand-text' : 'bg-brand-text/5 text-brand-text-muted group-hover:bg-white/10 group-hover:text-blue-400'}`}>
                                                                 {marker}
                                                             </span>
                                                         ))}
                                                     </div>
                                                 )}
-
-
                                             </div>
                                         </div>
                                     </motion.div>
