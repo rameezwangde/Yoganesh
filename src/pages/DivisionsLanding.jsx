@@ -14,7 +14,7 @@ import divMusicImg from '../assets/images/div_music.png'
 
 const divisions = [
     { id: 'health-institute', title: 'Health Institute', icon: '🏥', desc: 'Medical-grade assessments and preventative care.', img: divHealthImg },
-    { id: 'yoga-classes', title: 'Yoga Classes', icon: '🧘', desc: 'Mobility, flexibility, and deep core strength.', img: divYogaImg, link: 'https://yoganeshfitnessclasses.com/' },
+    { id: 'yoga-classes', title: 'Yoga Classes', icon: '🧘', desc: 'Mobility, flexibility, and deep core strength.', img: divYogaImg },
     { id: 'fitness-classes', title: 'Fitness Classes', icon: '⚡', desc: 'Elite strength training and metabolic conditioning.', img: divFitnessImg },
     { id: 'wellness-center', title: 'Wellness Center', icon: '🌿', desc: 'Complete recovery and restoration protocols.', img: divWellnessImg },
     { id: 'dance-classes', title: 'Dance Classes', icon: '💃', desc: 'Kinetic movement and cardiovascular rhythm.', img: divDanceImg },

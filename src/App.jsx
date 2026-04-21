@@ -104,8 +104,7 @@ const AnimatedRoutes = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Custom Yoga Mudra Division Page */}
-          <Route path="/yoga-classes" element={<YogaMudra />} />
+
           {/* Catch specific divisions */}
           <Route path="/:divisionId" element={<DivisionTemplate />} />
         </Routes>

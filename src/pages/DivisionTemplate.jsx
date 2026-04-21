@@ -22,6 +22,13 @@ import courseResearchImg from '../assets/images/course_research.png'
 import serviceBiomechanicalImg from '../assets/images/service_biomechanical.png'
 import servicePhysioImg from '../assets/images/service_physio.png'
 import healthHeroV2 from '../assets/images/health_hero_v2.png'
+import wellnessDimensionsImg from '../assets/images/wellness_dimensions.png'
+import musicGalaxyImg from '../assets/images/music_galaxy.png'
+import galleryStringsWest from '../assets/images/gallery_strings_west.png'
+import galleryStringsEast from '../assets/images/gallery_strings_east.png'
+import galleryKeys from '../assets/images/gallery_keys.png'
+import galleryRhythmWind from '../assets/images/gallery_rhythm_wind.png'
+import galleryDanceClassic from '../assets/images/gallery_dance_classic.png'
 
 const divisionData = {
     'health-institute': {
@@ -75,22 +82,29 @@ const divisionData = {
     'yoga-classes': {
         title: 'Yoga Classes',
         img: divYogaImg,
-        tagline: 'Ancient Lineage. Modern Biomechanics.',
-        overview: 'Experience the synthesis of traditional yogic wisdom and contemporary anatomical science. We go beyond simple poses, focusing on the profound connection between neural pathways, breath, and structural alignment.',
+        tagline: 'Ancient Wisdom. Modern Biology.',
+        overview: 'Yoga at YOGANESH is more than just movement; it is a clinical approach to structural integrity and mental clarity. We bridge the gap between traditional asana and contemporary physiological optimization.',
         programs: [
-            { name: 'Vinyasa Krama', time: '7:00 AM | Daily', desc: 'Intelligent sequencing of postures connected by conscious breath and internal focus.' },
-            { name: 'Structural Hatha', time: '6:30 PM | Tue-Thu', desc: 'Focusing on isometric holds and absolute alignment to build resilient joints and core power.' },
-            { name: 'Dhyana & Pranayama', time: '5:30 AM | Sun', desc: 'Advanced breathwork and meditative techniques for autonomic nervous system regulation.' }
+            { name: 'Vinyasa & Flow', time: 'Ashtanga | Power | Vinyasa', desc: 'High-energy, breath-synchronized sequences designed for cardiovascular flow and structural strength.' },
+            { name: 'Alignment & Therapy', time: 'Hatha | Iyengar | Restorative', desc: 'Precision-focused practices emphasizing skeletal alignment and neuromuscular restoration.' },
+            { name: 'Spiritual Science', time: 'Kundalini | Shuddhikriya', desc: 'Ancient cleansing and energetic protocols to optimize the nervous system and mental focus.' },
+            { name: 'Inclusive Wellness', time: 'Prenatal | Chair | Yin', desc: 'Accessible, specialized protocols for targeted recovery and specific life stages.' }
         ],
         uniqueSection: {
-            title: 'The 8 Limbs Integration',
-            desc: 'Our curriculum is rooted in the Ashtanga philosophy, ensuring your practice transcends the physical mat and integrates into your cognitive and emotional life.',
+            title: 'The Asana Gallery',
+            desc: 'Explore ten distinct yogic paths, each engineered to target specific dimensions of your physical and energetic evolution.',
+            isLargeGrid: true,
             items: [
-                { label: 'Yama & Niyama', detail: 'Ethical & Self-discipline' },
-                { label: 'Asana', detail: 'Physical Integrity' },
-                { label: 'Pranayama', detail: 'Vital Energy Mastery' },
-                { label: 'Pratyahara', detail: 'Sensory Withdrawal' },
-                { label: 'Dharana', detail: 'Absolute Concentration' }
+                { label: 'Ashtanga Yoga', detail: 'A dynamic, physically demanding practice following a rigorous traditional sequence.', img: divYogaImg },
+                { label: 'Vinyasa Yoga', detail: 'Fluid, breath-synchronized movement that flows seamlessly through creative sequences.', img: divYogaImg },
+                { label: 'Power Yoga', detail: 'A vigorous, fitness-based approach focused on building raw functional strength.', img: divYogaImg },
+                { label: 'Hatha & Yin Yoga', detail: 'Balancing active alignment with deep, meditative long-holds for fascia release.', img: divYogaImg },
+                { label: 'Restorative Yoga', detail: 'Gentle, prop-supported poses designed for deep nervous system healing.', img: divYogaImg },
+                { label: 'Iyengar Yoga', detail: 'Precision-focused practice using props to achieve perfect structural alignment.', img: divYogaImg },
+                { label: 'Kundalini Yoga', detail: 'Spiritual practice involving chanting and breathwork to awaken energetic flow.', img: divYogaImg },
+                { label: 'Hot & Bikram Yoga', detail: 'Intensive sequences in a heated environment for detoxification and flexibility.', img: divYogaImg },
+                { label: 'Prenatal & Chair Yoga', detail: 'Specialized, accessible practices for expectant mothers or limited mobility.', img: divYogaImg },
+                { label: 'Shuddhikriya', detail: 'Traditional yogic cleansing techniques to purify the body and clarify the mind.', img: divYogaImg }
             ]
         },
         benefits: ['Neuromuscular coordination', 'Stress hormone regulation', 'Extraordinary mobility', 'Hyper-focus & mental clarity'],
@@ -109,19 +123,21 @@ const divisionData = {
         tagline: 'Engineered for Peak Performance.',
         overview: 'Elite conditioning is not random. It is calculated, progressive, and intense. Our fitness ecosystem is designed for those who demand measurable results and surgical precision in their training.',
         programs: [
-            { name: 'Hypertrophy Lab', time: '6:00 AM / PM', desc: 'Science-backed resistance training focused on structural balance and muscle development.' },
-            { name: 'Metabolic Conditioning', time: 'Daily High-Intensity', desc: 'Energy system development designed to torch body fat while preserving lean tissue.' },
-            { name: 'Power & Explosiveness', time: 'Sat Morning', desc: 'Olympic lifting and plyometric protocols to enhance fast-twitch fiber recruitment.' }
+            { name: 'Strength & Power', time: 'Hypertrophy | Powerlifting', desc: 'Surgical muscle development and raw force production protocols.' },
+            { name: 'Endurance & Flow', time: 'Metabolic | Zumba | Aerial', desc: 'Optimizing aerobic capacity and rhythmic athleticism for total-body vitality.' },
+            { name: 'Core & Control', time: 'Pilates | Functional', desc: 'Building an unbreakable foundation of joint stability and postural integrity.' },
+            { name: 'Fuel & Recovery', time: 'Nutrition | Recovery Lab', desc: 'Personalized metabolic structuring and elite restoration cycles.' }
         ],
         uniqueSection: {
             title: 'The Performance Matrix',
-            desc: 'We track your progress through five core pillars of human capability to ensure a balanced, bulletproof physique.',
+            desc: 'We track and optimize your progress through eight core pillars of human capability to ensure a balanced, bulletproof physique.',
+            isLargeGrid: true,
             items: [
-                { label: 'Relative Strength', detail: 'Force production per kg' },
-                { label: 'VO2 Max', detail: 'Aerobic capacity limit' },
-                { label: 'Power Output', detail: 'Explosive rate of force' },
-                { label: 'Kinetic Stability', detail: 'Joint integrity & control' },
-                { label: 'Metabolic Flux', detail: 'Energy efficiency' }
+                { label: 'Nutrition & Dietitian', detail: 'Personalized fueling strategies based on blood chemistry and goals.', img: divFitnessImg },
+                { label: 'CrossFit', detail: 'High-intensity functional movement for total athletic capability.', img: divFitnessImg },
+                { label: 'Pilates', detail: 'Deep core stabilization and postural alignment through fluid resistance.', img: divFitnessImg },
+                { label: 'Zumba', detail: 'High-energy rhythmic cardio blending world beats with athletic flow.', img: divFitnessImg },
+                { label: 'Aerial', detail: 'Gravity-defying strength and flexibility using silk hammocks.', img: divFitnessImg }
             ]
         },
         benefits: ['Rapid body recomposition', 'Elite athletic capability', 'Hormonal optimization', 'Unbreakable joint health'],
@@ -145,14 +161,18 @@ const divisionData = {
             { name: 'Myofascial Release', time: 'Expert Assisted', desc: 'Clinical tissue manipulation to resolve adhesions and restore fluid movement.' }
         ],
         uniqueSection: {
-            title: 'Recovery Protocols',
-            desc: 'Our restoration cycles are designed to reset your autonomic nervous system from "Fight or Flight" to "Rest and Digest".',
+            title: '8 Dimensions of Holistic Wellness',
+            desc: 'True restoration requires a multi-faceted approach. We evaluate and optimize your life across these eight core pillars of human vitality.',
+            img: wellnessDimensionsImg,
             items: [
-                { label: 'Inflammation Reset', detail: 'Cellular debris clearance' },
-                { label: 'Sleep Architecture', detail: 'Deep rest optimization' },
-                { label: 'Cortisol Flushing', detail: 'Stress hormone removal' },
-                { label: 'Fascial Hydration', detail: 'Connective tissue repair' },
-                { label: 'Vagus Nerve Stimulation', detail: 'Nervous system tone' }
+                { label: 'Physical', detail: 'Nourishing your body through movement, nutrition, and sleep. For those seeking vitality and disease prevention.' },
+                { label: 'Emotional', detail: 'Understanding your feelings and coping with stress. For those seeking inner peace and emotional resilience.' },
+                { label: 'Intellectual', detail: 'Expanding knowledge and creative abilities. For lifelong learners and creative minds.' },
+                { label: 'Social', detail: 'Developing connection and support systems. For those seeking community and deeper relationships.' },
+                { label: 'Spiritual', detail: 'Expanding sense of purpose and meaning. For seekers of higher purpose and mindfulness.' },
+                { label: 'Environmental', detail: 'Creating stimulating environments that support well-being. For those seeking harmony with their surroundings.' },
+                { label: 'Vocational', detail: 'Deriving satisfaction through purposeful work. For professionals seeking career-life balance.' },
+                { label: 'Financial', detail: 'Satisfaction with current and future financial status. For those seeking stability and stress reduction.' }
             ]
         },
         benefits: ['Accelerated tissue repair', 'Decreased systemic inflammation', 'Profound psychological rest', 'Enhanced immune function'],
@@ -171,19 +191,34 @@ const divisionData = {
         tagline: 'Kinetic Artistry. Cardio Flow.',
         overview: 'Dance is the ultimate expression of human movement. Our classes merge athletic demand with artistic freedom, creating a high-energy environment that builds coordination and cardiovascular endurance.',
         programs: [
-            { name: 'Contemporary Fusion', time: 'Mon, Wed - 6:30 PM', desc: 'Merging technical modern dance with interpretive emotional storytelling.' },
-            { name: 'Urban Choreography', time: 'Tue, Thu - 7:30 PM', desc: 'Fast-paced, high-precision rhythmic movement set to the latest global beats.' },
-            { name: 'Rhythmic Cardio', time: 'Sat - 10:00 AM', desc: 'A relentless calorie-burning session disguised as an electrifying dance party.' }
+            { name: 'Classical & Grace', time: 'Ballet | Contemporary | Modern', desc: 'Build a foundation of technical precision and ethereal movement with our elite classical programs.' },
+            { name: 'Cultural Roots', time: 'Indian Classical | Folk', desc: 'Explore the divine rhythm and storytelling power of global heritage dances.' },
+            { name: 'Urban & Street', time: 'Hip Hop | Breakdancing', desc: 'Fast-paced, high-precision rhythmic movement set to the latest global beats.' },
+            { name: 'Latin Passion', time: 'Salsa | Tango | Flamenco', desc: 'Experience the infectious heat and intimate conversation of world-class partner dancing.' }
         ],
         uniqueSection: {
-            title: 'The Rhythmic Spectrum',
-            desc: 'We explore movement across multiple stylistic dimensions to build a versatile and expressive physical vocabulary.',
+            title: 'The Global Gallery',
+            desc: 'Explore our world-class dance studio featuring 18 distinct styles, from technical classical forms to explosive urban and cultural energy.',
+            isLargeGrid: true,
             items: [
-                { label: 'Fluidity', detail: 'Seamless transitions' },
-                { label: 'Precision', detail: 'Isolated muscle control' },
-                { label: 'Stamina', detail: 'Unrelenting cardio' },
-                { label: 'Expression', detail: 'Emotional projection' },
-                { label: 'Musicality', detail: 'Timing & Syncopation' }
+                { label: 'Ballet', detail: 'The foundation of grace and technical precision. For discipline and ethereal movement.', img: galleryDanceClassic },
+                { label: 'Contemporary', detail: 'Artistic freedom merged with athletic technique. For expressive and versatile movers.', img: galleryDanceClassic },
+                { label: 'Bharatanatyam', detail: 'The mathematical precision of South Indian storytelling. For technical mastery.', img: galleryDanceClassic },
+                { label: 'Hip Hop', detail: 'Urban culture, rhythmic bounce, and raw style. For street-level energy and flow.', img: galleryDanceClassic },
+                { label: 'Salsa', detail: 'The infectious, rhythmic heat of Latin passion. For social connectivity.', img: galleryDanceClassic },
+                { label: 'Kathak', detail: 'The mesmerizing footwork and pirouettes of the North. For rhythmic complexity.', img: galleryDanceClassic },
+                { label: 'Jazz', detail: 'Explosive energy, syncopation, and personality. For performance-focused dancers.', img: galleryDanceClassic },
+                { label: 'Tango', detail: 'The dramatic, intimate conversation of two souls. For precision and intensity.', img: galleryDanceClassic },
+                { label: 'Breakdancing', detail: 'The ultimate athletic fusion of power and rhythm. For strength and skill.', img: galleryDanceClassic },
+                { label: 'Flamenco', detail: 'The powerful, rhythmic fire of Spanish tradition. For expressive strength.', img: galleryDanceClassic },
+                { label: 'Belly Dance', detail: 'The fluid, isolated artistry of the torso. For core strength and grace.', img: galleryDanceClassic },
+                { label: 'Odissi', detail: 'The fluid, statuesque beauty of Eastern India. For sculptural poses.', img: galleryDanceClassic },
+                { label: 'Modern', detail: 'Exploring the ground and the soul through movement. For emotional expression.', img: galleryDanceClassic },
+                { label: 'Bhangra', detail: 'The explosive, joyful power of the harvest. For an intense cardio workout.', img: galleryDanceClassic },
+                { label: 'Garba', detail: 'The rhythmic, circular celebration of life. For community and cultural joy.', img: galleryDanceClassic },
+                { label: 'Ballroom', detail: 'Elegance, partner connection, and social grace. For coordination.', img: galleryDanceClassic },
+                { label: 'Folk Dances', detail: 'The vibrant heartbeat of community and heritage. For group energy.', img: galleryDanceClassic },
+                { label: 'Indian Classical', detail: 'A divine journey through rhythm and expression. For spiritual connection.', img: galleryDanceClassic }
             ]
         },
         benefits: ['Superior coordination', 'High-caloric expenditure', 'Enhanced endorphin release', 'Social connectivity'],
@@ -202,27 +237,48 @@ const divisionData = {
         tagline: 'Cognitive Harmony.',
         overview: 'Music is not just a skill—it is a cognitive super-tool. Our music programs focus on the intersection of technical mastery and the therapeutic power of sound for mental health and brain plasticity.',
         programs: [
-            { name: 'Instrumental Mastery', time: 'Guitar | Piano | Drums', desc: 'One-on-one sessions focusing on theory, technique, and creative improvisation.' },
-            { name: 'Vocal Performance', time: 'Individual / Group', desc: 'Developing breath control, pitch accuracy, and public performance confidence.' },
-            { name: 'Sonic Therapy', time: 'Sun Afternoon', desc: 'Understanding the use of music and frequency for emotional regulation and focus.' }
+            { name: 'Western Strings', time: 'Guitar | Violin | Cello | Viola', desc: 'From the versatile Guitar to the emotional depth of the Cello, master the art of the bow and pluck.' },
+            { name: 'Master Keys', time: 'Piano | Synth | Organ', desc: 'Build a complete musical foundation with the King of instruments and modern sound design.' },
+            { name: 'Eastern Roots', time: 'Sitar | Veena | Sarangi', desc: 'Explore the hypnotic, microtonal complexity and spiritual resonance of the East.' },
+            { name: 'Rhythm & Wind', time: 'Drums | Octapad | Flute', desc: 'Master the heartbeat of timing or the ethereal breath control of soaring melodies.' }
         ],
         uniqueSection: {
-            title: 'Cognitive Symphony',
-            desc: 'Learning music restructures the brain, enhancing areas responsible for language, memory, and executive function.',
+            title: 'The Global Gallery',
+            desc: 'Explore our comprehensive conservatory featuring 23 distinct instruments, each with its own unique sonic signature and technical path.',
+            isLargeGrid: true,
             items: [
-                { label: 'Neural Plasticity', detail: 'New brain connections' },
-                { label: 'Auditory Processing', detail: 'Sharper listening skills' },
-                { label: 'Emotional IQ', detail: 'Creative catharsis' },
-                { label: 'Memory Retention', detail: 'Pattern recognition' },
-                { label: 'Fine Motor Control', detail: 'Manual dexterity' }
+                { label: 'Guitar', detail: 'The versatile soul of modern music. For rhythmic and melodic freedom.', img: galleryStringsWest },
+                { label: 'Violin', detail: 'Elegant complexity and emotional depth. For technical excellence.', img: galleryStringsWest },
+                { label: 'Cello', detail: 'Profound resonance mimicking the human voice. For deep emotional impact.', img: galleryStringsWest },
+                { label: 'Piano', detail: 'The king of instruments, a complete musical foundation. For theory.', img: galleryKeys },
+                { label: 'Sitar', detail: 'The hypnotic, microtonal complexity of the East. For spiritual depth.', img: galleryStringsEast },
+                { label: 'Drums', detail: 'The raw power of heartbeat and timing. For physical musicians.', img: galleryRhythmWind },
+                { label: 'Keyboard', detail: 'The gateway to digital soundscapes and theory. For producers.', img: galleryKeys },
+                { label: 'Flute', detail: 'Ethereal breath control and soaring melodies. For grace.', img: galleryRhythmWind },
+                { label: 'Harmonium', detail: 'The spiritual heart of classical resonance. For vocalists.', img: galleryKeys },
+                { label: 'Octapad', detail: 'Precision electronic percussion. For tech-savvy beat makers.', img: galleryRhythmWind },
+                { label: 'Violin', detail: 'Elegant complexity and emotional depth. For technical excellence.', img: galleryStringsWest },
+                { label: 'Organ', detail: 'Majestic scale and harmonic richness. For grand sound lovers.', img: galleryKeys },
+                { label: 'Tuba', detail: 'The deep, brassy anchor of the low end. For foundations.', img: galleryRhythmWind },
+                { label: 'Viola', detail: 'The warm, mellow middle of the string family. For a rich, alto voice.', img: galleryStringsWest },
+                { label: 'Harp', detail: 'Celestial strings and shimmering arpeggios. For an intricate craft.', img: galleryStringsWest },
+                { label: 'Banjo', detail: 'Bright, percussive energy with a distinctive twang. For folk lovers.', img: galleryStringsWest },
+                { label: 'Ukulele', detail: 'Portable joy and bright, island-inspired tones. For beginners.', img: galleryStringsWest },
+                { label: 'Mandolin', detail: 'High-pitched, double-stringed rhythmic brilliance. For folk texture.', img: galleryStringsWest },
+                { label: 'Veena', detail: 'The divine instrument of pure celestial vibration. For masters.', img: galleryStringsEast },
+                { label: 'Sarangi', detail: 'The "voice of a hundred colors," a hauntingly vocal soul.', img: galleryStringsEast },
+                { label: 'Balalaika', detail: 'The triangular folk charm of Slavic heritage. For ethnic character.', img: galleryStringsEast },
+                { label: 'Synthesizer', detail: 'Boundless sonic exploration and sound design. For futurists.', img: galleryKeys },
+                { label: 'Accordion', detail: 'The portable orchestra of rhythm and melody. For folk lovers.', img: galleryKeys },
+                { label: 'Lute', detail: 'The ancient, delicate ancestor of the guitar. For early music lovers.', img: galleryStringsEast }
             ]
         },
         benefits: ['Enhanced brain plasticity', 'Emotional stress outlet', 'Discipline and patience', 'Increased focus duration'],
         who: 'Children and adults seeking intellectual enrichment and a powerful creative outlet.',
         navItems: [
             { id: 'overview', label: 'Insight' },
-            { id: 'programs', label: 'Learning' },
-            { id: 'unique', label: 'Mind' },
+            { id: 'programs', label: 'Conservatory' },
+            { id: 'unique', label: 'Gallery' },
             { id: 'benefits', label: 'Cognition' },
             { id: 'enquiry', label: 'Create' }
         ]
@@ -787,62 +843,93 @@ const DivisionTemplate = () => {
                             </div>
 
                             <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-                                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-
-                                    <div className="w-full lg:w-1/2">
-                                        <motion.div
-                                            initial={{ opacity: 0, x: -40 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            className="space-y-8"
-                                        >
-                                            <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-blue-600">System Protocol</div>
-                                            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none italic uppercase">{data.uniqueSection.title}</h2>
-                                            <p className="text-xl text-white/70 leading-relaxed max-w-xl">
+                                {data.uniqueSection.isLargeGrid ? (
+                                    <div className="space-y-16">
+                                        <div className="text-center max-w-3xl mx-auto space-y-6">
+                                            <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-blue-600">The Conservatory</div>
+                                            <h2 className="text-5xl md:text-8xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
+                                            <p className="text-xl text-white/70 leading-relaxed">
                                                 {data.uniqueSection.desc}
                                             </p>
+                                        </div>
 
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
-                                                {data.uniqueSection.items.map((item, idx) => (
-                                                    <motion.div
-                                                        key={idx}
-                                                        initial={{ opacity: 0, y: 10 }}
-                                                        whileInView={{ opacity: 1, y: 0 }}
-                                                        transition={{ delay: idx * 0.1 }}
-                                                        className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group"
-                                                    >
-                                                        <h4 className="text-blue-600 font-black text-sm uppercase tracking-widest mb-1 group-hover:translate-x-1 transition-transform">{item.label}</h4>
-                                                        <p className="text-white/50 text-sm">{item.detail}</p>
-                                                    </motion.div>
-                                                ))}
-                                            </div>
-                                        </motion.div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                            {data.uniqueSection.items.map((item, idx) => (
+                                                <motion.div
+                                                    key={idx}
+                                                    initial={{ opacity: 0, y: 20 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    transition={{ delay: idx * 0.05 }}
+                                                    className="group relative bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden hover:bg-white/10 transition-all duration-500"
+                                                >
+                                                    <div className="aspect-video overflow-hidden">
+                                                        <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100" />
+                                                    </div>
+                                                    <div className="p-8">
+                                                        <h4 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{item.label}</h4>
+                                                        <p className="text-white/50 text-sm leading-relaxed">{item.detail}</p>
+                                                    </div>
+                                                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-blue-600/20 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:bg-blue-600 transition-colors">
+                                                        <FaArrowRight className="text-white text-xs" />
+                                                    </div>
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
+                                ) : (
+                                    <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                        <div className="w-full lg:w-1/2">
+                                            <motion.div
+                                                initial={{ opacity: 0, x: -40 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                className="space-y-8"
+                                            >
+                                                <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-blue-600">System Protocol</div>
+                                                <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
+                                                <p className="text-xl text-white/70 leading-relaxed max-w-xl">
+                                                    {data.uniqueSection.desc}
+                                                </p>
 
-                                    <div className="w-full lg:w-1/2">
-                                        <TiltWrapper intensity={10}>
-                                            <div className="relative group">
-                                                {/* Decorative Frame */}
-                                                <div className="absolute -inset-4 border border-white/10 rounded-[3rem] pointer-events-none group-hover:scale-105 transition-transform duration-700"></div>
-                                                <div className="absolute -inset-8 border border-white/5 rounded-[4rem] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
-
-                                                <img
-                                                    src={divisionId === 'yoga-classes' ? yogaSpecialImg : divisionId === 'fitness-classes' ? fitnessSpecialImg : data.img}
-                                                    alt={data.uniqueSection.title}
-                                                    className="rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] w-full aspect-[4/5] object-cover relative z-10"
-                                                />
-
-                                                {/* Floating Stat Box */}
-                                                <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-3xl shadow-2xl z-20 max-w-[240px] transform hover:scale-105 transition-transform hidden md:block">
-                                                    <div className="text-white font-black text-xs uppercase tracking-widest mb-2 opacity-80">Ecosystem Integrity</div>
-                                                    <div className="text-white text-3xl font-black italic">100%</div>
-                                                    <div className="text-white/60 text-[10px] mt-2 leading-tight uppercase font-bold tracking-widest">Validated Performance Protocols</div>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                                                    {data.uniqueSection.items.map((item, idx) => (
+                                                        <motion.div
+                                                            key={idx}
+                                                            initial={{ opacity: 0, y: 10 }}
+                                                            whileInView={{ opacity: 1, y: 0 }}
+                                                            transition={{ delay: idx * 0.1 }}
+                                                            className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group"
+                                                        >
+                                                            <h4 className="text-blue-600 font-black text-sm uppercase tracking-widest mb-1 group-hover:translate-x-1 transition-transform">{item.label}</h4>
+                                                            <p className="text-white/50 text-sm">{item.detail}</p>
+                                                        </motion.div>
+                                                    ))}
                                                 </div>
-                                            </div>
-                                        </TiltWrapper>
-                                    </div>
+                                            </motion.div>
+                                        </div>
 
-                                </div>
+                                        <div className="w-full lg:w-1/2">
+                                            <TiltWrapper intensity={10}>
+                                                <div className="relative group">
+                                                    <div className="absolute -inset-4 border border-white/10 rounded-[3rem] pointer-events-none group-hover:scale-105 transition-transform duration-700"></div>
+                                                    <div className="absolute -inset-8 border border-white/5 rounded-[4rem] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
+
+                                                    <img
+                                                        src={divisionId === 'yoga-classes' ? yogaSpecialImg : divisionId === 'fitness-classes' ? fitnessSpecialImg : data.img}
+                                                        alt={data.uniqueSection.title}
+                                                        className="rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] w-full aspect-[4/5] object-cover relative z-10"
+                                                    />
+
+                                                    <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-3xl shadow-2xl z-20 max-w-[240px] transform hover:scale-105 transition-transform hidden md:block">
+                                                        <div className="text-white font-black text-xs uppercase tracking-widest mb-2 opacity-80">Ecosystem Integrity</div>
+                                                        <div className="text-white text-3xl font-black italic">100%</div>
+                                                        <div className="text-white/60 text-[10px] mt-2 leading-tight uppercase font-bold tracking-widest">Validated Performance Protocols</div>
+                                                    </div>
+                                                </div>
+                                            </TiltWrapper>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </motion.section>
                     )}
@@ -957,70 +1044,70 @@ const DivisionTemplate = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 1, ease: "easeOut" }}
                                     viewport={{ once: true }}
-                                    className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-10 md:p-16 relative overflow-hidden group"
+                                    className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-8 md:p-12 relative overflow-hidden group"
                                 >
 
                                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-700/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
 
-                                    <div className="text-center mb-12 relative z-10">
-                                        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Ready to Begin?</h2>
-                                        <p className="text-xl text-brand-text-muted">Book a consultation or request more information about {data.title}.</p>
+                                    <div className="text-center mb-6 relative z-10">
+                                        <h2 className="text-3xl md:text-4xl font-extrabold mb-2 tracking-tight">Ready to Begin?</h2>
+                                        <p className="text-lg text-brand-text-muted">Book a consultation or request more information.</p>
                                     </div>
 
-                                    <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <form className="space-y-4 relative z-10" onSubmit={handleSubmit}>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
-                                                <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Full Name</label>
+                                                <label className="block text-xs font-bold mb-2 text-brand-text-muted uppercase tracking-widest pl-2">Full Name</label>
                                                 <input
                                                     required
                                                     name="name"
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     type="text"
-                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
                                                     placeholder="John Doe"
                                                 />
                                             </motion.div>
                                             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} viewport={{ once: true }}>
-                                                <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Phone Number</label>
+                                                <label className="block text-xs font-bold mb-2 text-brand-text-muted uppercase tracking-widest pl-2">Phone Number</label>
                                                 <input
                                                     required
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     type="tel"
-                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
                                                     placeholder="+91 84229 23924"
                                                 />
                                             </motion.div>
                                         </div>
 
                                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }}>
-                                            <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Email Address</label>
+                                            <label className="block text-xs font-bold mb-2 text-brand-text-muted uppercase tracking-widest pl-2">Email Address</label>
                                             <input
                                                 required
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 type="email"
-                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
                                                 placeholder="john@example.com"
                                             />
                                         </motion.div>
 
                                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} viewport={{ once: true }}>
-                                            <label className="block text-sm font-bold mb-3 text-brand-text-muted uppercase tracking-widest pl-2">Message (Optional)</label>
+                                            <label className="block text-xs font-bold mb-2 text-brand-text-muted uppercase tracking-widest pl-2">Message (Optional)</label>
                                             <textarea
                                                 name="message"
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                rows="4"
-                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-5 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner resize-none"
+                                                rows="2"
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner resize-none"
                                                 placeholder={`I'd like to enquiry about ${data.title}...`}
                                             ></textarea>
                                         </motion.div>
 
-                                        <div className="text-center pt-8">
+                                        <div className="text-center pt-4">
                                             <button
                                                 type="submit"
                                                 className="inline-flex flex-col items-center justify-center px-12 py-5 rounded-[2rem] bg-blue-700 text-white font-extrabold text-lg tracking-widest uppercase hover:bg-blue-600 hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-auto"
