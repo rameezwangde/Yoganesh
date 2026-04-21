@@ -6,7 +6,7 @@ import TiltWrapper from '../ui/TiltWrapper'
 
 const paths = [
     { name: 'Health Institute', link: '/health-institute', icon: '🏥', desc: 'Medical-grade assessments, physiotherapy, and preventative care to keep your body functioning at its peak.' },
-    { name: 'Yoga Classes', link: 'https://yoganeshfitnessclasses.com/', icon: '🧘', desc: 'Build flexibility, mobility, and deep core strength through guided flows that connect motion to stillness.' },
+    { name: 'Yoga Classes', link: '/yoga-classes', icon: '🧘', desc: 'Build flexibility, mobility, and deep core strength through guided flows that connect motion to stillness.' },
     { name: 'Fitness Classes', link: '/fitness-classes', icon: '⚡', desc: 'Elite strength training and metabolic conditioning guided by world-class performance coaches.' },
     { name: 'Wellness Center', link: '/wellness-center', icon: '🌿', desc: 'Restore your autonomic nervous system through premium recovery protocols and advanced relaxation.' },
     { name: 'Dance Classes', link: '/dance-classes', icon: '💃', desc: 'Improve coordination and cardiovascular health in an electrifying, supportive group environment.' },

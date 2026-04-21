@@ -69,7 +69,13 @@ const divisionData = {
             { name: 'Under Graduate', levels: 'University Degree', icon: '🎓' },
             { name: 'Post Graduate', levels: 'Research & Advanced Study', icon: '🏛️' }
         ],
-        benefits: ['University Accredited Pathways', 'Medical-grade diagnostics', 'Pain-free movement patterns', 'Custom rehabilitation plans', 'Integrated clinical approach'],
+        benefits: [
+            { title: 'University Accredited', desc: 'Our pathways are recognized globally, bridging clinical science with traditional mastery.', icon: '🎓' },
+            { title: 'Medical Diagnostics', desc: 'Utilizing clinical-grade assessment tools for precise physiological mapping.', icon: '🔬' },
+            { title: 'Pain-Free Movement', desc: 'Restore optimal kinetic function and eliminate chronic mechanical discomfort.', icon: '🦾' },
+            { title: 'Custom Rehabilitation', desc: 'Bespoke recovery protocols engineered specifically for your unique biomechanics.', icon: '🔄' },
+            { title: 'Integrated Clinicals', desc: 'A holistic ecosystem merging physiotherapy, nutrition, and neural science.', icon: '🏛️' }
+        ],
         who: 'Healthcare professionals, athletes seeking peak optimization, and individuals requiring specialized clinical guidance.',
         navItems: [
             { id: 'overview', label: 'Overview' },
@@ -95,19 +101,24 @@ const divisionData = {
             desc: 'Explore ten distinct yogic paths, each engineered to target specific dimensions of your physical and energetic evolution.',
             isLargeGrid: true,
             items: [
-                { label: 'Ashtanga Yoga', detail: 'A dynamic, physically demanding practice following a rigorous traditional sequence.', img: divYogaImg },
-                { label: 'Vinyasa Yoga', detail: 'Fluid, breath-synchronized movement that flows seamlessly through creative sequences.', img: divYogaImg },
-                { label: 'Power Yoga', detail: 'A vigorous, fitness-based approach focused on building raw functional strength.', img: divYogaImg },
-                { label: 'Hatha & Yin Yoga', detail: 'Balancing active alignment with deep, meditative long-holds for fascia release.', img: divYogaImg },
-                { label: 'Restorative Yoga', detail: 'Gentle, prop-supported poses designed for deep nervous system healing.', img: divYogaImg },
-                { label: 'Iyengar Yoga', detail: 'Precision-focused practice using props to achieve perfect structural alignment.', img: divYogaImg },
-                { label: 'Kundalini Yoga', detail: 'Spiritual practice involving chanting and breathwork to awaken energetic flow.', img: divYogaImg },
-                { label: 'Hot & Bikram Yoga', detail: 'Intensive sequences in a heated environment for detoxification and flexibility.', img: divYogaImg },
-                { label: 'Prenatal & Chair Yoga', detail: 'Specialized, accessible practices for expectant mothers or limited mobility.', img: divYogaImg },
-                { label: 'Shuddhikriya', detail: 'Traditional yogic cleansing techniques to purify the body and clarify the mind.', img: divYogaImg }
+                { label: 'Ashtanga Yoga', detail: 'A dynamic, physically demanding practice following a rigorous traditional sequence.', img: 'https://m.media-amazon.com/images/I/41I4-bzPDWL._SY445_SX342_.jpg' },
+                { label: 'Vinyasa Yoga', detail: 'Fluid, breath-synchronized movement that flows seamlessly through creative sequences.', img: 'https://tse2.mm.bing.net/th/id/OIP.LdgpXa5uCaCSFlGXTVuelQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Power Yoga', detail: 'A vigorous, fitness-based approach focused on building raw functional strength.', img: 'https://th.bing.com/th/id/OIP.jKiG-MGx8463fBG7IYZRjgHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Hatha & Yin Yoga', detail: 'Balancing active alignment with deep, meditative long-holds for fascia release.', img: 'https://tse2.mm.bing.net/th/id/OIP.aepB44q3GmZZpen437JIzAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Restorative Yoga', detail: 'Gentle, prop-supported poses designed for deep nervous system healing.', img: 'https://tse2.mm.bing.net/th/id/OIP.cuB5NGH-ulVlpui8qy0PRAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Iyengar Yoga', detail: 'Precision-focused practice using props to achieve perfect structural alignment.', img: 'https://www.fitsri.com/wp-content/uploads/2021/12/triangle-pose-with-yoga-block-1024x683.jpg' },
+                { label: 'Kundalini Yoga', detail: 'Spiritual practice involving chanting and breathwork to awaken energetic flow.', img: 'https://tse2.mm.bing.net/th/id/OIP.5v__tzVw0wROFAzHBimynQHaDy?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Hot & Bikram Yoga', detail: 'Intensive sequences in a heated environment for detoxification and flexibility.', img: 'https://tse1.mm.bing.net/th/id/OIP.lS5MT5YNzEXS3sv35mNwigHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },
+                { label: 'Prenatal & Chair Yoga', detail: 'Specialized, accessible practices for expectant mothers or limited mobility.', img: 'https://media.istockphoto.com/id/542718538/photo/pregnant-young-woman-doing-prenatal-yoga-chair-pose-utkatasana.jpg?s=612x612&w=is&k=20&c=HD2yPlqsRZvLdnNub3QOSR63gYeANXfFsd5eZekq1B4=' },
+                { label: 'Shuddhikriya', detail: 'Traditional yogic cleansing techniques to purify the body and clarify the mind.', img: 'https://i.ytimg.com/vi/lnjV0qQiWB8/maxresdefault.jpg' }
             ]
         },
-        benefits: ['Neuromuscular coordination', 'Stress hormone regulation', 'Extraordinary mobility', 'Hyper-focus & mental clarity'],
+        benefits: [
+            { title: 'Neuromuscular Coordination', desc: 'Recalibrate your neural pathways through precision-focused movement protocols.', icon: '🧠' },
+            { title: 'Hormonal Regulation', desc: 'Systematically lower cortisol levels and activate deep parasympathetic recovery.', icon: '📈' },
+            { title: 'Extraordinary Mobility', desc: 'Achieve skeletal liberation through scientifically sequenced asana engineering.', icon: '🦾' },
+            { title: 'Hyper-Focus & Clarity', desc: 'Awaken cognitive sharpness through advanced pranayama and meditative science.', icon: '💎' }
+        ],
         who: 'Individuals seeking a deep, disciplined approach to physical and mental mastery through the lens of ancient wisdom.',
         navItems: [
             { id: 'overview', label: 'Philosophy' },
@@ -140,7 +151,12 @@ const divisionData = {
                 { label: 'Aerial', detail: 'Gravity-defying strength and flexibility using silk hammocks.', img: divFitnessImg }
             ]
         },
-        benefits: ['Rapid body recomposition', 'Elite athletic capability', 'Hormonal optimization', 'Unbreakable joint health'],
+        benefits: [
+            { title: 'Rapid Recomposition', desc: 'Optimize your fat-to-muscle ratio through high-intensity, science-backed conditioning.', icon: '⚡' },
+            { title: 'Elite Capability', desc: 'Develop superior force production and explosive power for peak athletic demand.', icon: '🏅' },
+            { title: 'Hormonal Optimization', desc: 'Balance your endocrine system through strategic resistance and metabolic training.', icon: '⚖️' },
+            { title: 'Bulletproof Joints', desc: 'Protect your skeletal integrity with pre-habilitative and structural stability work.', icon: '🛡️' }
+        ],
         who: 'Goal-oriented individuals, high-performers, and those who treat their body as a high-performance vehicle.',
         navItems: [
             { id: 'overview', label: 'Method' },
@@ -175,7 +191,12 @@ const divisionData = {
                 { label: 'Financial', detail: 'Satisfaction with current and future financial status. For those seeking stability and stress reduction.' }
             ]
         },
-        benefits: ['Accelerated tissue repair', 'Decreased systemic inflammation', 'Profound psychological rest', 'Enhanced immune function'],
+        benefits: [
+            { title: 'Accelerated Repair', desc: 'Trigger rapid cellular recovery and tissue healing through advanced recovery tech.', icon: '🧪' },
+            { title: 'Systemic Anti-Inflammation', desc: 'Systematically reduce internal inflammation and oxidative stress markers.', icon: '🌊' },
+            { title: 'Psychological Reset', desc: 'Profoundly downshift your nervous system into deep parasympathetic states.', icon: '🧘' },
+            { title: 'Immune Augmentation', desc: 'Strengthen your biological defenses through optimized rest and restoration.', icon: '🛡️' }
+        ],
         who: 'Busy professionals, high-intensity athletes, and anyone navigating a high-stress modern environment.',
         navItems: [
             { id: 'overview', label: 'Reset' },
@@ -221,7 +242,12 @@ const divisionData = {
                 { label: 'Indian Classical', detail: 'A divine journey through rhythm and expression. For spiritual connection.', img: galleryDanceClassic }
             ]
         },
-        benefits: ['Superior coordination', 'High-caloric expenditure', 'Enhanced endorphin release', 'Social connectivity'],
+        benefits: [
+            { title: 'Superior Coordination', desc: 'Master complex rhythmic patterns and enhance proprietary motor control.', icon: '🩰' },
+            { title: 'Metabolic Ignite', desc: 'Achieve high-caloric expenditure through exhilarating and artistic cardio flow.', icon: '🔥' },
+            { title: 'Endorphin Surge', desc: 'Experience a profound psychological lift through the joy of rhythmic expression.', icon: '✨' },
+            { title: 'Social Synchronicity', desc: 'Build deep communal connections through the shared language of movement.', icon: '🤝' }
+        ],
         who: 'Individuals looking for an exhilarating, musical alternative to standard gym routines.',
         navItems: [
             { id: 'overview', label: 'Artistry' },
@@ -273,7 +299,12 @@ const divisionData = {
                 { label: 'Lute', detail: 'The ancient, delicate ancestor of the guitar. For early music lovers.', img: galleryStringsEast }
             ]
         },
-        benefits: ['Enhanced brain plasticity', 'Emotional stress outlet', 'Discipline and patience', 'Increased focus duration'],
+        benefits: [
+            { title: 'Neural Plasticity', desc: 'Leverage musical mastery to enhance memory, logic, and brain connectivity.', icon: '🧠' },
+            { title: 'Emotional Resonance', desc: 'Utilize sound as a clinical-grade outlet for stress and emotional regulation.', icon: '🎵' },
+            { title: 'Disciplined Patience', desc: 'Cultivate the profound mental grit required for technical instrument mastery.', icon: '⏳' },
+            { title: 'Focus Duration', desc: 'Significantly increase your capacity for deep work and sustained attention.', icon: '🎯' }
+        ],
         who: 'Children and adults seeking intellectual enrichment and a powerful creative outlet.',
         navItems: [
             { id: 'overview', label: 'Insight' },
@@ -285,9 +316,11 @@ const divisionData = {
     }
 }
 
+
 const DivisionTemplate = () => {
     const { divisionId } = useParams()
     const data = divisionData[divisionId]
+    const [selectedImg, setSelectedImg] = useState(null)
     const [activeSection, setActiveSection] = useState('overview')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const { scrollY } = useScroll()
@@ -372,6 +405,7 @@ const DivisionTemplate = () => {
                 <meta name="description" content={`Join YOGANESH ${data.title}. ${data.overview.substring(0, 100)}...`} />
             </Helmet>
 
+
             <main className="bg-brand-bg text-brand-text min-h-screen overflow-hidden">
 
                 {/* Cinematic Hero */}
@@ -391,9 +425,9 @@ const DivisionTemplate = () => {
                         <div className={`absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent`}></div>
                         <div className={`absolute inset-0 opacity-40 mix-blend-multiply bg-blue-900`}></div>
                         <div className="absolute inset-0 bg-black/50"></div>
-                        
+
                         {/* Animated Scanning Line */}
-                        <motion.div 
+                        <motion.div
                             animate={{ top: ['0%', '100%', '0%'] }}
                             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                             className="absolute left-0 right-0 h-[1px] bg-blue-500/20 z-0 pointer-events-none"
@@ -425,10 +459,10 @@ const DivisionTemplate = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-7xl md:text-[10rem] font-black mb-10 tracking-tighter text-white leading-[0.8] uppercase italic pr-12 drop-shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
+                            className="text-6xl md:text-[7rem] font-black mb-10 tracking-tighter text-white leading-[0.8] uppercase italic pr-24 drop-shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
                         >
                             YOGANESH <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-400 to-cyan-400 drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] block mt-4">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-400 to-cyan-400 drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] block mt-4 pr-10">
                                 {data.title}
                             </span>
                         </motion.h1>
@@ -437,7 +471,7 @@ const DivisionTemplate = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-sm md:text-xl font-black text-blue-400 px-12 py-5 bg-white/5 backdrop-blur-xl border border-white/10 tracking-[0.4em] max-w-4xl uppercase relative overflow-hidden group rounded-lg"
+                            className="text-[10px] md:text-lg font-black text-blue-400 px-12 py-5 bg-white/5 backdrop-blur-xl border border-white/10 tracking-[0.4em] max-w-4xl uppercase relative overflow-hidden group rounded-lg"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent"></div>
                             <span className="relative z-10 font-black tracking-[0.6em]">
@@ -547,7 +581,7 @@ const DivisionTemplate = () => {
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative">
                                 {/* Background Decorative Number */}
                                 <div className="absolute -top-20 -left-10 text-[250px] font-black text-blue-500 opacity-[0.03] select-none pointer-events-none hidden md:block">01</div>
-                                
+
                                 <div className="w-full lg:w-3/5 relative z-10">
                                     <motion.div
                                         initial={{ opacity: 0, x: -40 }}
@@ -561,16 +595,16 @@ const DivisionTemplate = () => {
                                                 <div className="w-8 h-[1px] bg-blue-500"></div>
                                                 <span className="text-blue-600 font-black uppercase tracking-[0.5em] text-[9px] px-3 py-1 bg-blue-500/5 rounded-full border border-blue-500/10">Strategic Blueprint</span>
                                             </div>
-                                            <h2 className="text-5xl md:text-8xl font-black tracking-tight text-brand-text italic uppercase leading-[0.85] pr-16">
+                                            <h2 className="text-4xl md:text-6xl font-black tracking-tight text-brand-text italic uppercase leading-[0.85] pr-16">
                                                 About The <br />
                                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-500 inline-block pr-4">Division</span>
                                             </h2>
                                         </div>
-                                        
-                                        <p className="text-brand-text-muted text-xl md:text-2xl font-medium leading-relaxed max-w-2xl border-l-4 border-blue-500/10 pl-10 py-2">
+
+                                        <p className="text-brand-text-muted text-lg md:text-xl font-medium leading-relaxed max-w-2xl border-l-4 border-blue-500/10 pl-10 py-2">
                                             {data.overview}
                                         </p>
-                                        
+
 
                                     </motion.div>
                                 </div>
@@ -587,7 +621,7 @@ const DivisionTemplate = () => {
                                             {/* Technical Decorations */}
                                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-1000"></div>
                                             <div className="absolute top-12 right-12 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                                            
+
                                             <div className="relative z-10 space-y-8">
                                                 <div className="flex items-center space-x-3">
                                                     <div className="w-6 h-6 rounded-lg bg-blue-500/20 flex items-center justify-center">
@@ -595,13 +629,13 @@ const DivisionTemplate = () => {
                                                     </div>
                                                     <span className="text-blue-400 font-black uppercase tracking-[0.3em] text-[10px]">Enrollment Protocol</span>
                                                 </div>
-                                                
+
                                                 <h3 className="text-blue-500 font-black uppercase tracking-widest text-sm italic">Who It's For</h3>
-                                                
-                                                <p className="text-2xl md:text-3xl font-bold leading-tight italic tracking-tight text-white/90">
+
+                                                <p className="text-xl md:text-2xl font-bold leading-tight italic tracking-tight text-white/90">
                                                     {data.who}
                                                 </p>
-                                                
+
 
                                             </div>
                                         </motion.div>
@@ -618,7 +652,7 @@ const DivisionTemplate = () => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="py-24 md:py-40 scroll-mt-20 bg-white relative"
+                        className="py-24 md:py-40 scroll-mt-20 bg-brand-bg-alt/50 relative"
                     >
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
@@ -627,7 +661,7 @@ const DivisionTemplate = () => {
                                         <div className="w-12 h-[2px] bg-blue-500"></div>
                                         <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-xs">The Methodology</span>
                                     </div>
-                                    <h2 className="text-6xl md:text-9xl font-black tracking-tight text-brand-text leading-none uppercase italic pr-12">
+                                    <h2 className="text-5xl md:text-7xl font-black tracking-tight text-brand-text leading-none uppercase italic pr-20">
                                         Programs
                                     </h2>
                                 </div>
@@ -642,8 +676,8 @@ const DivisionTemplate = () => {
                                         viewport={{ once: true }}
                                         transition={{ delay: i * 0.1, duration: 0.6 }}
                                         className={`group relative rounded-[3rem] overflow-hidden border border-brand-text/5 shadow-sm hover:shadow-2xl transition-all duration-700 ${prog.size === 'large' ? 'md:col-span-7 md:row-span-2' :
-                                                prog.size === 'medium' ? 'md:col-span-5 md:row-span-1' :
-                                                    'md:col-span-5 md:row-span-1'
+                                            prog.size === 'medium' ? 'md:col-span-5 md:row-span-1' :
+                                                'md:col-span-5 md:row-span-1'
                                             }`}
                                     >
                                         {/* Background Image Overlay */}
@@ -654,7 +688,7 @@ const DivisionTemplate = () => {
                                                     alt={prog.name}
                                                     className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0"
                                                 />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/20 group-hover:from-brand-text/90 group-hover:via-brand-text/40 group-hover:to-transparent transition-all duration-700"></div>
+                                                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-brand-bg/20 group-hover:from-brand-text/90 group-hover:via-brand-text/40 group-hover:to-transparent transition-all duration-700"></div>
                                             </div>
                                         )}
 
@@ -669,7 +703,7 @@ const DivisionTemplate = () => {
                                                     </div>
                                                 </div>
 
-                                                <h3 className={`font-black tracking-tight leading-none uppercase italic mb-6 transition-colors duration-500 pr-8 ${prog.size === 'large' ? 'text-5xl md:text-7xl' : 'text-3xl md:text-4xl'
+                                                <h3 className={`font-black tracking-tight leading-none uppercase italic mb-6 transition-colors duration-500 pr-8 ${prog.size === 'large' ? 'text-4xl md:text-6xl' : 'text-2xl md:text-3xl'
                                                     } ${prog.img ? 'group-hover:text-white' : 'text-brand-text'}`}>
                                                     {prog.name}
                                                 </h3>
@@ -691,10 +725,7 @@ const DivisionTemplate = () => {
                                                     </div>
                                                 )}
 
-                                                <div className="flex items-center justify-between pt-6 border-t border-brand-text/5 group-hover:border-white/10 transition-colors">
-                                                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500">Protocol Insight</span>
-                                                    <FaArrowRight className="text-blue-500 group-hover:translate-x-2 transition-transform" />
-                                                </div>
+
                                             </div>
                                         </div>
                                     </motion.div>
@@ -720,7 +751,7 @@ const DivisionTemplate = () => {
                             <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                                 <div className="flex flex-col mb-20">
                                     <div className="inline-block px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] text-blue-500 mb-6 w-fit">Academic Excellence</div>
-                                    <h2 className="text-5xl md:text-8xl font-black tracking-tight leading-none text-white italic uppercase pr-12">
+                                    <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-none text-white italic uppercase pr-12">
                                         The Learning <br />
                                         <span className="text-blue-500">Ecosystem</span>
                                     </h2>
@@ -737,8 +768,8 @@ const DivisionTemplate = () => {
                                                     onMouseEnter={() => setActiveCourse(i)}
                                                     onClick={() => setActiveCourse(i)}
                                                     className={`w-full text-left p-8 rounded-[2rem] transition-all duration-500 flex items-center justify-between group ${activeCourse === i
-                                                            ? 'bg-white shadow-[0_30px_60px_rgba(0,0,0,0.3)] -translate-y-1'
-                                                            : 'bg-white/5 border border-white/5 hover:bg-white/10'
+                                                        ? 'bg-white shadow-[0_30px_60px_rgba(0,0,0,0.3)] -translate-y-1'
+                                                        : 'bg-white/5 border border-white/5 hover:bg-white/10'
                                                         }`}
                                                 >
                                                     <div className="flex items-center space-x-6">
@@ -755,8 +786,8 @@ const DivisionTemplate = () => {
                                                         </div>
                                                     </div>
                                                     <FaArrowRight className={`transition-all duration-500 ${activeCourse === i
-                                                            ? 'text-blue-500 opacity-100 translate-x-0'
-                                                            : 'text-white/0 -translate-x-4'
+                                                        ? 'text-blue-500 opacity-100 translate-x-0'
+                                                        : 'text-white/0 -translate-x-4'
                                                         }`} />
                                                 </motion.button>
                                             ))}
@@ -801,10 +832,10 @@ const DivisionTemplate = () => {
                                                         className="space-y-6"
                                                     >
                                                         <div className="w-20 h-1 bg-blue-500"></div>
-                                                        <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter">
+                                                        <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter">
                                                             {data.universityCourses[activeCourse].name}
                                                         </h3>
-                                                        <p className="text-white/70 text-xl leading-relaxed max-w-xl">
+                                                        <p className="text-white/70 text-lg leading-relaxed max-w-xl">
                                                             {activeCourse === 0 && "Deep dive into the structural foundations of yoga therapy and clinical biomechanics."}
                                                             {activeCourse === 1 && "Specialized training in clinical assessment and advanced corrective exercise."}
                                                             {activeCourse === 2 && "The gold standard for aspiring instructors, merging technical mastery with spiritual depth."}
@@ -847,8 +878,8 @@ const DivisionTemplate = () => {
                                     <div className="space-y-16">
                                         <div className="text-center max-w-3xl mx-auto space-y-6">
                                             <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-blue-600">The Conservatory</div>
-                                            <h2 className="text-5xl md:text-8xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
-                                            <p className="text-xl text-white/70 leading-relaxed">
+                                            <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
+                                            <p className="text-lg text-white/70 leading-relaxed">
                                                 {data.uniqueSection.desc}
                                             </p>
                                         </div>
@@ -862,11 +893,14 @@ const DivisionTemplate = () => {
                                                     transition={{ delay: idx * 0.05 }}
                                                     className="group relative bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden hover:bg-white/10 transition-all duration-500"
                                                 >
-                                                    <div className="aspect-video overflow-hidden">
+                                                    <div
+                                                        className="aspect-video overflow-hidden cursor-zoom-in"
+                                                        onClick={() => setSelectedImg(item.img)}
+                                                    >
                                                         <img src={item.img} alt={item.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100" />
                                                     </div>
                                                     <div className="p-8">
-                                                        <h4 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{item.label}</h4>
+                                                        <h4 className="text-xl font-black text-white uppercase italic mb-2 tracking-tighter">{item.label}</h4>
                                                         <p className="text-white/50 text-sm leading-relaxed">{item.detail}</p>
                                                     </div>
                                                     <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-blue-600/20 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:bg-blue-600 transition-colors">
@@ -886,8 +920,8 @@ const DivisionTemplate = () => {
                                                 className="space-y-8"
                                             >
                                                 <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-blue-600">System Protocol</div>
-                                                <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
-                                                <p className="text-xl text-white/70 leading-relaxed max-w-xl">
+                                                <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
+                                                <p className="text-lg text-white/70 leading-relaxed max-w-xl">
                                                     {data.uniqueSection.desc}
                                                 </p>
 
@@ -917,12 +951,13 @@ const DivisionTemplate = () => {
                                                     <img
                                                         src={divisionId === 'yoga-classes' ? yogaSpecialImg : divisionId === 'fitness-classes' ? fitnessSpecialImg : data.img}
                                                         alt={data.uniqueSection.title}
-                                                        className="rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] w-full aspect-[4/5] object-cover relative z-10"
+                                                        className="rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] w-full aspect-[4/5] object-cover relative z-10 cursor-zoom-in"
+                                                        onClick={() => setSelectedImg(divisionId === 'yoga-classes' ? yogaSpecialImg : divisionId === 'fitness-classes' ? fitnessSpecialImg : data.img)}
                                                     />
 
                                                     <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-3xl shadow-2xl z-20 max-w-[240px] transform hover:scale-105 transition-transform hidden md:block">
                                                         <div className="text-white font-black text-xs uppercase tracking-widest mb-2 opacity-80">Ecosystem Integrity</div>
-                                                        <div className="text-white text-3xl font-black italic">100%</div>
+                                                        <div className="text-white text-2xl font-black italic">100%</div>
                                                         <div className="text-white/60 text-[10px] mt-2 leading-tight uppercase font-bold tracking-widest">Validated Performance Protocols</div>
                                                     </div>
                                                 </div>
@@ -941,13 +976,9 @@ const DivisionTemplate = () => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="py-24 md:py-40 scroll-mt-20 relative overflow-hidden bg-white"
+                        className="py-24 md:py-40 scroll-mt-20 relative overflow-hidden bg-brand-bg-alt/50"
                     >
-                        {/* Background Decorative Elements */}
-                        <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none select-none overflow-hidden">
-                            <span className="absolute -top-10 -left-10 text-[500px] font-black text-blue-500 rotate-12 uppercase tracking-tighter">WHY</span>
-                            <span className="absolute -bottom-10 -right-10 text-[500px] font-black text-blue-500 -rotate-12 uppercase tracking-tighter">US</span>
-                        </div>
+                        {/* Removed Large Background Watermark per User Request */}
 
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                             <div className="flex flex-col lg:flex-row items-end justify-between mb-24 gap-8">
@@ -961,7 +992,7 @@ const DivisionTemplate = () => {
                                         <div className="w-12 h-[2px] bg-blue-600"></div>
                                         <span className="text-blue-600 font-black uppercase tracking-[0.4em] text-xs">The Advantage</span>
                                     </div>
-                                    <h2 className="text-5xl md:text-7xl font-black tracking-tight text-brand-text leading-[0.9] pr-12">
+                                    <h2 className="text-4xl md:text-6xl font-black tracking-tight text-brand-text leading-[0.9] pr-12">
                                         WHY CHOOSE <br />
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400">YOGANESH</span>
                                     </h2>
@@ -970,7 +1001,7 @@ const DivisionTemplate = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="text-brand-text-muted text-xl max-w-md font-medium leading-relaxed pb-2"
+                                    className="text-brand-text-muted text-lg max-w-md font-medium leading-relaxed pb-2"
                                 >
                                     We bridge the gap between clinical excellence and holistic mastery to engineer your ultimate physical evolution.
                                 </motion.p>
@@ -978,48 +1009,59 @@ const DivisionTemplate = () => {
 
 
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                                 {data.benefits.map((benefit, i) => (
                                     <motion.div
                                         key={i}
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: i * 0.1, duration: 0.6 }}
+                                        transition={{ delay: i * 0.1, duration: 0.8 }}
                                         className="group h-full"
                                     >
-                                        <div className="relative h-full bg-brand-bg-alt/50 border border-brand-text/5 p-10 rounded-[2.5rem] transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] hover:-translate-y-3 flex flex-col overflow-hidden">
+                                        <TiltWrapper intensity={5} scaleOnHover={1.03}>
+                                            <div className="relative h-full bg-brand-bg/60 backdrop-blur-md border border-brand-text/5 p-8 rounded-[3rem] transition-all duration-500 hover:bg-brand-bg hover:shadow-[0_50px_100px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden group">
+                                                
+                                                {/* Glass Reflection Effect */}
+                                                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
 
-                                            {/* Benefit Number Background */}
-                                            <div className="absolute -top-6 -right-6 text-9xl font-black text-brand-text/[0.03] group-hover:text-blue-600/[0.05] transition-colors duration-500 select-none">
-                                                0{i + 1}
-                                            </div>
-
-                                            {/* Icon Header */}
-                                            <div className="w-20 h-20 bg-white rounded-3xl shadow-lg border border-brand-text/5 flex items-center justify-center mb-10 group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-500 relative z-10">
-                                                <div className="text-3xl text-blue-600 group-hover:text-white transition-colors">
-                                                    {benefit.includes('Medical') || benefit.includes('clinical') ? '🔬' :
-                                                        benefit.includes('University') || benefit.includes('Accredited') ? '🎓' :
-                                                            benefit.includes('Pain') || benefit.includes('rehabilitation') ? '🦾' :
-                                                                benefit.includes('Integrated') || benefit.includes('Ecosystem') ? '🔄' :
-                                                                    benefit.includes('movement') || benefit.includes('Performance') ? '⚡' : '✨'}
+                                                {/* Icon Header */}
+                                                <div className="w-16 h-16 bg-white rounded-2xl shadow-md border border-brand-text/5 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 relative z-10">
+                                                    <div className="text-3xl group-hover:scale-125 transition-transform">
+                                                        {benefit.icon}
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <h4 className="text-2xl font-black text-brand-text mb-6 tracking-tight leading-tight group-hover:text-blue-700 transition-colors relative z-10">
-                                                {benefit}
-                                            </h4>
-
-                                            <div className="mt-auto pt-8 border-t border-brand-text/5 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 relative z-10">
-                                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600">Domain Expertise</span>
-                                                <div className="w-8 h-8 rounded-full bg-blue-600/10 flex items-center justify-center">
-                                                    <FaArrowRight className="text-blue-600 text-xs" />
+                                                <div className="relative z-10">
+                                                    <h4 className="text-lg font-black text-brand-text mb-4 tracking-tight leading-tight group-hover:text-blue-700 transition-colors">
+                                                        {benefit.title}
+                                                    </h4>
+                                                    <p className="text-brand-text-muted text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                                                        {benefit.desc}
+                                                    </p>
                                                 </div>
-                                            </div>
 
-                                            {/* Subtle Animated Border Bottom */}
-                                            <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-blue-600 transition-all duration-700 ease-out group-hover:w-full"></div>
-                                        </div>
+                                                {/* Secondary Detail Badge */}
+                                                <div className="mt-auto pt-6 flex items-center justify-between relative z-10">
+                                                    <div className="flex -space-x-2">
+                                                        {[1, 2, 3].map(n => (
+                                                            <div key={n} className="w-6 h-6 rounded-full border-2 border-white bg-blue-600/10 flex items-center justify-center">
+                                                                <div className="w-1 h-1 rounded-full bg-blue-600"></div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                    <div className="w-8 h-8 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                                                        <FaArrowRight className="text-blue-600 text-[10px] group-hover:text-white transition-colors" />
+                                                    </div>
+                                                </div>
+
+                                                {/* Sophisticated Glow */}
+                                                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-600/5 blur-[50px] group-hover:bg-blue-600/10 rounded-full transition-all duration-700"></div>
+                                                
+                                                {/* Subtle Animated Border Bottom */}
+                                                <div className="absolute bottom-0 left-0 h-1 w-0 bg-blue-600 transition-all duration-700 ease-out group-hover:w-full"></div>
+                                            </div>
+                                        </TiltWrapper>
                                     </motion.div>
                                 ))}
                             </div>
@@ -1050,8 +1092,8 @@ const DivisionTemplate = () => {
                                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-700/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
 
                                     <div className="text-center mb-6 relative z-10">
-                                        <h2 className="text-3xl md:text-4xl font-extrabold mb-2 tracking-tight">Ready to Begin?</h2>
-                                        <p className="text-lg text-brand-text-muted">Book a consultation or request more information.</p>
+                                        <h2 className="text-2xl md:text-3xl font-extrabold mb-2 tracking-tight">Ready to Begin?</h2>
+                                        <p className="text-base text-brand-text-muted">Book a consultation or request more information.</p>
                                     </div>
 
                                     <form className="space-y-4 relative z-10" onSubmit={handleSubmit}>
@@ -1132,8 +1174,8 @@ const DivisionTemplate = () => {
                                                 <div className="w-20 h-20 bg-[#25D366]/10 rounded-full flex items-center justify-center mb-6">
                                                     <svg className="w-10 h-10 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                                                 </div>
-                                                <h3 className="text-3xl font-black mb-4">Request Sent!</h3>
-                                                <p className="text-brand-text-muted text-lg mb-8 max-w-sm">
+                                                <h3 className="text-2xl font-black mb-4">Request Sent!</h3>
+                                                <p className="text-brand-text-muted text-base mb-8 max-w-sm">
                                                     We are redirecting you to WhatsApp and your Email to finalize the enquiry for <strong>{data.title}</strong>.
                                                 </p>
                                                 <button
@@ -1152,6 +1194,41 @@ const DivisionTemplate = () => {
                     </motion.section>
                 </div>
             </main>
+
+            {/* Cinematic Image Modal (Lightbox) */}
+            <AnimatePresence>
+                {selectedImg && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImg(null)}
+                        className="fixed inset-0 z-[100] bg-brand-bg/95 backdrop-blur-2xl flex items-center justify-center p-4 md:p-12 cursor-pointer"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            className="relative max-w-5xl w-full max-h-full bg-white rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.5)] border border-white/20"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img
+                                src={selectedImg}
+                                alt="Gallery Preview"
+                                className="w-full h-auto max-h-[85vh] object-contain"
+                            />
+
+                            {/* Close Trigger */}
+                            <button
+                                onClick={() => setSelectedImg(null)}
+                                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-brand-bg/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 hover:bg-white hover:text-brand-bg transition-all text-xl"
+                            >
+                                ✕
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     )
 }
