@@ -12,17 +12,20 @@ const navLinks = [
     { name: 'Contact', path: '/contact' },
 ]
 
+import { useTheme } from '../../context/ThemeContext'
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const [visible, setVisible] = useState(true)
     const location = useLocation()
     const { scrollY } = useScroll()
+    const { currentTheme, setCurrentTheme, activeTheme, themes } = useTheme()
 
     // Handle scroll visibility and background
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious()
-        
+
         // Dynamic background trigger
         setScrolled(latest > 20)
 
@@ -48,22 +51,44 @@ const Navbar = () => {
         }
     }, [isOpen])
 
+    const ThemeSwitcher = ({ mobile = false }) => (
+        <div className={`flex items-center space-x-2 ${mobile ? 'mt-8' : ''}`}>
+            {!mobile && (
+                <span className="text-[9px] font-black uppercase tracking-[0.3em] opacity-40 mr-2">
+                    Palettes
+                </span>
+            )}
+            <div className={`flex items-center space-x-3 bg-brand-bg-alt/20 backdrop-blur-md px-4 py-2 rounded-full border border-brand-text/5 ${mobile ? 'flex-wrap justify-center gap-3' : ''}`}>
+                {themes.map((theme) => (
+                    <button
+                        key={theme.id}
+                        onClick={() => setCurrentTheme(theme.id)}
+                        className={`w-5 h-5 rounded-full border-2 transition-all transform hover:scale-125 ${currentTheme === theme.id ? 'border-brand-text scale-110 shadow-lg' : 'border-white/20'}`}
+                        style={{ backgroundColor: theme.color }}
+                        title={theme.name}
+                    />
+                ))}
+            </div>
+        </div>
+    )
+
     return (
         <motion.header
             initial={{ y: 0 }}
             animate={{ 
                 y: visible ? 0 : -100,
-                backgroundColor: scrolled ? "rgba(253, 251, 247, 0.85)" : "rgba(253, 251, 247, 0)",
+                backgroundColor: scrolled ? activeTheme.colors.bg : "rgba(0,0,0,0)",
                 backdropFilter: scrolled ? "blur(20px)" : "blur(0px)",
                 boxShadow: scrolled ? "0 10px 30px -10px rgba(0,0,0,0.1)" : "none",
                 paddingTop: scrolled ? "12px" : "20px",
                 paddingBottom: scrolled ? "12px" : "20px"
             }}
-            transition={{ duration: 0.4, ease: [0.32, 1, 0.2, 1] }}
-            className="fixed top-0 w-full z-50 border-b border-transparent transition-colors duration-500"
             style={{ 
-                borderBottomColor: scrolled ? "rgba(0,0,0,0.05)" : "transparent"
+                borderBottom: scrolled ? `1px solid ${activeTheme.colors.primary}20` : "1px solid transparent",
+                opacity: scrolled ? 0.98 : 1
             }}
+            transition={{ duration: 0.4, ease: [0.32, 1, 0.2, 1] }}
+            className="fixed top-0 w-full z-50 transition-colors duration-500"
         >
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center relative z-50">
                 {/* Logo */}
@@ -78,7 +103,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center space-x-12 px-6 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <nav className="hidden xl:flex items-center space-x-12 px-6 py-2 bg-brand-bg-alt/30 rounded-full border border-brand-text/5 backdrop-blur-sm">
                     <ul className="flex space-x-10">
                         {navLinks.map((link) => (
                             <li key={link.name}>
@@ -95,10 +120,11 @@ const Navbar = () => {
                     </ul>
                 </nav>
 
-                <div className="hidden md:flex items-center space-x-4">
+                <div className="hidden md:flex items-center space-x-6">
+                    <ThemeSwitcher />
                     <Link
                         to="/contact"
-                        className="bg-brand-text text-white px-8 py-3 rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-brand-red-light hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] transition-all transform hover:-translate-y-1"
+                        className="bg-brand-text text-brand-bg px-8 py-3 rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-brand-red-light hover:text-white hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] transition-all transform hover:-translate-y-1"
                     >
                         Start Journey
                     </Link>
@@ -126,9 +152,9 @@ const Navbar = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(192,0,0,0.1),transparent_60%)] pointer-events-none"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.05),transparent_60%)] pointer-events-none"></div>
 
-                        <ul className="flex flex-col space-y-10 text-center mb-12 relative z-10 w-full px-12">
+                        <ul className="flex flex-col space-y-10 text-center mb-6 relative z-10 w-full px-12">
                             {navLinks.map((link, i) => (
-                                <motion.li 
+                                <motion.li
                                     key={link.name}
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -144,7 +170,9 @@ const Navbar = () => {
                                 </motion.li>
                             ))}
                         </ul>
-                        
+
+                        <ThemeSwitcher mobile />
+
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

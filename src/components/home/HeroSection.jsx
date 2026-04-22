@@ -7,10 +7,10 @@ const HeroSection = () => {
     // Dynamic Text Logic
     const [textIndex, setTextIndex] = useState(0);
     const phrases = [
-        "STRENGTHEN YOUR MIND.",
-        "ELEVATE YOUR SOUL.",
-        "FIND YOUR BALANCE.",
-        "TRANSFORM YOUR LIFE."
+        "EVOLVE YOUR PERFORMANCE.",
+        "MASTER YOUR BIOLOGY.",
+        "OPTIMIZE YOUR VITALITY.",
+        "ENGINEER YOUR WELLNESS."
     ];
 
     useEffect(() => {
@@ -86,6 +86,8 @@ const HeroSection = () => {
         <section
             role="banner"
             className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-bg transition-all duration-1000"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
         >
             {/* Background Decorative Elements */}
             <motion.div
@@ -106,34 +108,63 @@ const HeroSection = () => {
                 />
             </motion.div>
 
-            <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
-                {/* Left Column */}
+            <div className="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center justify-center text-center min-h-[80vh]">
+                
+                {/* Background 3D Cinematic Frame - Centered and behind text */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 flex items-center justify-center z-0 perspective-[1500px] pointer-events-none"
+                >
+                    <motion.div
+                        className="relative w-full max-w-6xl aspect-[21/9] md:aspect-video rounded-[3rem] overflow-hidden opacity-20 md:opacity-40 blur-[2px] md:blur-none border border-white/10 shadow-2xl"
+                        style={{
+                            rotateX: rotateX,
+                            rotateY: rotateY,
+                        }}
+                    >
+                        <motion.img
+                            style={{
+                                x: useTransform(springX, [-0.5, 0.5], [-40, 40]),
+                                y: useTransform(springY, [-0.5, 0.5], [-40, 40]),
+                                scale: 1.2
+                            }}
+                            src={heroImage}
+                            alt="YOGANESH Background"
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/90 via-transparent to-brand-bg"></div>
+                    </motion.div>
+                </motion.div>
+
+                {/* Main Content Column - Centered */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="flex flex-col items-start text-left"
+                    className="relative z-20 flex flex-col items-center max-w-5xl"
                 >
-                    <motion.div variants={itemVariants} className="inline-block mb-6 px-5 py-2 border border-brand-red-dark/40 rounded-full bg-brand-red-dark/10 backdrop-blur-md relative overflow-hidden group shadow-[0_0_15px_rgba(192,0,0,0.15)]">
+                    <motion.div variants={itemVariants} className="inline-block mb-10 px-6 py-2.5 border border-brand-red-dark/40 rounded-full bg-brand-red-dark/10 backdrop-blur-xl relative overflow-hidden group shadow-[0_0_20px_rgba(192,0,0,0.2)]">
                         <motion.div
                             animate={{ x: ["-100%", "200%"] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1 }}
                             className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
                         />
-                        <span className="text-brand-red-light font-bold text-xs uppercase tracking-widest relative z-10">A Complete Wellness Ecosystem</span>
+                        <span className="text-brand-red-light font-black text-[10px] md:text-xs uppercase tracking-[0.5em] relative z-10">A Complete Wellness Ecosystem</span>
                     </motion.div>
 
-                    <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-extrabold text-brand-text leading-tight mb-6 tracking-tight drop-shadow-lg flex flex-col">
-                        <span>TRAIN YOUR BODY.</span>
-                        <div className="min-h-[2.4em] sm:min-h-[1.2em] relative flex items-start mt-2">
+                    <motion.h1 variants={itemVariants} className="text-4xl md:text-[6.5rem] font-black text-brand-text leading-[0.85] mb-10 tracking-tighter drop-shadow-2xl flex flex-col items-center">
+                        <span className="opacity-90">OPTIMIZE YOUR BODY.</span>
+                        <div className="min-h-[1.2em] relative flex items-center justify-center mt-6 w-full">
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={textIndex}
-                                    initial={{ y: 20, opacity: 0, rotateX: -90 }}
+                                    initial={{ y: 40, opacity: 0, rotateX: -90 }}
                                     animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                                    exit={{ y: -20, opacity: 0, rotateX: 90 }}
-                                    transition={{ duration: 0.5, ease: "circOut" }}
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light animate-gradient-x drop-shadow-sm origin-bottom"
+                                    exit={{ y: -40, opacity: 0, rotateX: 90 }}
+                                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light animate-gradient-x drop-shadow-xl inline-block"
                                 >
                                     {phrases[textIndex]}
                                 </motion.span>
@@ -141,116 +172,70 @@ const HeroSection = () => {
                         </div>
                     </motion.h1>
 
-                    <motion.p variants={itemVariants} className="text-lg md:text-xl text-brand-text-muted mb-10 max-w-xl leading-relaxed mt-4">
-                        Health Institute | Yoga Classes | Fitness Classes | Wellness Center | Dance Classes | Music Classes
+                    <motion.p variants={itemVariants} className="text-base md:text-2xl text-brand-text-muted mb-14 max-w-4xl leading-relaxed font-medium tracking-tight px-4 md:px-0">
+                        Health Institute <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Yoga Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Fitness Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Wellness Center <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Dance Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Music Classes
+                        <span className="md:hidden block mt-2 text-sm opacity-60">Integrated Human Performance System</span>
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center w-full sm:w-auto">
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 items-center justify-center w-full px-8 md:px-0">
                         <motion.div
                             style={{ x: btnSpringX, y: btnSpringY }}
                             onMouseMove={handleBtnMouseMove}
                             onMouseLeave={handleBtnMouseLeave}
-                            className="w-full sm:w-auto z-20"
+                            className="w-full sm:w-auto"
                         >
                             <Link
                                 to="/contact"
-                                className="relative block overflow-hidden px-8 py-4 rounded-full bg-gradient-primary text-white font-bold text-lg shadow-[0_4px_20px_rgba(192,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(192,0,0,0.5)] transition-shadow text-center group"
+                                className="relative block overflow-hidden px-12 py-6 rounded-full bg-gradient-primary text-white font-black shadow-[0_10px_30px_rgba(192,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(192,0,0,0.5)] transition-all text-center group"
                             >
-                                <span className="relative z-10 flex items-center justify-center gap-2">
+                                <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.2em] uppercase text-[10px] md:text-xs">
                                     Start Your Transformation
-                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                                 </span>
-                                {/* Sweeping Shine Effect */}
-                                <div className="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer" />
+                                <div className="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shimmer" />
                             </Link>
                         </motion.div>
 
                         <Link
                             to="/divisions"
-                            className="w-full sm:w-auto px-8 py-4 rounded-full border-2 border-brand-text/10 text-brand-text font-bold text-lg hover:border-brand-red-light/40 hover:bg-brand-red-dark/5 hover:-translate-y-1 transition-all text-center backdrop-blur-sm"
+                            className="w-full sm:w-auto px-12 py-6 rounded-full border-2 border-brand-text/10 text-brand-text font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:border-brand-red-light/40 hover:bg-brand-red-dark/5 hover:-translate-y-1 transition-all text-center backdrop-blur-md"
                         >
                             Explore Divisions
                         </Link>
                     </motion.div>
                 </motion.div>
 
-                {/* Right Column Visual 3D Frame */}
+                {/* Floating Orbiting Badges - Strategic positioning */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9, y: 30 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative flex items-center justify-center w-full h-[500px] lg:h-[700px] perspective-[1500px]"
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -20, 0] }}
+                    transition={{ opacity: { duration: 1, delay: 1 }, scale: { duration: 1, delay: 1 }, y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+                    className="absolute top-[15%] right-[8%] z-30 hidden 2xl:flex items-center gap-4 bg-white/80 backdrop-blur-3xl px-8 py-5 rounded-full border border-white shadow-2xl"
                 >
-                    <motion.div
-                        className="relative w-full h-full rounded-[2rem] overflow-hidden glass-panel group shadow-[0_20px_50px_rgba(0,0,0,0.15)] transform-style-preserve-3d"
-                        style={{
-                            rotateX: rotateX,
-                            rotateY: rotateY,
-                        }}
-                    >
-                        {/* Subtle theme overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-brand-bg/60 via-transparent to-brand-red-light/20 z-10 mix-blend-multiply transition-opacity duration-700 pointer-events-none"></div>
+                    <div className="flex text-yellow-500 text-xl">
+                        {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                    </div>
+                    <span className="font-black text-brand-text text-[10px] uppercase tracking-[0.4em]">5.0 Rated Mastery</span>
+                </motion.div>
 
-                        {/* Animated 3D Depth Image */}
-                        <motion.img
-                            style={{
-                                x: useTransform(springX, [-0.5, 0.5], [-20, 20]),
-                                y: useTransform(springY, [-0.5, 0.5], [-20, 20]),
-                                scale: 1.1
-                            }}
-                            src={heroImage}
-                            alt="YOGANESH Cinematic Integration"
-                            className="absolute inset-0 w-full h-full object-cover z-0"
-                            loading="eager"
-                        />
-                    </motion.div>
-
-                    {/* Badge 1: Holistic Approach */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-                        style={{
-                            x: useTransform(springX, [-0.5, 0.5], [40, -40]),
-                            y: useTransform(springY, [-0.5, 0.5], [40, -40]),
-                            translateZ: "50px",
-                        }}
-                        className="absolute bottom-6 left-2 sm:left-6 md:left-auto md:-left-8 z-30 bg-white/90 backdrop-blur-2xl p-5 md:p-6 rounded-2xl border border-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_45px_rgba(192,0,0,0.15)] transition-shadow duration-300 pointer-events-auto"
-                    >
-                        <div className="flex items-center space-x-5">
-                            <motion.div
-                                animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="w-14 h-14 bg-gradient-to-br from-brand-red-light to-brand-red-dark rounded-full flex items-center justify-center shadow-[0_5px_15px_rgba(192,0,0,0.3)] shrink-0"
-                            >
-                                <span className="font-bold text-white text-2xl drop-shadow-md">✓</span>
-                            </motion.div>
-                            <div>
-                                <h4 className="text-brand-text font-black text-lg md:text-xl mb-1 tracking-wide">Holistic Approach</h4>
-                                <p className="text-brand-text-muted text-xs md:text-sm font-bold">Mind, body, and soul integration</p>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Badge 2: 5.0 Rating */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1, y: [0, -15, 0] }}
-                        transition={{ opacity: { duration: 0.8, delay: 1.2 }, scale: { duration: 0.8, delay: 1.2 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
-                        style={{
-                            x: useTransform(springX, [-0.5, 0.5], [-30, 30]),
-                            y: useTransform(springY, [-0.5, 0.5], [-30, 30]),
-                            translateZ: "80px",
-                        }}
-                        className="absolute top-10 right-2 sm:right-6 md:-right-8 z-30 bg-white/95 backdrop-blur-2xl px-6 py-4 rounded-full border border-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-3 pointer-events-auto"
-                    >
-                        <div className="flex text-yellow-500 text-lg">
-                            {'★★★★★'.split('').map((star, i) => <motion.span key={i} animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}>{star}</motion.span>)}
-                        </div>
-                        <span className="font-extrabold text-brand-text text-sm uppercase tracking-widest hidden sm:inline-block">5.0 Rated</span>
-                    </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 1.2 }}
+                    className="absolute bottom-[15%] left-[8%] z-30 hidden 2xl:flex items-center space-x-6 bg-white/80 backdrop-blur-3xl p-6 rounded-[2.5rem] border border-white shadow-2xl"
+                >
+                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-white text-3xl font-black">✓</span>
+                    </div>
+                    <div className="text-left">
+                        <h4 className="text-brand-text font-black text-xl mb-1 tracking-tight">Holistic Protocol</h4>
+                        <p className="text-brand-text-muted text-[10px] font-bold uppercase tracking-[0.2em]">Ecosystem Integrity 100%</p>
+                    </div>
                 </motion.div>
             </div>
         </section>

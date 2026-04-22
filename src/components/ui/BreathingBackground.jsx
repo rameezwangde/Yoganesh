@@ -1,6 +1,7 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
+import { useTheme } from '../../context/ThemeContext';
 
 const BreathingShaderMaterial = {
   uniforms: {
@@ -8,6 +9,8 @@ const BreathingShaderMaterial = {
     uMouse: { value: new THREE.Vector2(0.5, 0.5) },
     uResolution: { value: new THREE.Vector2(1, 1) },
     uPulse: { value: 0 },
+    uColorA: { value: new THREE.Color('#0A0A0B') },
+    uColorB: { value: new THREE.Color('#10B981') },
   },
   vertexShader: `
     varying vec2 vUv;
@@ -21,6 +24,8 @@ const BreathingShaderMaterial = {
     uniform vec2 uMouse;
     uniform vec2 uResolution;
     uniform float uPulse;
+    uniform vec3 uColorA;
+    uniform vec3 uColorB;
     varying vec2 vUv;
 
     // Simple noise function
@@ -35,18 +40,12 @@ const BreathingShaderMaterial = {
       float dist = distance(uv, uMouse);
       float ripple = sin(dist * 20.0 - uTime * 2.0) * exp(-dist * 5.0) * 0.1;
       
-      // Breathing Pulse Logic (colors)
-      // Base dark charcoal
-      vec3 colorA = vec3(0.05, 0.05, 0.05); 
-      // Subtle brand red glow
-      vec3 colorB = vec3(0.3, 0.0, 0.0); 
+      // Mixing logic
+      float mixValue = uPulse * 0.2 + ripple * 0.3;
+      vec3 finalColor = mix(uColorA, uColorB, clamp(mixValue, 0.0, 0.4));
       
-      // Mix based on pulse and ripple
-      float mixValue = uPulse * 0.3 + ripple * 0.5;
-      vec3 finalColor = mix(colorA, colorB, clamp(mixValue, 0.0, 1.0));
-      
-      // Add some subtle grain
-      finalColor += noise(uv + uTime) * 0.02;
+      // Add subtle grain
+      finalColor += noise(uv + uTime) * 0.01;
 
       gl_FragColor = vec4(finalColor, 1.0);
     }
@@ -56,31 +55,35 @@ const BreathingShaderMaterial = {
 const ShaderPlane = () => {
   const meshRef = useRef();
   const { size } = useThree();
+  const { activeTheme } = useTheme();
   
   const uniforms = useMemo(() => ({
     uTime: { value: 0 },
     uMouse: { value: new THREE.Vector2(0.5, 0.5) },
     uResolution: { value: new THREE.Vector2(size.width, size.height) },
     uPulse: { value: 0 },
+    uColorA: { value: new THREE.Color(activeTheme.colors.bg) },
+    uColorB: { value: new THREE.Color(activeTheme.colors.primary) },
   }), [size]);
+
+  useEffect(() => {
+    uniforms.uColorA.value.set(activeTheme.colors.bg);
+    uniforms.uColorB.value.set(activeTheme.colors.primary);
+  }, [activeTheme, uniforms]);
 
   useFrame((state) => {
     const { clock } = state;
     const t = clock.getElapsedTime();
     
     // 4-7-8 Breathing Implementation
-    // Total cycle = 19 seconds
     const cycle = t % 19.0;
     let pulse = 0.0;
     
     if (cycle < 4.0) {
-      // Inhale (4s) - Linear ramp up
       pulse = cycle / 4.0;
     } else if (cycle < 11.0) {
-      // Hold (7s) - Stay at peak
       pulse = 1.0;
     } else {
-      // Exhale (8s) - Smoother ramp down
       pulse = 1.0 - ((cycle - 11.0) / 8.0);
     }
     
@@ -89,7 +92,7 @@ const ShaderPlane = () => {
   });
 
   const handlePointerMove = (e) => {
-    uniforms.uMouse.value.set(e.uv.x, e.uv.y);
+    if (e.uv) uniforms.uMouse.value.set(e.uv.x, e.uv.y);
   };
 
   return (

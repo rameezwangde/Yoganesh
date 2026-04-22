@@ -1,14 +1,74 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #FDFBF7;
-  --color-brand-bg-alt: #F3EFE6;
-  --color-brand-red-light: #3B82F6;
-  --color-brand-red-dark: #1E3A8A;
-  --color-brand-text: #0F172A;
-  --color-brand-text-muted: #475569;
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-bg-alt: var(--brand-bg-alt);
+  --color-brand-red-light: var(--brand-primary);
+  --color-brand-red-dark: var(--brand-secondary);
+  --color-brand-text: var(--brand-text);
+  --color-brand-text-muted: var(--brand-text-muted);
 
   --font-sans: "Inter", "Outfit", sans-serif;
+  --font-mastery: "Plus Jakarta Sans", "Outfit", sans-serif;
+}
+
+:root {
+  /* Default: Clinical Elite */
+  --brand-bg: #FDFBF7;
+  --brand-bg-alt: #F3EFE6;
+  --brand-primary: #3B82F6;
+  --brand-secondary: #1E3A8A;
+  --brand-text: #0F172A;
+  --brand-text-muted: #475569;
+}
+
+:root.theme-midnight {
+  --brand-bg: #0A0A0B;
+  --brand-bg-alt: #161618;
+  --brand-primary: #10B981;
+  --brand-secondary: #064E3B;
+  --brand-text: #F8FAFC;
+  --brand-text-muted: #94A3B8;
+}
+
+:root.theme-crimson {
+  --brand-bg: #FFFFFF;
+  --brand-bg-alt: #FFF1F2;
+  --brand-primary: #E11D48;
+  --brand-secondary: #881337;
+  --brand-text: #1E293B;
+  --brand-text-muted: #64748B;
+}
+
+:root.theme-gold {
+  --brand-bg: #0F172A;
+  --brand-bg-alt: #1E293B;
+  --brand-primary: #D4AF37;
+  --brand-secondary: #92400E;
+  --brand-text: #F3F4F6;
+  --brand-text-muted: #94A3B8;
+}
+
+:root.theme-industrial {
+  --brand-bg: #F1F5F9;
+  --brand-bg-alt: #E2E8F0;
+  --brand-primary: #6366F1;
+  --brand-secondary: #312E81;
+  --brand-text: #020617;
+  --brand-text-muted: #475569;
+}
+
+:root.theme-sage {
+  --brand-bg: #F7FAF9;
+  --brand-bg-alt: #ECFDF5;
+  --brand-primary: #059669;
+  --brand-secondary: #064E3B;
+  --brand-text: #111827;
+  --brand-text-muted: #374151;
+}
+
+.font-mastery {
+  font-family: var(--font-mastery) !important;
 }
 
 @layer base {

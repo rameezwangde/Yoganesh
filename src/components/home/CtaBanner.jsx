@@ -1,67 +1,107 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaWhatsapp, FaArrowRight } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import TiltWrapper from '../ui/TiltWrapper'
+import heroImage from '../../assets/images/hero_wellness.png'
 
 const CtaBanner = () => {
+    const { scrollYProgress } = useScroll();
+    const scale = useTransform(scrollYProgress, [0.7, 1], [0.95, 1]);
+    const opacity = useTransform(scrollYProgress, [0.7, 0.9], [0, 1]);
+
     return (
-        <section className="py-24 relative overflow-hidden bg-brand-bg px-4 md:px-8">
-            <div className="container mx-auto max-w-6xl relative z-10">
+        <section className="py-32 relative overflow-hidden bg-brand-bg px-4 md:px-8 font-mastery">
+            <div className="container mx-auto max-width-6xl relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    style={{ scale, opacity }}
+                    className="relative"
                 >
-                    <TiltWrapper intensity={5} scaleOnHover={1.01}>
-                        <div className="relative rounded-[3rem] overflow-hidden p-12 md:p-24 shadow-[0_40px_80px_rgba(0,0,0,0.1)] group border border-white/10">
+                    <TiltWrapper intensity={3} scaleOnHover={1.01}>
+                        <div className="relative rounded-[4rem] overflow-hidden p-12 md:p-32 shadow-[0_50px_100px_rgba(0,0,0,0.2)] group border border-white/20 min-h-[600px] flex items-center justify-center">
+                            
+                            {/* Cinematic Background Image */}
+                            <div className="absolute inset-0 z-0">
+                                <motion.img 
+                                    initial={{ scale: 1.1 }}
+                                    whileInView={{ scale: 1 }}
+                                    transition={{ duration: 2 }}
+                                    src={heroImage} 
+                                    className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity"
+                                    alt="Background"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark via-brand-red-dark/95 to-brand-red-light/80 mix-blend-multiply"></div>
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,23,42,0.8)_100%)]"></div>
+                            </div>
 
-                            {/* Island Backgrounds */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark to-brand-red-light z-0"></div>
-
-                            {/* Animated Inner Meshes (Zero-Lag Opacity Based) */}
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_60%)] z-0 mix-blend-overlay"></div>
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.4),transparent_50%)] z-0 mix-blend-multiply opacity-60 group-hover:opacity-40 transition-opacity duration-1000"></div>
+                            {/* Floating Visual Particles */}
+                            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+                                {[...Array(6)].map((_, i) => (
+                                    <motion.div
+                                        key={i}
+                                        animate={{ 
+                                            y: [0, -100, 0],
+                                            opacity: [0, 0.3, 0],
+                                            scale: [1, 1.5, 1]
+                                        }}
+                                        transition={{ 
+                                            duration: 10 + i * 2, 
+                                            repeat: Infinity, 
+                                            ease: "easeInOut",
+                                            delay: i * 1.5
+                                        }}
+                                        className="absolute w-32 h-32 bg-white/10 rounded-full blur-3xl"
+                                        style={{ 
+                                            left: `${Math.random() * 100}%`,
+                                            top: `${Math.random() * 100}%`
+                                        }}
+                                    />
+                                ))}
+                            </div>
 
                             {/* Core Content */}
-                            <div className="relative z-10 text-center flex flex-col items-center">
+                            <div className="relative z-10 text-center flex flex-col items-center max-w-4xl">
 
                                 <motion.div
-                                    initial={{ opacity: 0, y: -20 }}
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/20 mb-8 shadow-inner"
+                                    className="inline-flex items-center space-x-3 bg-white/5 backdrop-blur-2xl px-8 py-3 rounded-full border border-white/10 mb-12 shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
                                 >
-                                    <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                                    <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/90">Take The Leap</span>
+                                    <span className="w-2 h-2 rounded-full bg-brand-red-light shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse"></span>
+                                    <span className="text-[10px] font-black tracking-[0.5em] uppercase text-white/70">Transformation Integrity</span>
                                 </motion.div>
 
-                                <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-10 tracking-tight leading-[1.1] drop-shadow-md">
-                                    Your Best Self Is<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/60">One Decision Away.</span>
+                                <h2 className="text-5xl md:text-8xl font-black text-white mb-12 tracking-tighter leading-[0.9] drop-shadow-2xl">
+                                    Your Best Self Is<br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40 italic">
+                                        One Decision Away.
+                                    </span>
                                 </h2>
 
+                                <p className="text-white/60 text-lg md:text-xl font-medium mb-12 max-w-2xl leading-relaxed tracking-tight">
+                                    Join the elite circle of individuals mastering their biology and spirit through our integrated human performance ecosystem.
+                                </p>
+
                                 {/* Buttons */}
-                                <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 w-full sm:w-auto mt-4">
+                                <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8 w-full sm:w-auto">
                                     <Link
                                         to="/contact"
-                                        className="relative overflow-hidden flex items-center justify-center px-10 py-5 rounded-[2rem] bg-white text-brand-red-dark font-extrabold text-lg hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto group/btn shadow-xl"
+                                        className="relative overflow-hidden flex items-center justify-center px-12 py-6 rounded-full bg-white text-brand-red-dark font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] hover:-translate-y-1.5 transition-all duration-500 w-full sm:w-auto group shadow-2xl"
                                     >
-                                        <span className="relative z-10">Contact Us</span>
-                                        <FaArrowRight className="ml-3 relative z-10 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                                        <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                                        <span className="relative z-10">Initiate Contact</span>
+                                        <FaArrowRight className="ml-3 relative z-10 group-hover:translate-x-2 transition-transform duration-500 text-sm" />
+                                        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
                                     </Link>
 
                                     <a
-                                        href="https://wa.me/918422923924"
+                                        href="https://wa.me/918097923924"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center px-10 py-5 rounded-[2rem] border-2 border-white/30 backdrop-blur-sm text-white font-extrabold text-lg w-full sm:w-auto hover:bg-white/10 hover:border-white hover:-translate-y-1 transition-all duration-300 group/btn2"
+                                        className="flex items-center justify-center px-12 py-6 rounded-full border-2 border-white/10 backdrop-blur-md text-white font-black text-xs uppercase tracking-[0.3em] w-full sm:w-auto hover:bg-white/10 hover:border-white/40 hover:-translate-y-1.5 transition-all duration-500 group"
                                     >
-                                        <div className="relative flex items-center justify-center mr-3 w-8 h-8 rounded-full bg-white/10 group-hover/btn2:bg-[#25D366] transition-colors duration-300">
-                                            <FaWhatsapp className="text-xl group-hover/btn2:scale-110 transition-transform duration-300" />
-                                        </div>
-                                        Talk on WhatsApp
+                                        <FaWhatsapp className="mr-3 text-xl group-hover:scale-125 group-hover:text-[#25D366] transition-all duration-500" />
+                                        Direct WhatsApp
                                     </a>
                                 </div>
                             </div>
