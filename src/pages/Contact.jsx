@@ -202,9 +202,9 @@ const Contact = () => {
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Our Location</h4>
                                                 <p className="text-brand-text-muted leading-relaxed">
-                                                    901, 902 NMS ICON Building,<br />
-                                                    Opp Bamandongari Railway station<br />
-                                                    Ulwe, Navi Mumbai
+                                                    Nms Icon, 901,902, PLOT NO. 194,<br />
+                                                    near Bamandongri Railway Station,<br />
+                                                    Sector 19, Ulwe, Navi Mumbai - 410206
                                                 </p>
                                             </div>
                                         </div>

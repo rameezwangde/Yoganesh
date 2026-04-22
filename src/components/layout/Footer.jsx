@@ -86,7 +86,7 @@ const Footer = () => {
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
                                     <FaMapMarkerAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
                                 </div>
-                                <span className="pt-1 leading-relaxed">901, 902 NMS ICON Building,<br />Opp Bamandongari station,<br />Ulwe, Navi Mumbai</span>
+                                <span className="pt-1 leading-relaxed">Nms Icon, 901,902, PLOT NO. 194,<br />near Bamandongri Railway Station,<br />Sector 19, Ulwe, Navi Mumbai - 410206</span>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted group">
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
