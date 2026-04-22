@@ -22,7 +22,7 @@ const PageLayout = ({ children }) => {
         <div className="flex flex-col min-h-screen w-full max-w-[100vw] overflow-x-hidden relative">
             <BreathingBackground />
             {!isDivisionPage && <Navbar />}
-            <main className={`flex-grow ${!isDivisionPage ? 'pt-[72px]' : ''}`}>
+            <main className={`flex-grow ${!isDivisionPage ? 'pt-[110px] md:pt-[72px]' : ''}`}>
                 {children}
             </main>
             <Footer />
