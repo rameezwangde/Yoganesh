@@ -171,24 +171,51 @@ const divisionData = {
         img: divWellnessImg,
         tagline: 'The Science of Restoration.',
         overview: 'Recovery is the most underrated phase of performance. Our Wellness Center provides a sanctuary of advanced recovery technology to downshift your nervous system and accelerate cellular repair.',
-        programs: [
-            { name: 'Neural Recovery', time: 'Scheduled Sessions', desc: 'Combining infrared light therapy and sound frequencies to induce deep parasympathetic states.', size: 'medium', markers: ['Infrared Tech', 'Delta Waves', 'Neural Reset'], accent: 'from-blue-500/10 to-cyan-500/5' },
-            { name: 'Contrast Therapy', time: 'Open Daily', desc: 'Alternating between advanced cryotherapy and sauna to stimulate systemic blood flow.', size: 'medium', markers: ['Cryo Protocol', 'Heat Shock', 'Vascular Pump'], accent: 'from-blue-700/10 to-red-700/5' },
-            { name: 'Myofascial Release', time: 'Expert Assisted', desc: 'Clinical tissue manipulation to resolve adhesions and restore fluid movement.', size: 'medium', markers: ['Tissue Health', 'Fascia Release', 'Range Restore'], accent: 'from-emerald-500/10 to-teal-500/5' }
-        ],
         uniqueSection: {
             title: '8 Dimensions of Holistic Wellness',
             desc: 'True restoration requires a multi-faceted approach. We evaluate and optimize your life across these eight core pillars of human vitality.',
-            img: wellnessDimensionsImg,
+            isLargeGrid: true,
             items: [
-                { label: 'Physical', detail: 'Nourishing your body through movement, nutrition, and sleep. For those seeking vitality and disease prevention.' },
-                { label: 'Emotional', detail: 'Understanding your feelings and coping with stress. For those seeking inner peace and emotional resilience.' },
-                { label: 'Intellectual', detail: 'Expanding knowledge and creative abilities. For lifelong learners and creative minds.' },
-                { label: 'Social', detail: 'Developing connection and support systems. For those seeking community and deeper relationships.' },
-                { label: 'Spiritual', detail: 'Expanding sense of purpose and meaning. For seekers of higher purpose and mindfulness.' },
-                { label: 'Environmental', detail: 'Creating stimulating environments that support well-being. For those seeking harmony with their surroundings.' },
-                { label: 'Vocational', detail: 'Deriving satisfaction through purposeful work. For professionals seeking career-life balance.' },
-                { label: 'Financial', detail: 'Satisfaction with current and future financial status. For those seeking stability and stress reduction.' }
+                { 
+                    label: 'Physical', 
+                    detail: 'Nourishing your body through movement, nutrition, and sleep. For those seeking vitality and disease prevention.',
+                    img: 'https://dailylifestyletalks.com/wp-content/uploads/2023/02/Physical-Wellness-1.png'
+                },
+                { 
+                    label: 'Emotional', 
+                    detail: 'Understanding your feelings and coping with stress. For those seeking inner peace and emotional resilience.',
+                    img: 'https://tse2.mm.bing.net/th/id/OIP.e0Z-bK-SyfktwJ7qom8AnAHaEy?rs=1&pid=ImgDetMain&o=7&rm=3'
+                },
+                { 
+                    label: 'Intellectual', 
+                    detail: 'Expanding knowledge and creative abilities. For lifelong learners and creative minds.',
+                    img: 'https://tse2.mm.bing.net/th/id/OIP.fDi7MhEcQWhorez7SfMHZwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'
+                },
+                { 
+                    label: 'Social', 
+                    detail: 'Developing connection and support systems. For those seeking community and deeper relationships.',
+                    img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2000&auto=format&fit=crop'
+                },
+                { 
+                    label: 'Spiritual', 
+                    detail: 'Expanding sense of purpose and meaning. For seekers of higher purpose and mindfulness.',
+                    img: 'https://tse3.mm.bing.net/th/id/OIP.dWXXWl3nTZK9YTvPDin3bgHaEO?rs=1&pid=ImgDetMain&o=7&rm=3'
+                },
+                { 
+                    label: 'Environmental', 
+                    detail: 'Creating stimulating environments that support well-being. For those seeking harmony with their surroundings.',
+                    img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000&auto=format&fit=crop'
+                },
+                { 
+                    label: 'Vocational', 
+                    detail: 'Deriving satisfaction through purposeful work. For professionals seeking career-life balance.',
+                    img: 'https://tse1.mm.bing.net/th/id/OIP.-OsE9MFn7iwDkbPqTBKmEAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'
+                },
+                { 
+                    label: 'Financial', 
+                    detail: 'Satisfaction with current and future financial status. For those seeking stability and stress reduction.',
+                    img: 'https://tse3.mm.bing.net/th/id/OIP.ar58EdFrofp-5QrIjwYSYgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'
+                }
             ]
         },
         benefits: [
@@ -200,7 +227,6 @@ const divisionData = {
         who: 'Busy professionals, high-intensity athletes, and anyone navigating a high-stress modern environment.',
         navItems: [
             { id: 'overview', label: 'Reset' },
-            { id: 'programs', label: 'Protocols' },
             { id: 'unique', label: 'The Cycle' },
             { id: 'benefits', label: 'Recovery' },
             { id: 'enquiry', label: 'Restore' }
@@ -646,97 +672,99 @@ const DivisionTemplate = () => {
                     </motion.section>
 
                     {/* PROGRAMS & OFFERINGS SECTION - Innovative Bento Lab */}
-                    <motion.section
-                        id="programs"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: true }}
-                        className="py-24 md:py-40 scroll-mt-20 bg-brand-bg-alt/50 relative"
-                    >
-                        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
-                                <div className="max-w-2xl">
-                                    <div className="flex items-center space-x-4 mb-6">
-                                        <div className="w-12 h-[2px] bg-blue-500"></div>
-                                        <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-xs">The Methodology</span>
+                    {data.programs && data.programs.length > 0 && (
+                        <motion.section
+                            id="programs"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true }}
+                            className="py-24 md:py-40 scroll-mt-20 bg-brand-bg-alt/50 relative"
+                        >
+                            <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+                                <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+                                    <div className="max-w-2xl">
+                                        <div className="flex items-center space-x-4 mb-6">
+                                            <div className="w-12 h-[2px] bg-blue-500"></div>
+                                            <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-xs">The Methodology</span>
+                                        </div>
+                                        <h2 className="text-5xl md:text-7xl font-black tracking-tight text-brand-text leading-none uppercase italic pr-20">
+                                            Programs
+                                        </h2>
                                     </div>
-                                    <h2 className="text-5xl md:text-7xl font-black tracking-tight text-brand-text leading-none uppercase italic pr-20">
-                                        Programs
-                                    </h2>
                                 </div>
-                            </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[300px] md:auto-rows-[300px]">
-                                {data.programs.map((prog, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: i * 0.1, duration: 0.6 }}
-                                        className={`group relative rounded-[3rem] overflow-hidden border border-brand-text/5 shadow-sm hover:shadow-2xl transition-all duration-700 ${prog.size === 'large' ? 'md:col-span-7 md:row-span-2' :
-                                            prog.size === 'medium' ? 'md:col-span-5 md:row-span-1' :
-                                                'md:col-span-5 md:row-span-1'
-                                            } ${!prog.img ? `bg-gradient-to-br ${prog.accent} backdrop-blur-sm` : 'bg-brand-bg-alt'}`}
-                                    >
-                                        {/* Background Image Overlay */}
-                                        {prog.img ? (
-                                            <div className="absolute inset-0 z-0 overflow-hidden">
-                                                <img
-                                                    src={prog.img}
-                                                    alt={prog.name}
-                                                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0"
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-brand-bg/20 group-hover:from-brand-text/90 group-hover:via-brand-text/40 group-hover:to-transparent transition-all duration-700"></div>
-                                            </div>
-                                        ) : (
-                                            /* Abstract Zen Glow for Non-Image Cards */
-                                            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
-                                                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${prog.accent} blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2`}></div>
-                                                <div className={`absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr ${prog.accent} blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2`}></div>
-                                            </div>
-                                        )}
+                                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[300px] md:auto-rows-[300px]">
+                                    {data.programs.map((prog, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: i * 0.1, duration: 0.6 }}
+                                            className={`group relative rounded-[3rem] overflow-hidden border border-brand-text/5 shadow-sm hover:shadow-2xl transition-all duration-700 ${prog.size === 'large' ? 'md:col-span-7 md:row-span-2' :
+                                                prog.size === 'medium' ? 'md:col-span-5 md:row-span-1' :
+                                                    'md:col-span-5 md:row-span-1'
+                                                } ${!prog.img ? `bg-gradient-to-br ${prog.accent} backdrop-blur-sm` : 'bg-brand-bg-alt'}`}
+                                        >
+                                            {/* Background Image Overlay */}
+                                            {prog.img ? (
+                                                <div className="absolute inset-0 z-0 overflow-hidden">
+                                                    <img
+                                                        src={prog.img}
+                                                        alt={prog.name}
+                                                        className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-100 grayscale-[50%] group-hover:grayscale-0"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-brand-bg/20 group-hover:from-brand-text/90 group-hover:via-brand-text/40 group-hover:to-transparent transition-all duration-700"></div>
+                                                </div>
+                                            ) : (
+                                                /* Abstract Zen Glow for Non-Image Cards */
+                                                <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                                                    <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${prog.accent} blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2`}></div>
+                                                    <div className={`absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr ${prog.accent} blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2`}></div>
+                                                </div>
+                                            )}
 
-                                        <div className="relative z-10 p-10 h-full flex flex-col justify-between">
-                                            <div>
-                                                <div className="flex items-center justify-between mb-8">
-                                                    <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent'}`}>
-                                                        {prog.time}
+                                            <div className="relative z-10 p-10 h-full flex flex-col justify-between">
+                                                <div>
+                                                    <div className="flex items-center justify-between mb-8">
+                                                        <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent'}`}>
+                                                            {prog.time}
+                                                        </div>
+                                                        <div className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500">
+                                                            {i === 0 ? '🦾' : i === 1 ? '🔬' : i === 2 ? '💎' : '💊'}
+                                                        </div>
                                                     </div>
-                                                    <div className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500">
-                                                        {i === 0 ? '🦾' : i === 1 ? '🔬' : i === 2 ? '💎' : '💊'}
-                                                    </div>
+
+                                                    <h3 className={`font-black tracking-tight leading-none uppercase italic mb-6 transition-colors duration-500 pr-8 ${prog.size === 'large' ? 'text-4xl md:text-6xl' : 'text-2xl md:text-3xl'
+                                                        } ${prog.img ? 'group-hover:text-white' : 'text-brand-text'}`}>
+                                                        {prog.name}
+                                                    </h3>
+
+                                                    <p className={`max-w-md text-lg leading-relaxed transition-colors duration-500 ${prog.img ? 'text-brand-text group-hover:text-white/70' : 'text-brand-text-muted'
+                                                        }`}>
+                                                        {prog.desc}
+                                                    </p>
                                                 </div>
 
-                                                <h3 className={`font-black tracking-tight leading-none uppercase italic mb-6 transition-colors duration-500 pr-8 ${prog.size === 'large' ? 'text-4xl md:text-6xl' : 'text-2xl md:text-3xl'
-                                                    } ${prog.img ? 'group-hover:text-white' : 'text-brand-text'}`}>
-                                                    {prog.name}
-                                                </h3>
-
-                                                <p className={`max-w-md text-lg leading-relaxed transition-colors duration-500 ${prog.img ? 'text-brand-text group-hover:text-white/70' : 'text-brand-text-muted'
-                                                    }`}>
-                                                    {prog.desc}
-                                                </p>
+                                                <div className="space-y-6">
+                                                    {prog.markers && (
+                                                        <div className="flex flex-wrap gap-2">
+                                                            {prog.markers.map((marker, m) => (
+                                                                <span key={m} className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${!prog.img ? 'bg-white/30 text-brand-text-muted group-hover:bg-white/60 group-hover:text-brand-text' : 'bg-brand-text/5 text-brand-text-muted group-hover:bg-white/10 group-hover:text-blue-400'}`}>
+                                                                    {marker}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
                                             </div>
-
-                                            <div className="space-y-6">
-                                                {prog.markers && (
-                                                    <div className="flex flex-wrap gap-2">
-                                                        {prog.markers.map((marker, m) => (
-                                                            <span key={m} className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${!prog.img ? 'bg-white/30 text-brand-text-muted group-hover:bg-white/60 group-hover:text-brand-text' : 'bg-brand-text/5 text-brand-text-muted group-hover:bg-white/10 group-hover:text-blue-400'}`}>
-                                                                {marker}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </motion.section>
+                        </motion.section>
+                    )}
 
                     {/* UNIVERSITY COURSES SECTION - Immersive Explorer Layout */}
                     {data.universityCourses && (
@@ -1111,7 +1139,7 @@ const DivisionTemplate = () => {
                                                     onChange={handleChange}
                                                     type="tel"
                                                     className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-blue-600 focus:bg-white transition-all shadow-inner"
-                                                    placeholder="+91 84229 23924"
+                                                    placeholder="+91 80979 23924"
                                                 />
                                             </motion.div>
                                         </div>
