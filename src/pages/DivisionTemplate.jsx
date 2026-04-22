@@ -1025,7 +1025,7 @@ const DivisionTemplate = () => {
                                     >
                                         <TiltWrapper intensity={5} scaleOnHover={1.03}>
                                             <div className="relative h-full bg-brand-bg/60 backdrop-blur-md border border-brand-text/5 p-8 rounded-[3rem] transition-all duration-500 hover:bg-brand-bg hover:shadow-[0_50px_100px_rgba(0,0,0,0.12)] flex flex-col overflow-hidden group">
-                                                
+
                                                 {/* Glass Reflection Effect */}
                                                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
 
@@ -1049,7 +1049,7 @@ const DivisionTemplate = () => {
 
                                                 {/* Sophisticated Glow */}
                                                 <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-600/5 blur-[50px] group-hover:bg-blue-600/10 rounded-full transition-all duration-700"></div>
-                                                
+
                                                 {/* Subtle Animated Border Bottom */}
                                                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-blue-600 transition-all duration-700 ease-out group-hover:w-full"></div>
                                             </div>

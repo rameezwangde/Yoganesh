@@ -37,10 +37,10 @@ const YogaAbout = () => {
                         className="space-y-6 text-brand-text-muted text-lg leading-relaxed font-medium"
                     >
                         <p>
-                            YOGANESH Fitness Classes offers a transformative experience through the ancient practice of yoga, enhancing both physical and mental well-being. Yoga improves flexibility, builds strength, and enhances posture. Regular practice reduces stress, boosts immunity, and improves breathing. It sharpens focus and promotes mindfulness, contributing to emotional balance and inner peace.
+                            Yoganesh Health Institute offers a transformative experience through the ancient practice of yoga, enhancing both physical and mental well-being. Yoga improves flexibility, builds strength, and enhances posture. Regular practice reduces stress, boosts immunity, and improves breathing. It sharpens focus and promotes mindfulness, contributing to emotional balance and inner peace.
                         </p>
                         <p>
-                            Joining YOGANESH Fitness Classes means embracing a healthier lifestyle with expert guidance in a supportive community. You'll enjoy increased energy, better sleep, and a toned body. Yoga aids digestion, lowers blood pressure, and supports heart health. It fosters discipline, self-awareness, and resilience. Discover serenity and strength through every breath and pose.
+                            Joining Yoganesh Health Institute means embracing a healthier lifestyle with expert guidance in a supportive community. You'll enjoy increased energy, better sleep, and a toned body. Yoga aids digestion, lowers blood pressure, and supports heart health. It fosters discipline, self-awareness, and resilience. Discover serenity and strength through every breath and pose.
                         </p>
                     </motion.div>
                 </div>
@@ -82,7 +82,7 @@ const YogaAbout = () => {
                             <FaLeaf className="text-brand-red-light text-xl" />
                         </div>
                         <p className="text-brand-text-muted text-xl leading-relaxed font-medium mb-10">
-                            YOGANESH Fitness Classes blends ancient yoga with modern fitness, creating harmony, strength, and inner peace daily.
+                            Yoganesh Health Institute blends ancient yoga with modern fitness, creating harmony, strength, and inner peace daily.
                         </p>
                         <button className="px-10 py-4 bg-gradient-primary text-white font-extrabold rounded-full hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] hover:-translate-y-1 transition-all duration-300 tracking-wider">
                             GET STARTED
@@ -129,7 +129,7 @@ const YogaAbout = () => {
                         className="space-y-6 text-brand-text-muted text-lg leading-relaxed font-medium relative z-10 lg:pl-8"
                     >
                         <p>
-                            YOGANESH Fitness Classes is dedicated to promoting health, wellness, and inner peace through expert-led yoga sessions. Our classes cater to all levels, helping you achieve balance, flexibility, and strength.
+                            Yoganesh Health Institute is dedicated to promoting health, wellness, and inner peace through expert-led yoga sessions. Our classes cater to all levels, helping you achieve balance, flexibility, and strength.
                         </p>
                         <p>
                             Join our community to experience personalized guidance, mindful practices, and holistic well-being. Whether you're a beginner or an advanced yogi, our sessions nurture your body, mind, and soul for a healthier lifestyle.

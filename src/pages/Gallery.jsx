@@ -41,7 +41,7 @@ const Gallery = () => {
                         transition={{ duration: 0.6 }}
                         className="container mx-auto px-4"
                     >
-                        <h1 className="text-5xl font-extrabold text-brand-text mb-6">Inside <span className="text-gradient">YOGANESH</span></h1>
+                        <h1 className="text-5xl font-extrabold text-brand-text mb-6">Inside <span className="text-gradient">Yoganesh Health Institute</span></h1>
                         <p className="text-brand-text-muted max-w-2xl mx-auto">Explore our premium facilities, vibrant community, and dynamic classes.</p>
                     </motion.div>
                 </section>

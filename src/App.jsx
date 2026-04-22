@@ -46,7 +46,7 @@ const PageLoader = () => (
         }}
         className="absolute w-12 h-12 rounded-full border-2 border-brand-red-light"
       />
-      
+
       {/* Central Pulsing Dot */}
       <motion.div
         animate={{
@@ -61,7 +61,7 @@ const PageLoader = () => (
         className="w-4 h-4 bg-brand-red-light rounded-full shadow-[0_0_20px_rgba(192,0,0,0.5)] z-10"
       />
     </div>
-    
+
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}

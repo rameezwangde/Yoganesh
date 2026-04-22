@@ -38,7 +38,7 @@ const YogaHero = () => {
                     <h1 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black mb-8 leading-[1.05] tracking-tight text-brand-text">
                         Yoganesh
                         <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">
-                            Fitness Classes
+                            Health Institute
                         </span>
                     </h1>
 

@@ -19,9 +19,9 @@ const YogaContact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { name, email, message } = formData;
-        
+
         const textMessage = `*New Yoga Enquiry*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
-        
+
         const whatsappUrl = `https://wa.me/918422923924?text=${encodeURIComponent(textMessage)}`;
         const mailtoUrl = `mailto:yoganeshfitnessclasses@gmail.com?subject=Yoga Enquiry - ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
 
@@ -157,7 +157,7 @@ const YogaContact = () => {
                     >
                         <AnimatePresence>
                             {isSubmitted && (
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.9 }}
@@ -168,7 +168,7 @@ const YogaContact = () => {
                                     <p className="text-brand-text-muted text-lg mb-8 max-w-sm">
                                         We are redirecting you to WhatsApp and Email to finalize your enquiry.
                                     </p>
-                                    <button 
+                                    <button
                                         onClick={() => setIsSubmitted(false)}
                                         className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-red-light transition-all"
                                     >

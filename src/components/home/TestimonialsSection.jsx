@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
                         <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
                         <span className="text-sm font-bold tracking-widest uppercase text-brand-text-muted">Success Stories</span>
                     </motion.div>
-                    
+
                     <h2 className="text-5xl md:text-6xl font-extrabold text-brand-text mb-6 tracking-tight">
                         Real People. <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Real Change.</span>
                     </h2>
@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
                         >
                             <TiltWrapper intensity={10} scaleOnHover={1.02}>
                                 <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 p-10 rounded-[2rem] h-full flex flex-col relative group hover:bg-white hover:border-brand-red-light/20 hover:shadow-[0_20px_40px_rgba(192,0,0,0.06)] transition-all duration-500 overflow-hidden cursor-pointer">
-                                    
+
                                     {/* Subtle Top Glow Line */}
                                     <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-brand-red-light/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
                                     {/* Ratings */}
                                     <div className="flex text-brand-red-light mb-8 space-x-1">
                                         {[...Array(5)].map((_, idx) => (
-                                            <motion.div 
+                                            <motion.div
                                                 key={idx}
                                                 whileHover={{ scale: 1.2, rotate: 180 }}
                                                 transition={{ duration: 0.3 }}

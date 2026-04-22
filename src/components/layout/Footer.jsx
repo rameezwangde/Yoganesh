@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 const Footer = () => {
     return (
         <footer className="bg-brand-bg-alt relative border-t border-brand-text/5 overflow-hidden">
-            
+
             {/* Massive Parallax Brand Watermark */}
             <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">
                 <span className="text-[120px] md:text-[250px] lg:text-[400px] font-black tracking-tighter text-brand-text whitespace-nowrap">
-                    
+
                 </span>
             </div>
 
@@ -19,11 +19,11 @@ const Footer = () => {
 
             <div className="container mx-auto px-4 md:px-8 relative z-10 pt-24 pb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-                    
+
                     {/* Brand Col */}
                     <div className="lg:col-span-4 pr-0 lg:pr-12">
-                        <Link to="/" className="text-4xl font-extrabold tracking-tight text-brand-text block mb-6 group">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">YOGA</span>NESH
+                        <Link to="/" className="text-3xl font-extrabold tracking-tight text-brand-text block mb-6 group">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">Yoganesh</span> Health Institute
                         </Link>
                         <p className="text-brand-text-muted text-base leading-relaxed mb-8">
                             A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent. We engineer your ultimate transformation.
@@ -34,9 +34,9 @@ const Footer = () => {
                                 { Icon: FaFacebookF, link: "#" },
                                 { Icon: FaYoutube, link: "#" }
                             ].map((item, i) => (
-                                <motion.a 
+                                <motion.a
                                     key={i}
-                                    href={item.link} 
+                                    href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     whileHover={{ y: -5, scale: 1.1 }}

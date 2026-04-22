@@ -20,28 +20,28 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const { name, phone, email, service, message } = formData;
-        
+
         // Format the message
         const textMessage = `*New Enquiry from Website*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service:* ${service || 'General Enquiry'}\n*Message:* ${message}`;
-        
+
         // WhatsApp URL
         const whatsappUrl = `https://wa.me/918422923924?text=${encodeURIComponent(textMessage)}`;
-        
+
         // Mailto URL
         const mailtoUrl = `mailto:yoganeshfitnessclasses@gmail.com?subject=New Enquiry from ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
 
         // Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
-        
+
         // Trigger mailto in current tab (or small delay to ensure WhatsApp opens)
         setTimeout(() => {
             window.location.href = mailtoUrl;
         }, 500);
 
         setIsSubmitted(true);
-        
+
         // Reset form after a delay
         setTimeout(() => {
             setIsSubmitted(false);
@@ -85,7 +85,7 @@ const Contact = () => {
                             >
                                 <div className="bg-brand-bg-alt border border-brand-text/10 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
                                     {isSubmitted && (
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             className="absolute inset-0 z-20 bg-brand-bg-alt/95 backdrop-blur-sm flex flex-col items-center justify-center text-center p-10"
@@ -95,7 +95,7 @@ const Contact = () => {
                                             <p className="text-brand-text-muted text-lg mb-8">
                                                 Redirecting you to WhatsApp and your Email client to finalize the message.
                                             </p>
-                                            <button 
+                                            <button
                                                 onClick={() => setIsSubmitted(false)}
                                                 className="px-8 py-3 bg-brand-text text-white rounded-full font-bold hover:bg-brand-red-light transition-colors"
                                             >
@@ -109,46 +109,46 @@ const Contact = () => {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
                                                 <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Full Name <span className="text-brand-red-light">*</span></label>
-                                                <input 
-                                                    required 
+                                                <input
+                                                    required
                                                     name="name"
                                                     value={formData.name}
                                                     onChange={handleChange}
-                                                    type="text" 
-                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors" 
-                                                    placeholder="John Doe" 
+                                                    type="text"
+                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                    placeholder="John Doe"
                                                 />
                                             </div>
                                             <div>
                                                 <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Phone Number <span className="text-brand-red-light">*</span></label>
-                                                <input 
-                                                    required 
+                                                <input
+                                                    required
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
-                                                    type="tel" 
-                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors" 
-                                                    placeholder="+91 84229 23924" 
+                                                    type="tel"
+                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                    placeholder="+91 84229 23924"
                                                 />
                                             </div>
                                         </div>
 
                                         <div>
                                             <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Email Address <span className="text-brand-red-light">*</span></label>
-                                            <input 
-                                                required 
+                                            <input
+                                                required
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                type="email" 
-                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors" 
-                                                placeholder="john@example.com" 
+                                                type="email"
+                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                placeholder="john@example.com"
                                             />
                                         </div>
 
                                         <div>
                                             <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Preferred Service</label>
-                                            <select 
+                                            <select
                                                 name="service"
                                                 value={formData.service}
                                                 onChange={handleChange}
@@ -166,12 +166,12 @@ const Contact = () => {
 
                                         <div>
                                             <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Message</label>
-                                            <textarea 
+                                            <textarea
                                                 name="message"
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                rows="5" 
-                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors" 
+                                                rows="5"
+                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
                                                 placeholder="How can we assist you?"
                                             ></textarea>
                                         </div>

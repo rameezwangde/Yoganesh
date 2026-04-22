@@ -14,12 +14,12 @@ const About = () => {
             </Helmet>
 
             <main className="w-full bg-brand-bg text-brand-text overflow-hidden">
-                
+
                 {/* 1. Hero */}
                 <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden border-b border-brand-text/5">
                     {/* Immersive Background Watermark */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">
-                        <span className="text-[150px] md:text-[250px] font-black tracking-tighter text-brand-text whitespace-nowrap">YOGANESH</span>
+                        <span className="text-[100px] md:text-[200px] font-black tracking-tighter text-brand-text whitespace-nowrap uppercase">Yoganesh Health Institute</span>
                     </div>
 
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(192,0,0,0.05),transparent_70%)] pointer-events-none"></div>
@@ -44,7 +44,7 @@ const About = () => {
                             The Story of <br className="hidden md:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light">YOGANESH</span>
                         </motion.h1>
-                        
+
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const About = () => {
                 <section className="py-24 md:py-32 bg-brand-bg relative">
                     <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                            
+
                             {/* Founder Image */}
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
@@ -75,7 +75,7 @@ const About = () => {
                                             <span className="text-brand-text/20 font-black tracking-widest uppercase text-2xl rotate-[-90deg]">Founder Portrait</span>
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent opacity-80 z-10"></div>
-                                        
+
                                         {/* Premium Overlay Trim */}
                                         <div className="absolute inset-6 border border-brand-text/10 rounded-[2rem] z-20 pointer-events-none group-hover:border-brand-red-light/30 transition-colors duration-500"></div>
                                     </div>
@@ -92,7 +92,7 @@ const About = () => {
                             >
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-text">The Visionary Behind the Movement.</h2>
                                 <div className="w-20 h-1.5 bg-gradient-to-r from-brand-red-dark to-brand-red-light rounded-full"></div>
-                                
+
                                 <div className="space-y-6 text-brand-text-muted text-lg md:text-xl leading-relaxed">
                                     <p>
                                         What began as a rigorous personal quest for physical restoration rapidly evolved into a definitive blueprint for holistic health. We recognized that disconnected fitness routines and isolated medical treatments were fundamentally broken.
@@ -135,15 +135,15 @@ const About = () => {
                                 >
                                     <TiltWrapper intensity={10} scaleOnHover={1.03}>
                                         <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 p-10 rounded-[2rem] h-full flex flex-col group hover:bg-white hover:border-brand-red-light/30 hover:shadow-[0_20px_40px_rgba(192,0,0,0.08)] transition-all duration-500 overflow-hidden relative text-center">
-                                            
+
                                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(192,0,0,0.04),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                                             <div className="w-20 h-20 mx-auto bg-brand-bg-alt rounded-2xl flex items-center justify-center mb-8 border border-brand-text/5 group-hover:scale-110 group-hover:bg-brand-red-light group-hover:-rotate-3 transition-all duration-500 shadow-sm relative z-10">
                                                 <item.icon className="text-3xl text-brand-red-dark group-hover:text-white transition-colors duration-500" />
                                             </div>
-                                            
+
                                             <h3 className="text-2xl font-extrabold mb-4 group-hover:text-brand-red-dark transition-colors duration-300 relative z-10">{item.title}</h3>
-                                            
+
                                             <p className="text-brand-text-muted text-lg leading-relaxed group-hover:text-brand-text/80 transition-colors duration-300 relative z-10 flex-grow">
                                                 {item.desc}
                                             </p>
@@ -235,7 +235,7 @@ const About = () => {
                                             <div className="absolute inset-0 bg-brand-bg-alt flex items-center justify-center">
                                                 <span className="text-brand-text/20 uppercase tracking-widest text-sm font-bold rotate-[-90deg]">Portrait</span>
                                             </div>
-                                            
+
                                             {/* Hover Profile Reveal Overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-brand-red-dark/90 via-brand-red-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-end p-6">
                                                 <div className="flex space-x-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -263,12 +263,12 @@ const About = () => {
                 <section className="py-24 md:py-32 relative overflow-hidden bg-brand-bg">
                     {/* Immersive Background */}
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(192,0,0,0.08),transparent_70%)] pointer-events-none z-0"></div>
-                    
+
                     <div className="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center">
                         <TiltWrapper intensity={5} scaleOnHover={1.02}>
                             <div className="w-full max-w-5xl bg-brand-bg-alt border border-brand-text/10 rounded-[3rem] p-12 md:p-20 text-center shadow-[0_30px_60px_rgba(0,0,0,0.05)] relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark/5 to-transparent z-0"></div>
-                                
+
                                 <div className="relative z-10">
                                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 tracking-tight">Become the 1%. <br className="hidden md:block" />Join The YOGANESH Community.</h2>
                                     <Link

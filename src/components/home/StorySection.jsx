@@ -18,7 +18,7 @@ const StorySection = () => {
                         }
                     }}
                 >
-                    <motion.div 
+                    <motion.div
                         variants={{
                             hidden: { opacity: 0, y: 20 },
                             visible: { opacity: 1, y: 0 }
@@ -28,7 +28,7 @@ const StorySection = () => {
                         The Philosophy
                     </motion.div>
 
-                    <motion.h2 
+                    <motion.h2
                         variants={{
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0 }
@@ -39,17 +39,17 @@ const StorySection = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">A Wellness Ecosystem.</span>
                     </motion.h2>
 
-                    <motion.p 
+                    <motion.p
                         variants={{
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0 }
                         }}
                         className="text-xl md:text-2xl text-brand-text/70 leading-relaxed mb-12 font-medium max-w-3xl mx-auto"
                     >
-                        At YOGANESH, we believe true fitness goes beyond lifting weights. We have engineered a unified space where physical strength meets mental clarity. By combining medical insights through our Health Institute with dynamic disciplines like Yoga, Fitness, Dance, and Music, we offer a comprehensive approach to human performance and recovery.
+                        At Yoganesh Health Institute, we believe true fitness goes beyond lifting weights. We have engineered a unified space where physical strength meets mental clarity. By combining medical insights through our Health Institute with dynamic disciplines like Yoga, Fitness, Dance, and Music, we offer a comprehensive approach to human performance and recovery.
                     </motion.p>
 
-                    <motion.div 
+                    <motion.div
                         variants={{
                             hidden: { opacity: 0, scaleX: 0 },
                             visible: { opacity: 1, scaleX: 1 }
