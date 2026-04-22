@@ -1,20 +1,56 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
+import divHealthImg from '../assets/images/div_health.png'
+import divYogaImg from '../assets/images/div_yoga.png'
+import divFitnessImg from '../assets/images/div_fitness.png'
+import divWellnessImg from '../assets/images/div_wellness.png'
+import divDanceImg from '../assets/images/div_dance.png'
+import divMusicImg from '../assets/images/div_music.png'
+import healthHeroV2 from '../assets/images/health_hero_v2.png'
+import serviceBiomechanicalImg from '../assets/images/service_biomechanical.png'
+import servicePhysioImg from '../assets/images/service_physio.png'
+import healthUniversityImg from '../assets/images/health_university.png'
 
-const categories = ['All', 'Fitness', 'Yoga', 'Dance', 'Events', 'Kids', 'Adults']
+const categories = ['All', 'Fitness', 'Yoga', 'Dance', 'Music', 'Events', 'Kids', 'Adults']
 
-// Placeholders for Gallery
+// Consolidated high-fidelity images from divisions
 const images = [
-    { id: 1, category: 'Fitness', src: 'https://via.placeholder.com/600x800/1A1A1A/FFFFFF?text=Fitness+1' },
-    { id: 2, category: 'Yoga', src: 'https://via.placeholder.com/600x600/1A1A1A/FFFFFF?text=Yoga+1' },
-    { id: 3, category: 'Dance', src: 'https://via.placeholder.com/800x600/1A1A1A/FFFFFF?text=Dance+1' },
-    { id: 4, category: 'Events', src: 'https://via.placeholder.com/600x800/1A1A1A/FFFFFF?text=Events+1' },
-    { id: 5, category: 'Fitness', src: 'https://via.placeholder.com/800x600/1A1A1A/FFFFFF?text=Fitness+2' },
-    { id: 6, category: 'Adults', src: 'https://via.placeholder.com/600x600/1A1A1A/FFFFFF?text=Adults+1' },
-    { id: 7, category: 'Kids', src: 'https://via.placeholder.com/800x800/1A1A1A/FFFFFF?text=Kids+1' },
-    { id: 8, category: 'Yoga', src: 'https://via.placeholder.com/600x800/1A1A1A/FFFFFF?text=Yoga+2' },
-    { id: 9, category: 'Dance', src: 'https://via.placeholder.com/600x600/1A1A1A/FFFFFF?text=Dance+2' },
+    // Fitness
+    { id: 1, category: 'Fitness', src: divFitnessImg },
+    { id: 2, category: 'Fitness', src: 'https://img.freepik.com/premium-photo/group-young-athletes-crossfit-gym-doing-variety-exercise-routines-while-trainer-other-members-group-cheer-them_378494-472.jpg?w=2000' },
+    { id: 3, category: 'Fitness', src: 'https://img.freepik.com/premium-photo/people-stretching-pilates-reformers_126745-3577.jpg?w=2000' },
+    { id: 4, category: 'Fitness', src: 'https://www.verywellfit.com/thmb/SaUyT2h2ujEDx4zCAU0ilFclWqI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4688722-GettyImages-950806258-06e1e050ab184f3694fd96017c9a42ee.jpg' },
+    
+    // Yoga
+    { id: 5, category: 'Yoga', src: divYogaImg },
+    { id: 6, category: 'Yoga', src: 'https://m.media-amazon.com/images/I/41I4-bzPDWL._SY445_SX342_.jpg' },
+    { id: 7, category: 'Yoga', src: 'https://www.fitsri.com/wp-content/uploads/2021/12/triangle-pose-with-yoga-block-1024x683.jpg' },
+    { id: 8, category: 'Yoga', src: 'https://tse1.mm.bing.net/th/id/OIP.lS5MT5YNzEXS3sv35mNwigHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' },
+    
+    // Dance
+    { id: 9, category: 'Dance', src: divDanceImg },
+    { id: 10, category: 'Dance', src: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop' },
+    { id: 11, category: 'Dance', src: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop' },
+    { id: 12, category: 'Dance', src: 'https://images.unsplash.com/photo-1612459284970-e8f027596582?q=80&w=2000&auto=format&fit=crop' },
+    { id: 13, category: 'Dance', src: 'https://i.pinimg.com/originals/70/e3/5d/70e35dbed223120593f2b9064bbd4291.jpg' },
+    
+    // Music
+    { id: 14, category: 'Music', src: divMusicImg },
+    { id: 15, category: 'Music', src: 'https://cdn.mos.cms.futurecdn.net/C2845HQhUYoWYJK3zMkKiX.jpg' },
+    { id: 16, category: 'Music', src: 'https://th.bing.com/th/id/OIP.rUTJG1rEeRhEiQfZaZnQowHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3' },
+    { id: 17, category: 'Music', src: 'https://www.amritmusic.com/wp-content/uploads/2024/09/Sitar.jpg' },
+    { id: 18, category: 'Music', src: 'https://static.roland.com/assets/images/products/gallery/octapad_spd-20_pro-bk_angle_gal.jpg' },
+
+    // Adults (Health / Medical)
+    { id: 19, category: 'Adults', src: healthHeroV2 },
+    { id: 20, category: 'Adults', src: serviceBiomechanicalImg },
+    { id: 21, category: 'Adults', src: servicePhysioImg },
+    { id: 22, category: 'Adults', src: healthUniversityImg },
+
+    // Events / Kids (Placeholders or related)
+    { id: 23, category: 'Events', src: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2000&auto=format&fit=crop' },
+    { id: 24, category: 'Kids', src: 'https://media.istockphoto.com/id/542718538/photo/pregnant-young-woman-doing-prenatal-yoga-chair-pose-utkatasana.jpg?s=612x612&w=is&k=20&c=HD2yPlqsRZvLdnNub3QOSR63gYeANXfFsd5eZekq1B4=' },
 ]
 
 const Gallery = () => {
@@ -28,8 +64,8 @@ const Gallery = () => {
     return (
         <>
             <Helmet>
-                <title>Gallery | Inside YOGANESH</title>
-                <meta name="description" content="Take a look inside the YOGANESH facilities, classes, and community events." />
+                <title>Gallery | Yoganesh Health Institute</title>
+                <meta name="description" content="Take a look inside the Yoganesh Health Institute facilities, classes, and community events." />
             </Helmet>
 
             <main className="min-h-screen bg-brand-bg pb-24">
