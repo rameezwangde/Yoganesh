@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import HeroSection from '../components/home/HeroSection'
 import VideoTourSection from '../components/home/VideoTourSection'
 import FeaturesSection from '../components/home/FeaturesSection'
-import TestimonialsSection from '../components/home/TestimonialsSection'
+
 import PathSection from '../components/home/PathSection'
 import CtaBanner from '../components/home/CtaBanner'
 
@@ -24,7 +24,7 @@ const Home = () => {
                 <VideoTourSection />
                 <PathSection />
                 <FeaturesSection />
-                <TestimonialsSection />
+
                 <CtaBanner />
             </div>
         </>
