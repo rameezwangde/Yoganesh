@@ -704,9 +704,7 @@ const DivisionTemplate = () => {
                                                         <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-brand-red-light group-hover:text-white group-hover:border-transparent'}`}>
                                                             {prog.time}
                                                         </div>
-                                                        <div className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500">
-                                                            {i === 0 ? '🦾' : i === 1 ? '🔬' : i === 2 ? '💎' : '💊'}
-                                                        </div>
+                                                        {/* Program Icon Removed */}
                                                     </div>
 
                                                     <h3 className={`font-black tracking-tight leading-none uppercase italic mb-6 transition-colors duration-500 pr-8 ${prog.size === 'large' ? 'text-4xl md:text-6xl' : 'text-2xl md:text-3xl'
@@ -778,9 +776,7 @@ const DivisionTemplate = () => {
                                                         }`}
                                                 >
                                                     <div className="flex items-center space-x-6">
-                                                        <span className={`text-3xl transition-transform duration-500 ${activeCourse === i ? 'scale-125 rotate-12' : 'group-hover:scale-110'}`}>
-                                                            {course.icon}
-                                                        </span>
+                                                        {/* Course Icon Removed */}
                                                         <div>
                                                             <h4 className={`font-black text-xl tracking-tight transition-colors ${activeCourse === i ? 'text-brand-text' : 'text-white/60'}`}>
                                                                 {course.name}
@@ -1030,12 +1026,7 @@ const DivisionTemplate = () => {
                                                 {/* Glass Reflection Effect */}
                                                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
 
-                                                {/* Icon Header */}
-                                                <div className="w-16 h-16 bg-white rounded-2xl shadow-md border border-brand-text/5 flex items-center justify-center mb-8 group-hover:bg-brand-red-light group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 relative z-10">
-                                                    <div className="text-3xl group-hover:scale-125 transition-transform">
-                                                        {benefit.icon}
-                                                    </div>
-                                                </div>
+                                                {/* Icon Header Removed */}
 
                                                 <div className="relative z-10">
                                                     <h4 className="text-lg font-black text-brand-text mb-4 tracking-tight leading-tight group-hover:text-brand-red-dark transition-colors">
