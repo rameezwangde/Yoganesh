@@ -53,7 +53,7 @@ const divisionData = {
         who: 'Healthcare professionals, athletes seeking peak optimization, and individuals requiring specialized clinical guidance.',
         navItems: [
             { id: 'overview', label: 'Overview' },
-            { id: 'courses', label: 'Courses' },
+            { id: 'courses', label: 'Offerings' },
             { id: 'benefits', label: 'Why Us' },
             { id: 'enquiry', label: 'Contact' }
         ]
@@ -94,11 +94,11 @@ const divisionData = {
         ],
         who: 'Individuals seeking a deep, disciplined approach to physical and mental mastery through the lens of ancient wisdom.',
         navItems: [
-            { id: 'overview', label: 'Philosophy' },
+            { id: 'overview', label: 'Overview' },
             { id: 'programs', label: 'Offerings' },
-            { id: 'unique', label: 'Lineage' },
-            { id: 'benefits', label: 'Impact' },
-            { id: 'enquiry', label: 'Connect' }
+            { id: 'unique', label: 'Features' },
+            { id: 'benefits', label: 'Why Us' },
+            { id: 'enquiry', label: 'Contact' }
         ]
     },
     'fitness-classes': {
@@ -132,11 +132,11 @@ const divisionData = {
         ],
         who: 'Goal-oriented individuals, high-performers, and those who treat their body as a high-performance vehicle.',
         navItems: [
-            { id: 'overview', label: 'Method' },
-            { id: 'programs', label: 'Labs' },
-            { id: 'unique', label: 'Matrix' },
-            { id: 'benefits', label: 'Results' },
-            { id: 'enquiry', label: 'Join' }
+            { id: 'overview', label: 'Overview' },
+            { id: 'programs', label: 'Offerings' },
+            { id: 'unique', label: 'Features' },
+            { id: 'benefits', label: 'Why Us' },
+            { id: 'enquiry', label: 'Contact' }
         ]
     },
     'wellness-center': {
@@ -149,43 +149,43 @@ const divisionData = {
             desc: 'True restoration requires a multi-faceted approach. We evaluate and optimize your life across these eight core pillars of human vitality.',
             isLargeGrid: true,
             items: [
-                { 
-                    label: 'Physical', 
+                {
+                    label: 'Physical',
                     detail: 'Nourishing your body through movement, nutrition, and sleep. For those seeking vitality and disease prevention.',
                     img: 'https://dailylifestyletalks.com/wp-content/uploads/2023/02/Physical-Wellness-1.png'
                 },
-                { 
-                    label: 'Emotional', 
+                {
+                    label: 'Emotional',
                     detail: 'Understanding your feelings and coping with stress. For those seeking inner peace and emotional resilience.',
                     img: 'https://tse2.mm.bing.net/th/id/OIP.e0Z-bK-SyfktwJ7qom8AnAHaEy?rs=1&pid=ImgDetMain&o=7&rm=3'
                 },
-                { 
-                    label: 'Intellectual', 
+                {
+                    label: 'Intellectual',
                     detail: 'Expanding knowledge and creative abilities. For lifelong learners and creative minds.',
                     img: 'https://tse2.mm.bing.net/th/id/OIP.fDi7MhEcQWhorez7SfMHZwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'
                 },
-                { 
-                    label: 'Social', 
+                {
+                    label: 'Social',
                     detail: 'Developing connection and support systems. For those seeking community and deeper relationships.',
                     img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2000&auto=format&fit=crop'
                 },
-                { 
-                    label: 'Spiritual', 
+                {
+                    label: 'Spiritual',
                     detail: 'Expanding sense of purpose and meaning. For seekers of higher purpose and mindfulness.',
                     img: 'https://tse3.mm.bing.net/th/id/OIP.dWXXWl3nTZK9YTvPDin3bgHaEO?rs=1&pid=ImgDetMain&o=7&rm=3'
                 },
-                { 
-                    label: 'Environmental', 
+                {
+                    label: 'Environmental',
                     detail: 'Creating stimulating environments that support well-being. For those seeking harmony with their surroundings.',
                     img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000&auto=format&fit=crop'
                 },
-                { 
-                    label: 'Vocational', 
+                {
+                    label: 'Vocational',
                     detail: 'Deriving satisfaction through purposeful work. For professionals seeking career-life balance.',
                     img: 'https://tse1.mm.bing.net/th/id/OIP.-OsE9MFn7iwDkbPqTBKmEAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'
                 },
-                { 
-                    label: 'Financial', 
+                {
+                    label: 'Financial',
                     detail: 'Satisfaction with current and future financial status. For those seeking stability and stress reduction.',
                     img: 'https://tse3.mm.bing.net/th/id/OIP.ar58EdFrofp-5QrIjwYSYgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'
                 }
@@ -199,10 +199,10 @@ const divisionData = {
         ],
         who: 'Busy professionals, high-intensity athletes, and anyone navigating a high-stress modern environment.',
         navItems: [
-            { id: 'overview', label: 'Reset' },
-            { id: 'unique', label: 'The Cycle' },
-            { id: 'benefits', label: 'Recovery' },
-            { id: 'enquiry', label: 'Restore' }
+            { id: 'overview', label: 'Overview' },
+            { id: 'unique', label: 'Features' },
+            { id: 'benefits', label: 'Why Us' },
+            { id: 'enquiry', label: 'Contact' }
         ]
     },
     'dance-classes': {
@@ -249,11 +249,11 @@ const divisionData = {
         ],
         who: 'Individuals looking for an exhilarating, musical alternative to standard gym routines.',
         navItems: [
-            { id: 'overview', label: 'Artistry' },
-            { id: 'programs', label: 'Styles' },
-            { id: 'unique', label: 'Spectrum' },
-            { id: 'benefits', label: 'Energy' },
-            { id: 'enquiry', label: 'Move' }
+            { id: 'overview', label: 'Overview' },
+            { id: 'programs', label: 'Offerings' },
+            { id: 'unique', label: 'Features' },
+            { id: 'benefits', label: 'Why Us' },
+            { id: 'enquiry', label: 'Contact' }
         ]
     },
     'music-classes': {
@@ -306,11 +306,11 @@ const divisionData = {
         ],
         who: 'Children and adults seeking intellectual enrichment and a powerful creative outlet.',
         navItems: [
-            { id: 'overview', label: 'Insight' },
-            { id: 'programs', label: 'Conservatory' },
-            { id: 'unique', label: 'Gallery' },
-            { id: 'benefits', label: 'Cognition' },
-            { id: 'enquiry', label: 'Create' }
+            { id: 'overview', label: 'Overview' },
+            { id: 'programs', label: 'Offerings' },
+            { id: 'unique', label: 'Features' },
+            { id: 'benefits', label: 'Why Us' },
+            { id: 'enquiry', label: 'Contact' }
         ]
     }
 }
