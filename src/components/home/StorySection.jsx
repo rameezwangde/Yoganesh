@@ -36,7 +36,7 @@ const StorySection = () => {
                         className="text-5xl md:text-7xl font-black text-brand-text mb-10 tracking-tighter leading-[0.95]"
                     >
                         More Than a Gym. <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">A Wellness Ecosystem.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">A Wellness Ecosystem.</span>
                     </motion.h2>
 
                     <motion.p
@@ -55,7 +55,7 @@ const StorySection = () => {
                             visible: { opacity: 1, scaleX: 1 }
                         }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="w-32 h-1.5 bg-gradient-to-r from-brand-red-dark to-brand-red-light mx-auto rounded-full shadow-[0_0_15px_rgba(192,0,0,0.3)]"
+                        className="w-32 h-1.5 bg-gradient-to-r from-brand-secondary to-brand-primary mx-auto rounded-full shadow-[0_0_15px_rgba(22,163,74,0.3)]"
                     ></motion.div>
                 </motion.div>
             </div>

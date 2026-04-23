@@ -97,7 +97,7 @@ const Contact = () => {
                                             </p>
                                             <button
                                                 onClick={() => setIsSubmitted(false)}
-                                                className="px-8 py-3 bg-brand-text text-white rounded-full font-bold hover:bg-brand-red-light transition-colors"
+                                                className="px-8 py-3 bg-brand-text text-white rounded-full font-bold hover:bg-brand-primary transition-colors"
                                             >
                                                 Send Another Message
                                             </button>
@@ -108,40 +108,40 @@ const Contact = () => {
                                     <form className="space-y-6" onSubmit={handleSubmit}>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
-                                                <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Full Name <span className="text-brand-red-light">*</span></label>
+                                                <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Full Name <span className="text-brand-primary">*</span></label>
                                                 <input
                                                     required
                                                     name="name"
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     type="text"
-                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-primary transition-colors"
                                                     placeholder="John Doe"
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Phone Number <span className="text-brand-red-light">*</span></label>
+                                                <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Phone Number <span className="text-brand-primary">*</span></label>
                                                 <input
                                                     required
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     type="tel"
-                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                    className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-primary transition-colors"
                                                     placeholder="+91 84229 23924"
                                                 />
                                             </div>
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Email Address <span className="text-brand-red-light">*</span></label>
+                                            <label className="block text-sm font-semibold mb-2 text-brand-text-muted">Email Address <span className="text-brand-primary">*</span></label>
                                             <input
                                                 required
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 type="email"
-                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-primary transition-colors"
                                                 placeholder="john@example.com"
                                             />
                                         </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                                                 name="service"
                                                 value={formData.service}
                                                 onChange={handleChange}
-                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors appearance-none"
+                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-primary transition-colors appearance-none"
                                             >
                                                 <option value="">Select a division (Optional)</option>
                                                 <option value="Health Institute">Health Institute</option>
@@ -171,12 +171,12 @@ const Contact = () => {
                                                 value={formData.message}
                                                 onChange={handleChange}
                                                 rows="5"
-                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-red-light transition-colors"
+                                                className="w-full bg-brand-bg border border-brand-text/10 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:border-brand-primary transition-colors"
                                                 placeholder="How can we assist you?"
                                             ></textarea>
                                         </div>
 
-                                        <button type="submit" className="w-full py-4 rounded-xl bg-gradient-primary text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(192,0,0,0.4)] transition-all">
+                                        <button type="submit" className="w-full py-4 rounded-xl bg-gradient-primary text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(22,163,74,0.4)] transition-all">
                                             Submit Message
                                         </button>
                                     </form>
@@ -196,7 +196,7 @@ const Contact = () => {
 
                                     <div className="space-y-8">
                                         <div className="flex items-start">
-                                            <div className="w-12 h-12 rounded-full bg-brand-red-dark/10 flex items-center justify-center text-brand-red-light text-xl shrink-0 mr-6">
+                                            <div className="w-12 h-12 rounded-full bg-brand-secondary/10 flex items-center justify-center text-brand-primary text-xl shrink-0 mr-6">
                                                 <FaMapMarkerAlt />
                                             </div>
                                             <div>
@@ -210,7 +210,7 @@ const Contact = () => {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="w-12 h-12 rounded-full bg-brand-red-dark/10 flex items-center justify-center text-brand-red-light text-xl shrink-0 mr-6">
+                                            <div className="w-12 h-12 rounded-full bg-brand-secondary/10 flex items-center justify-center text-brand-primary text-xl shrink-0 mr-6">
                                                 <FaPhoneAlt />
                                             </div>
                                             <div>
@@ -220,7 +220,7 @@ const Contact = () => {
                                         </div>
 
                                         <div className="flex items-start">
-                                            <div className="w-12 h-12 rounded-full bg-brand-red-dark/10 flex items-center justify-center text-brand-red-light text-xl shrink-0 mr-6">
+                                            <div className="w-12 h-12 rounded-full bg-brand-secondary/10 flex items-center justify-center text-brand-primary text-xl shrink-0 mr-6">
                                                 <FaEnvelope />
                                             </div>
                                             <div>
@@ -243,7 +243,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className="w-full h-80 rounded-[2rem] overflow-hidden shadow-xl border border-brand-text/5 group relative">
-                                    <div className="absolute inset-0 bg-brand-red-dark/10 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10 mix-blend-color"></div>
+                                    <div className="absolute inset-0 bg-brand-secondary/10 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10 mix-blend-color"></div>
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693190868846!2d73.02325011119523!3d18.968080282121045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3ba8109ed8d%3A0x6b29ebd836d5b038!2sNMS%20ICON!5e0!3m2!1sen!2sin!4v1710849202157!5m2!1sen!2sin"
                                         width="100%"

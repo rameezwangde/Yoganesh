@@ -17,7 +17,7 @@ const YogaHero = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/50 via-transparent to-brand-bg"></div>
 
                 {/* Subtle theme glows */}
-                <div className="absolute top-0 right-1/4 w-[40vw] h-[40vw] bg-brand-red-light/10 rounded-full blur-[100px] -translate-y-1/2"></div>
+                <div className="absolute top-0 right-1/4 w-[40vw] h-[40vw] bg-brand-primary/10 rounded-full blur-[100px] -translate-y-1/2"></div>
                 <div className="absolute bottom-1/4 left-0 w-[50vw] h-[50vw] bg-brand-text/5 rounded-full blur-[120px] -translate-x-1/4"></div>
             </div>
 
@@ -28,8 +28,8 @@ const YogaHero = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="lg:col-span-7 xl:col-span-6 pt-10"
                 >
-                    <div className="inline-flex items-center gap-3 mb-8 px-6 py-2.5 rounded-full bg-white/60 border border-brand-red-light/20 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
-                        <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
+                    <div className="inline-flex items-center gap-3 mb-8 px-6 py-2.5 rounded-full bg-white/60 border border-brand-primary/20 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+                        <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                         <span className="text-brand-text font-bold text-xs tracking-[0.2em] uppercase">
                             Welcome To
                         </span>
@@ -37,7 +37,7 @@ const YogaHero = () => {
 
                     <h1 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-black mb-8 leading-[1.05] tracking-tight text-brand-text">
                         Yoganesh
-                        <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">
+                        <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
                             Health Institute
                         </span>
                     </h1>
@@ -47,12 +47,12 @@ const YogaHero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-6">
-                        <button className="w-full sm:w-auto px-10 py-4 bg-gradient-primary text-white font-bold rounded-full shadow-[0_10px_30px_rgba(192,0,0,0.25)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(192,0,0,0.35)] transition-all duration-300">
+                        <button className="w-full sm:w-auto px-10 py-4 bg-gradient-primary text-white font-bold rounded-full shadow-[0_10px_30px_rgba(22,163,74,0.25)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(22,163,74,0.35)] transition-all duration-300">
                             Start Your Journey
                         </button>
                         <div className="flex items-center gap-4 group cursor-pointer">
-                            <div className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center border border-brand-red-light/10 group-hover:scale-110 transition-transform">
-                                <FaLeaf className="text-brand-red-light text-xl" />
+                            <div className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center border border-brand-primary/10 group-hover:scale-110 transition-transform">
+                                <FaLeaf className="text-brand-primary text-xl" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-brand-text font-black tracking-wide">365 Days Yoga</span>
@@ -69,7 +69,7 @@ const YogaHero = () => {
                         transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
                         className="relative w-full max-w-md"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-brand-red-light to-brand-red-dark rounded-[2.5rem] rotate-3 opacity-20 blur-xl"></div>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-brand-secondary rounded-[2.5rem] rotate-3 opacity-20 blur-xl"></div>
                         <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl aspect-[4/5] group">
                             <div className="absolute inset-0 bg-brand-text/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                             <img

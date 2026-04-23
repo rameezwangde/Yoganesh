@@ -38,7 +38,7 @@ const DivisionsLanding = () => {
                         <span className="text-[120px] md:text-[250px] font-black tracking-tighter text-brand-text whitespace-nowrap">ECOSYSTEM</span>
                     </div>
 
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(192,0,0,0.04),transparent_70%)] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(22,163,74,0.04),transparent_70%)] pointer-events-none"></div>
 
                     <div className="container mx-auto px-4 relative z-10 max-w-5xl">
                         <motion.div
@@ -47,7 +47,7 @@ const DivisionsLanding = () => {
                             transition={{ duration: 0.8 }}
                             className="inline-flex items-center space-x-2 bg-brand-bg-alt px-6 py-2 rounded-full border border-brand-text/5 mb-8 shadow-sm"
                         >
-                            <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
+                            <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                             <span className="text-sm font-bold tracking-widest uppercase text-brand-text-muted">Master Your Craft</span>
                         </motion.div>
 
@@ -58,7 +58,7 @@ const DivisionsLanding = () => {
                             className="text-5xl md:text-7xl font-extrabold text-brand-text mb-8 tracking-tight leading-[1.1]"
                         >
                             A Complete <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light">Wellness Ecosystem.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary">Wellness Ecosystem.</span>
                         </motion.h1>
 
                         <motion.p
@@ -79,7 +79,7 @@ const DivisionsLanding = () => {
                             const isExternal = div.link?.startsWith('http');
                             const CardContent = (
                                 <TiltWrapper intensity={8} scaleOnHover={1.02}>
-                                    <div className="h-full bg-white/80 backdrop-blur-md border border-brand-text/5 rounded-[2.5rem] overflow-hidden hover:border-brand-red-light/30 transition-all duration-500 relative group shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(192,0,0,0.1)] flex flex-col">
+                                    <div className="h-full bg-white/80 backdrop-blur-md border border-brand-text/5 rounded-[2.5rem] overflow-hidden hover:border-brand-primary/30 transition-all duration-500 relative group shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(22,163,74,0.1)] flex flex-col">
 
                                         {/* Image Area with Premium Cover Mask */}
                                         <div className="h-[240px] relative overflow-hidden flex items-center justify-center bg-brand-bg-alt">
@@ -90,7 +90,7 @@ const DivisionsLanding = () => {
                                                 loading="lazy"
                                             />
                                             {/* Darkened overlay for contrast */}
-                                            <div className="absolute inset-0 bg-brand-bg/20 group-hover:bg-brand-red-dark/30 mix-blend-multiply transition-colors duration-700 z-10"></div>
+                                            <div className="absolute inset-0 bg-brand-bg/20 group-hover:bg-brand-secondary/30 mix-blend-multiply transition-colors duration-700 z-10"></div>
 
                                             {/* Bottom fading mask into card body */}
                                             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white/90 via-white/50 to-transparent z-20"></div>
@@ -100,26 +100,26 @@ const DivisionsLanding = () => {
                                         <div className="px-10 pb-10 pt-4 flex-grow flex flex-col items-center text-center relative z-30">
 
                                             {/* Floating Icon Orb */}
-                                            <div className="w-[84px] h-[84px] bg-white rounded-2xl flex items-center justify-center text-[40px] -mt-16 mb-8 shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-brand-text/5 relative group-hover:-translate-y-2 group-hover:rotate-6 group-hover:shadow-[0_20px_40px_rgba(192,0,0,0.15)] transition-all duration-500 overflow-hidden">
-                                                <div className="absolute inset-0 bg-brand-red-light/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></div>
+                                            <div className="w-[84px] h-[84px] bg-white rounded-2xl flex items-center justify-center text-[40px] -mt-16 mb-8 shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-brand-text/5 relative group-hover:-translate-y-2 group-hover:rotate-6 group-hover:shadow-[0_20px_40px_rgba(22,163,74,0.15)] transition-all duration-500 overflow-hidden">
+                                                <div className="absolute inset-0 bg-brand-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></div>
                                                 <span className="relative z-10 drop-shadow-sm group-hover:brightness-125 transition-all duration-300">{div.icon}</span>
                                             </div>
 
-                                            <h2 className="text-[28px] font-extrabold text-brand-text mb-4 group-hover:text-brand-red-dark transition-colors duration-300 tracking-tight leading-tight">{div.title}</h2>
+                                            <h2 className="text-[28px] font-extrabold text-brand-text mb-4 group-hover:text-brand-secondary transition-colors duration-300 tracking-tight leading-tight">{div.title}</h2>
 
                                             <p className="text-brand-text-muted text-lg mb-10 leading-relaxed flex-grow group-hover:text-brand-text/90 transition-colors duration-300">
                                                 {div.desc}
                                             </p>
 
                                             {/* Action Button Line */}
-                                            <div className="flex items-center justify-center space-x-3 w-full border-t border-brand-text/5 pt-6 text-brand-red-dark font-extrabold text-sm tracking-widest uppercase group-hover:text-brand-red-light transition-colors duration-300">
+                                            <div className="flex items-center justify-center space-x-3 w-full border-t border-brand-text/5 pt-6 text-brand-secondary font-extrabold text-sm tracking-widest uppercase group-hover:text-brand-primary transition-colors duration-300">
                                                 <span>Explore Domain</span>
                                                 <FaArrowRight className="text-lg -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                                             </div>
                                         </div>
 
                                         {/* Subtle animated bottom structural bar */}
-                                        <div className="absolute bottom-0 left-0 h-[4px] bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out z-40"></div>
+                                        <div className="absolute bottom-0 left-0 h-[4px] bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out z-40"></div>
                                     </div>
                                 </TiltWrapper>
                             );
@@ -138,12 +138,12 @@ const DivisionsLanding = () => {
                                             href={div.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="block h-full outline-none focus:ring-2 focus:ring-brand-red-light focus:ring-offset-4 rounded-[2.5rem]"
+                                            className="block h-full outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-4 rounded-[2.5rem]"
                                         >
                                             {CardContent}
                                         </a>
                                     ) : (
-                                        <Link to={div.link || `/${div.id}`} className="block h-full outline-none focus:ring-2 focus:ring-brand-red-light focus:ring-offset-4 rounded-[2.5rem]">
+                                        <Link to={div.link || `/${div.id}`} className="block h-full outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-4 rounded-[2.5rem]">
                                             {CardContent}
                                         </Link>
                                     )}

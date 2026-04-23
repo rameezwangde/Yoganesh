@@ -20,7 +20,7 @@ const Testimonials = () => {
                         <span className="text-[120px] md:text-[250px] font-black tracking-tighter text-brand-text whitespace-nowrap">STORIES</span>
                     </div>
 
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(192,0,0,0.04),transparent_70%)] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(22,163,74,0.04),transparent_70%)] pointer-events-none"></div>
 
                     <div className="container mx-auto px-4 relative z-10 max-w-4xl">
                         <motion.div
@@ -29,7 +29,7 @@ const Testimonials = () => {
                             transition={{ duration: 0.8 }}
                             className="inline-flex items-center space-x-2 bg-brand-bg-alt px-6 py-2 rounded-full border border-brand-text/5 mb-8 shadow-sm"
                         >
-                            <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
+                            <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                             <span className="text-sm font-bold tracking-widest uppercase text-brand-text-muted">Real Results</span>
                         </motion.div>
 
@@ -40,7 +40,7 @@ const Testimonials = () => {
                             className="text-5xl md:text-7xl font-extrabold text-brand-text mb-8 tracking-tight leading-[1.1]"
                         >
                             What Our <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light">Members Say.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary">Members Say.</span>
                         </motion.h1>
 
                         <motion.p

@@ -10,7 +10,7 @@ const YogaCTA = ({ scrollToSection }) => {
             {/* Dark/Gradient Overlays to ensure text readability */}
             <div className="absolute inset-0 bg-brand-text/60 mix-blend-multiply transition-colors duration-700 group-hover:bg-brand-text/50"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-brand-bg"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-red-dark/40 to-brand-red-light/40 opacity-60 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/40 to-brand-primary/40 opacity-60 mix-blend-overlay"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
@@ -24,14 +24,14 @@ const YogaCTA = ({ scrollToSection }) => {
                         Your Time Is Now
                     </span>
                     <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-2xl">
-                        Transform Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-white drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Mind & Body</span> Today
+                        Transform Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-white drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">Mind & Body</span> Today
                     </h2>
                     <p className="text-white/90 text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
                         Take the first step towards a healthier, happier you. Join our expert-led sessions and feel the difference from day one.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                        <button onClick={() => scrollToSection('contact')} className="px-10 py-4 bg-white text-brand-text hover:text-brand-red-dark font-black rounded-full shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 text-sm md:text-base uppercase tracking-wider relative overflow-hidden group/btn">
+                        <button onClick={() => scrollToSection('contact')} className="px-10 py-4 bg-white text-brand-text hover:text-brand-secondary font-black rounded-full shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 text-sm md:text-base uppercase tracking-wider relative overflow-hidden group/btn">
                             <span className="relative z-10">Book a Free Trial</span>
                             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-brand-bg-alt to-white opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
                         </button>

@@ -8,8 +8,8 @@ const YogaAbout = () => {
         <section id="about" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden border-b border-brand-text/5">
             {/* Ambient glowing background */}
             <div className="absolute inset-0 pointer-events-none z-0">
-                <div className="absolute top-0 right-1/3 w-[40rem] h-[40rem] bg-brand-red-dark/10 rounded-full blur-[150px]"></div>
-                <div className="absolute bottom-1/4 left-1/4 w-[25rem] h-[25rem] bg-brand-red-light/5 rounded-full blur-[120px]"></div>
+                <div className="absolute top-0 right-1/3 w-[40rem] h-[40rem] bg-brand-secondary/10 rounded-full blur-[150px]"></div>
+                <div className="absolute bottom-1/4 left-1/4 w-[25rem] h-[25rem] bg-brand-primary/5 rounded-full blur-[120px]"></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -20,14 +20,14 @@ const YogaAbout = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Introduction</span>
+                        <span className="text-brand-primary font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Introduction</span>
                         <h2 className="text-5xl md:text-6xl font-extrabold text-brand-text mb-6">
-                            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Us</span>
+                            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Us</span>
                         </h2>
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="h-[1px] w-12 bg-brand-red-light"></div>
-                            <FaLeaf className="text-brand-red-light text-xl" />
-                            <div className="h-[1px] w-12 bg-brand-red-light"></div>
+                            <div className="h-[1px] w-12 bg-brand-primary"></div>
+                            <FaLeaf className="text-brand-primary text-xl" />
+                            <div className="h-[1px] w-12 bg-brand-primary"></div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -60,8 +60,8 @@ const YogaAbout = () => {
                             { number: "365", text: "Days Classes" },
                             { number: "17", text: "Award Achieve" }
                         ].map((stat, idx) => (
-                            <div key={idx} className="bg-brand-bg-alt border border-brand-text/5 rounded-[2rem] p-6 md:p-8 text-center hover:border-brand-red-light/30 hover:shadow-[0_10px_30px_rgba(192,0,0,0.1)] transition-all duration-300">
-                                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark mb-2">{stat.number}</div>
+                            <div key={idx} className="bg-brand-bg-alt border border-brand-text/5 rounded-[2rem] p-6 md:p-8 text-center hover:border-brand-primary/30 hover:shadow-[0_10px_30px_rgba(22,163,74,0.1)] transition-all duration-300">
+                                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary mb-2">{stat.number}</div>
                                 <div className="text-brand-text-muted font-bold tracking-wide uppercase text-xs md:text-sm">{stat.text}</div>
                             </div>
                         ))}
@@ -74,17 +74,17 @@ const YogaAbout = () => {
                         viewport={{ once: true }}
                         className="lg:pl-12"
                     >
-                        <span className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Fun Fact</span>
+                        <span className="text-brand-primary font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Fun Fact</span>
                         <h3 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight">
-                            Discover New <br /> Way Of <span className="text-brand-red-light">Yoga!</span>
+                            Discover New <br /> Way Of <span className="text-brand-primary">Yoga!</span>
                         </h3>
                         <div className="flex items-center gap-4 mb-6">
-                            <FaLeaf className="text-brand-red-light text-xl" />
+                            <FaLeaf className="text-brand-primary text-xl" />
                         </div>
                         <p className="text-brand-text-muted text-xl leading-relaxed font-medium mb-10">
                             Yoganesh Health Institute blends ancient yoga with modern fitness, creating harmony, strength, and inner peace daily.
                         </p>
-                        <button className="px-10 py-4 bg-gradient-primary text-white font-extrabold rounded-full hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] hover:-translate-y-1 transition-all duration-300 tracking-wider">
+                        <button className="px-10 py-4 bg-gradient-primary text-white font-extrabold rounded-full hover:shadow-[0_15px_30px_rgba(22,163,74,0.25)] hover:-translate-y-1 transition-all duration-300 tracking-wider">
                             GET STARTED
                         </button>
                     </motion.div>
@@ -93,7 +93,7 @@ const YogaAbout = () => {
                 {/* BOTTOM ROW: Video & Inner Peace Text */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center bg-brand-bg-alt border border-brand-text/5 rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
                     {/* Fancy Glow */}
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red-dark/10 rounded-full blur-[80px] group-hover:bg-brand-red-dark/20 transition-all duration-700 pointer-events-none"></div>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/10 rounded-full blur-[80px] group-hover:bg-brand-secondary/20 transition-all duration-700 pointer-events-none"></div>
 
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -105,11 +105,11 @@ const YogaAbout = () => {
                             Inner Peace To Your <br /> Body And Mind
                         </h3>
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="h-[1px] w-8 bg-brand-red-light"></div>
-                            <FaLeaf className="text-brand-red-light text-xl" />
-                            <div className="h-[1px] w-8 bg-brand-red-light"></div>
+                            <div className="h-[1px] w-8 bg-brand-primary"></div>
+                            <FaLeaf className="text-brand-primary text-xl" />
+                            <div className="h-[1px] w-8 bg-brand-primary"></div>
                         </div>
-                        <div className="relative rounded-[2rem] overflow-hidden aspect-[16/9] bg-black shadow-2xl border border-brand-text/10 group-hover:shadow-[0_20px_40px_rgba(192,0,0,0.15)] transition-all">
+                        <div className="relative rounded-[2rem] overflow-hidden aspect-[16/9] bg-black shadow-2xl border border-brand-text/10 group-hover:shadow-[0_20px_40px_rgba(22,163,74,0.15)] transition-all">
                             <video
                                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                                 controls

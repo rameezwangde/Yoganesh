@@ -86,7 +86,7 @@ const ScrollStorytelling = () => {
                         
                         {/* High Performance Overlays (Pure Opacity) */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 z-10"></div>
-                        <div className="absolute inset-0 bg-brand-red-dark/10 opacity-60 z-10"></div>
+                        <div className="absolute inset-0 bg-brand-secondary/10 opacity-60 z-10"></div>
                         
                         <AnimatePresence mode="popLayout">
                             <motion.div 
@@ -108,7 +108,7 @@ const ScrollStorytelling = () => {
                             {divisions.map((_, i) => (
                                 <motion.div 
                                     key={i}
-                                    className={`w-1.5 rounded-full transition-all duration-300 transform-gpu ${i === activeIndex ? 'h-8 bg-brand-red-light' : 'h-2 bg-white/20'}`}
+                                    className={`w-1.5 rounded-full transition-all duration-300 transform-gpu ${i === activeIndex ? 'h-8 bg-brand-primary' : 'h-2 bg-white/20'}`}
                                 />
                             ))}
                         </div>
@@ -160,9 +160,9 @@ const StoryBlock = memo(({ div, index, setActiveIndex, isActive }) => {
                     <motion.span 
                         animate={{ width: isActive ? 48 : 16 }}
                         transition={{ duration: 0.4 }}
-                        className="h-[2px] bg-brand-red-light mr-4 origin-left transform-gpu"
+                        className="h-[2px] bg-brand-primary mr-4 origin-left transform-gpu"
                     ></motion.span>
-                    <span className="text-brand-red-light font-bold text-sm tracking-widest uppercase">
+                    <span className="text-brand-primary font-bold text-sm tracking-widest uppercase">
                         {div.title}
                     </span>
                 </div>
@@ -175,10 +175,10 @@ const StoryBlock = memo(({ div, index, setActiveIndex, isActive }) => {
                     {div.desc}
                 </p>
                 
-                <Link to={`/${div.id}`} className="inline-flex items-center text-brand-text font-extrabold text-sm tracking-widest uppercase group hover:text-brand-red-light transition-colors duration-300 transform-gpu">
+                <Link to={`/${div.id}`} className="inline-flex items-center text-brand-text font-extrabold text-sm tracking-widest uppercase group hover:text-brand-primary transition-colors duration-300 transform-gpu">
                     <span>Explore Division</span>
-                    <span className="ml-4 w-12 h-12 rounded-full border border-brand-text/20 flex items-center justify-center group-hover:border-brand-red-light group-hover:bg-brand-red-light/5 transition-all duration-300 overflow-hidden relative">
-                        <span className="absolute inset-0 bg-brand-red-light translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></span>
+                    <span className="ml-4 w-12 h-12 rounded-full border border-brand-text/20 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary/5 transition-all duration-300 overflow-hidden relative">
+                        <span className="absolute inset-0 bg-brand-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></span>
                         <span className="relative z-10 group-hover:text-white transition-colors duration-300">→</span>
                     </span>
                 </Link>

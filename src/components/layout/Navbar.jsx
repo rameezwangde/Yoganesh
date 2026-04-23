@@ -13,6 +13,7 @@ const navLinks = [
 ]
 
 import { useTheme } from '../../context/ThemeContext'
+import brandLogo from '../../assets/images/brand-logo.jpeg'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -73,9 +74,21 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 md:px-8 flex justify-between items-center relative z-50">
                 {/* Logo */}
-                <Link to="/" className="flex items-center z-50 relative group leading-none py-1">
-                    <span className="text-xl md:text-3xl font-black tracking-tighter text-brand-red-light group-hover:text-brand-red-dark transition-colors mr-1">Yoganesh</span>
-                    <span className="text-xl md:text-3xl font-black tracking-tighter text-brand-text">Health Institute</span>
+                <Link to="/" className="flex items-center z-50 relative group py-1 space-x-4">
+                    <img 
+                        src={brandLogo} 
+                        alt="Yoganesh Logo" 
+                        className="h-12 md:h-16 w-auto rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="flex flex-col justify-center">
+                        <div className="flex items-baseline">
+                            <span className="text-2xl md:text-4xl font-black tracking-tighter text-brand-primary">YOGA</span>
+                            <span className="text-2xl md:text-4xl font-black tracking-tighter text-brand-secondary ml-0.5">NESH</span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-black tracking-[0.3em] uppercase text-brand-secondary/60 -mt-1">
+                            Health Institute
+                        </span>
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -85,11 +98,11 @@ const Navbar = () => {
                             <li key={link.name}>
                                 <Link
                                     to={link.path}
-                                    className={`text-[11px] font-black uppercase tracking-[0.2em] transition-all hover:text-brand-red-light relative group ${location.pathname === link.path ? 'text-brand-red-light' : 'text-brand-text/60 hover:text-brand-text'
+                                    className={`text-[11px] font-black uppercase tracking-[0.2em] transition-all hover:text-brand-primary relative group ${location.pathname === link.path ? 'text-brand-primary' : 'text-brand-text/60 hover:text-brand-text'
                                         }`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-brand-red-light transform origin-left transition-transform duration-300 ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+                                    <span className={`absolute -bottom-1 left-0 w-full h-[1.5px] bg-brand-primary transform origin-left transition-transform duration-300 ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
                                 </Link>
                             </li>
                         ))}
@@ -100,7 +113,7 @@ const Navbar = () => {
 
                     <Link
                         to="/contact"
-                        className="bg-brand-text text-brand-bg px-8 py-3 rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-brand-red-light hover:text-white hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] transition-all transform hover:-translate-y-1"
+                        className="bg-brand-text text-brand-bg px-8 py-3 rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-brand-primary hover:text-white hover:shadow-[0_15px_30px_rgba(22,163,74,0.25)] transition-all transform hover:-translate-y-1"
                     >
                         Start Journey
                     </Link>
@@ -108,7 +121,7 @@ const Navbar = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg-alt/50 border border-brand-text/5 text-brand-text text-2xl focus:outline-none z-50 relative hover:text-brand-red-light transition-colors"
+                    className="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg-alt/50 border border-brand-text/5 text-brand-text text-2xl focus:outline-none z-50 relative hover:text-brand-primary transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <HiX /> : <HiMenu />}
@@ -125,7 +138,7 @@ const Navbar = () => {
                         transition={{ type: "spring", damping: 30, stiffness: 300 }}
                         className="fixed inset-0 h-[100dvh] w-full bg-brand-bg flex flex-col items-center justify-center z-40 md:hidden"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(192,0,0,0.1),transparent_60%)] pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(22,163,74,0.1),transparent_60%)] pointer-events-none"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.05),transparent_60%)] pointer-events-none"></div>
 
                         <ul className="flex flex-col space-y-10 text-center mb-6 relative z-10 w-full px-12">
@@ -138,7 +151,7 @@ const Navbar = () => {
                                 >
                                     <Link
                                         to={link.path}
-                                        className={`text-4xl font-black tracking-tighter hover:text-brand-red-light transition-all ${location.pathname === link.path ? 'text-brand-red-light' : 'text-brand-text'}`}
+                                        className={`text-4xl font-black tracking-tighter hover:text-brand-primary transition-all ${location.pathname === link.path ? 'text-brand-primary' : 'text-brand-text'}`}
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.name}
@@ -157,7 +170,7 @@ const Navbar = () => {
                         >
                             <Link
                                 to="/contact"
-                                className="bg-brand-red-dark text-white px-12 py-5 rounded-full font-black text-xl tracking-widest uppercase hover:bg-brand-red-light shadow-2xl transition-all inline-block mt-4"
+                                className="bg-brand-secondary text-white px-12 py-5 rounded-full font-black text-xl tracking-widest uppercase hover:bg-brand-primary shadow-2xl transition-all inline-block mt-4"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Contact Us

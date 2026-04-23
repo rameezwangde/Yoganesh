@@ -74,8 +74,8 @@ const YogaMudra = () => {
                             animate={{ y: 0, opacity: 1 }}
                             className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] px-2 md:px-6 py-2 flex items-center justify-between"
                         >
-                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-all font-bold text-xs tracking-widest uppercase mr-4">
-                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all shadow-sm">
+                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-primary transition-all font-bold text-xs tracking-widest uppercase mr-4">
+                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-primary/10 group-hover:border-brand-primary/30 transition-all shadow-sm">
                                     <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                                 </div>
                                 <span className="hidden sm:inline">Back</span>
@@ -94,7 +94,7 @@ const YogaMudra = () => {
                                         {activeSection === item.id && (
                                             <motion.div
                                                 layoutId="pill-active-yoga"
-                                                className="absolute inset-0 bg-brand-red-light rounded-full z-0 shadow-[0_5px_15px_rgba(192,0,0,0.2)]"
+                                                className="absolute inset-0 bg-brand-primary rounded-full z-0 shadow-[0_5px_15px_rgba(22,163,74,0.2)]"
                                                 transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                                             />
                                         )}
@@ -125,7 +125,7 @@ const YogaMudra = () => {
                                             <button
                                                 onClick={() => scrollToSection(item.id)}
                                                 className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${activeSection === item.id
-                                                    ? 'bg-brand-red-light text-white shadow-lg'
+                                                    ? 'bg-brand-primary text-white shadow-lg'
                                                     : 'bg-brand-bg-alt/50 text-brand-text-muted'
                                                     }`}
                                             >

@@ -5,19 +5,19 @@ import { FaArrowRight } from 'react-icons/fa'
 import TiltWrapper from '../ui/TiltWrapper'
 
 const paths = [
-    { name: 'Health Institute', link: '/health-institute', icon: '🏥', desc: 'Medical-grade assessments, physiotherapy, and preventative care to keep your body functioning at its peak.' },
-    { name: 'Yoga Classes', link: '/yoga-classes', icon: '🧘', desc: 'Build flexibility, mobility, and deep core strength through guided flows that connect motion to stillness.' },
-    { name: 'Fitness Classes', link: '/fitness-classes', icon: '⚡', desc: 'Elite strength training and metabolic conditioning guided by world-class performance coaches.' },
-    { name: 'Wellness Center', link: '/wellness-center', icon: '🌿', desc: 'Restore your autonomic nervous system through premium recovery protocols and advanced relaxation.' },
-    { name: 'Dance Classes', link: '/dance-classes', icon: '💃', desc: 'Improve coordination and cardiovascular health in an electrifying, supportive group environment.' },
-    { name: 'Music Classes', link: '/music-classes', icon: '🎵', desc: 'Cognitive enhancement and emotional regulation through the therapeutic power of sound and rhythm.' }
+    { name: 'Health Institute', link: '/health-institute', icon: '🏥', desc: 'University-accredited Yoga courses including Diploma, Degree, and Post Graduate programs.' },
+    { name: 'Yoga Classes', link: '/yoga-classes', icon: '🧘', desc: 'Mobility, flexibility, and deep core strength.' },
+    { name: 'Fitness Classes', link: '/fitness-classes', icon: '⚡', desc: 'Elite strength training and metabolic conditioning.' },
+    { name: 'Wellness Center', link: '/wellness-center', icon: '🌿', desc: 'Complete recovery and restoration protocols.' },
+    { name: 'Dance Classes', link: '/dance-classes', icon: '💃', desc: 'Kinetic movement and cardiovascular rhythm.' },
+    { name: 'Music Classes', link: '/music-classes', icon: '🎵', desc: 'Cognitive enhancement through musical learning.' }
 ]
 
 const PathSection = () => {
     return (
         <section className="py-32 bg-brand-bg relative overflow-hidden">
             {/* Ambient Background Glow (Zero-Lag Radial Gradient) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(192,0,0,0.02),transparent_60%)] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.02),transparent_60%)] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 md:px-8 text-center max-w-7xl relative z-10">
                 
@@ -27,7 +27,7 @@ const PathSection = () => {
                     viewport={{ once: true }}
                     className="inline-flex items-center space-x-2 bg-brand-bg-alt px-6 py-2 rounded-full border border-brand-text/5 mb-6 shadow-sm"
                 >
-                    <span className="w-2 h-2 rounded-full bg-brand-red-dark"></span>
+                    <span className="w-2 h-2 rounded-full bg-brand-secondary"></span>
                     <span className="text-sm font-bold tracking-widest uppercase text-brand-text-muted">Explore Ecosystem</span>
                 </motion.div>
 
@@ -39,26 +39,26 @@ const PathSection = () => {
                         const isExternal = path.link.startsWith('http');
                         const CardContent = (
                             <TiltWrapper intensity={12} scaleOnHover={1.03}>
-                                <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 rounded-[2.5rem] p-10 flex flex-col items-start h-full relative group hover:bg-white hover:border-brand-red-light/30 hover:shadow-[0_25px_50px_rgba(192,0,0,0.08)] transition-all duration-500 overflow-hidden text-left cursor-pointer">
+                                <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 rounded-[2.5rem] p-10 flex flex-col items-start h-full relative group hover:bg-white hover:border-brand-primary/30 hover:shadow-[0_25px_50px_rgba(22,163,74,0.08)] transition-all duration-500 overflow-hidden text-left cursor-pointer">
                                     
                                     {/* Background Hover Flare (Zero-Lag Radial Gradient) */}
-                                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(192,0,0,0.06),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+                                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(22,163,74,0.06),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
 
                                     <div className="flex items-center justify-between w-full mb-10 relative z-10">
                                         {/* Icon Morph Container */}
-                                        <div className="w-[72px] h-[72px] rounded-[1.2rem] bg-brand-bg-alt border border-brand-text/5 flex items-center justify-center text-[40px] group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-brand-red-light group-hover:border-brand-red-light transition-all duration-500 shadow-sm relative overflow-hidden">
+                                        <div className="w-[72px] h-[72px] rounded-[1.2rem] bg-brand-bg-alt border border-brand-text/5 flex items-center justify-center text-[40px] group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-brand-primary group-hover:border-brand-primary transition-all duration-500 shadow-sm relative overflow-hidden">
                                             <div className="absolute inset-0 bg-white/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></div>
                                             <span className="drop-shadow-sm group-hover:brightness-150 transition-all duration-500 relative z-10">{path.icon}</span>
                                         </div>
 
                                         {/* Action Arrow */}
-                                        <div className="w-14 h-14 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/30 group-hover:bg-brand-red-light group-hover:text-white group-hover:border-brand-red-light transition-all duration-500 bg-white shadow-sm">
+                                        <div className="w-14 h-14 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/30 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-500 bg-white shadow-sm">
                                             <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform duration-500 text-lg" />
                                         </div>
                                     </div>
                                     
                                     <div className="relative z-10">
-                                        <h3 className="text-brand-text font-extrabold text-[26px] group-hover:text-brand-red-dark transition-colors duration-300 tracking-tight leading-tight mb-3">
+                                        <h3 className="text-brand-text font-extrabold text-[26px] group-hover:text-brand-secondary transition-colors duration-300 tracking-tight leading-tight mb-3">
                                             {path.name}
                                         </h3>
                                         <p className="text-brand-text-muted text-lg leading-relaxed group-hover:text-brand-text/90 transition-colors duration-300">
@@ -67,7 +67,7 @@ const PathSection = () => {
                                     </div>
 
                                     {/* Subtle animated bottom structural bar */}
-                                    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
+                                    <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
                                 </div>
                             </TiltWrapper>
                         );
@@ -86,12 +86,12 @@ const PathSection = () => {
                                         href={path.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
-                                        className="block h-full outline-none focus:ring-2 focus:ring-brand-red-light focus:ring-offset-4 rounded-[2.5rem]"
+                                        className="block h-full outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-4 rounded-[2.5rem]"
                                     >
                                         {CardContent}
                                     </a>
                                 ) : (
-                                    <Link to={path.link} className="block h-full outline-none focus:ring-2 focus:ring-brand-red-light focus:ring-offset-4 rounded-[2.5rem]">
+                                    <Link to={path.link} className="block h-full outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-4 rounded-[2.5rem]">
                                         {CardContent}
                                     </Link>
                                 )}

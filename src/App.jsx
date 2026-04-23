@@ -31,7 +31,7 @@ const PageLoader = () => (
           repeat: Infinity,
           ease: "easeOut",
         }}
-        className="absolute w-12 h-12 rounded-full border-2 border-brand-red-light"
+        className="absolute w-12 h-12 rounded-full border-2 border-brand-primary"
       />
       <motion.div
         animate={{
@@ -44,7 +44,7 @@ const PageLoader = () => (
           ease: "easeOut",
           delay: 0.5
         }}
-        className="absolute w-12 h-12 rounded-full border-2 border-brand-red-light"
+        className="absolute w-12 h-12 rounded-full border-2 border-brand-primary"
       />
 
       {/* Central Pulsing Dot */}
@@ -58,7 +58,7 @@ const PageLoader = () => (
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="w-4 h-4 bg-brand-red-light rounded-full shadow-[0_0_20px_rgba(192,0,0,0.5)] z-10"
+        className="w-4 h-4 bg-brand-primary rounded-full shadow-[0_0_20px_rgba(22,163,74,0.5)] z-10"
       />
     </div>
 
@@ -66,7 +66,7 @@ const PageLoader = () => (
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="mt-8 text-[10px] font-black tracking-[0.4em] uppercase text-brand-red-light/60"
+      className="mt-8 text-[10px] font-black tracking-[0.4em] uppercase text-brand-primary/60"
     >
       YOGANESH
     </motion.div>

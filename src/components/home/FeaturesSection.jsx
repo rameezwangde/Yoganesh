@@ -37,7 +37,7 @@ const FeaturesSection = () => {
                 <div className="flex-shrink-0 text-center md:text-left z-30 bg-brand-bg pr-8 border-r border-brand-text/10">
                     <p className="text-brand-text/60 font-black text-xs tracking-[0.2em] uppercase">
                         Curating Your <br />
-                        <span className="text-brand-red-dark text-sm">Inner Sanctuary</span>
+                        <span className="text-brand-secondary text-sm">Inner Sanctuary</span>
                     </p>
                 </div>
 
@@ -64,10 +64,10 @@ const FeaturesSection = () => {
                                     key={index}
                                     className="flex items-center space-x-5 group cursor-default shrink-0"
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-brand-red-light/10 flex items-center justify-center group-hover:bg-brand-red-light transition-all duration-500 shadow-sm border border-brand-red-light/20">
+                                    <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary transition-all duration-500 shadow-sm border border-brand-primary/20">
                                         <IconComponent className="text-xl text-brand-text/30 group-hover:text-white transition-colors" />
                                     </div>
-                                    <h4 className="text-brand-text/70 font-black text-sm uppercase tracking-[0.15em] group-hover:text-brand-red-dark transition-colors">
+                                    <h4 className="text-brand-text/70 font-black text-sm uppercase tracking-[0.15em] group-hover:text-brand-secondary transition-colors">
                                         {feature.title}
                                     </h4>
                                 </div>

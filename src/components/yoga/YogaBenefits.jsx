@@ -16,17 +16,17 @@ const YogaBenefits = () => {
             icon: FaYinYang,
             title: "Balance Life",
             desc: "Yoga helps balance life by reducing stress daily.",
-            color: "from-brand-red-light to-rose-500",
-            hoverShadow: "hover:shadow-[0_20px_40px_rgba(225,29,72,0.2)]",
-            iconColor: "text-brand-red-light"
+            color: "from-brand-primary to-emerald-500",
+            hoverShadow: "hover:shadow-[0_20px_40px_rgba(22,163,74,0.2)]",
+            iconColor: "text-brand-primary"
         },
         {
             icon: FaHeartbeat,
             title: "Body Exercise",
             desc: "Daily yoga strengthens body, improves flexibility, and relaxes.",
-            color: "from-brand-red-light to-orange-500",
-            hoverShadow: "hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)]",
-            iconColor: "text-brand-red-light"
+            color: "from-brand-primary to-green-500",
+            hoverShadow: "hover:shadow-[0_20px_40px_rgba(22,163,74,0.2)]",
+            iconColor: "text-brand-primary"
         },
         {
             icon: FaSpa,
@@ -42,10 +42,10 @@ const YogaBenefits = () => {
         <section id="benefits" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden">
             {/* Premium Ambient Background */}
             <div className="absolute inset-0 pointer-events-none z-0">
-                <div className="absolute top-0 right-1/4 w-[40rem] h-[40rem] bg-brand-red-dark/5 rounded-full blur-[150px]"></div>
-                <div className="absolute bottom-0 left-1/4 w-[30rem] h-[30rem] bg-brand-red-light/5 rounded-full blur-[150px]"></div>
+                <div className="absolute top-0 right-1/4 w-[40rem] h-[40rem] bg-brand-secondary/5 rounded-full blur-[150px]"></div>
+                <div className="absolute bottom-0 left-1/4 w-[30rem] h-[30rem] bg-brand-primary/5 rounded-full blur-[150px]"></div>
                 {/* Elegant glowing line */}
-                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red-dark/20 to-transparent"></div>
+                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-secondary/20 to-transparent"></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -55,7 +55,7 @@ const YogaBenefits = () => {
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-brand-red-light font-bold text-xs md:text-sm tracking-[0.4em] uppercase mb-6 px-6 py-2 border border-brand-red-dark/20 rounded-full bg-brand-red-dark/5 backdrop-blur-sm shadow-[0_4px_20px_rgba(192,0,0,0.1)]"
+                        className="text-brand-primary font-bold text-xs md:text-sm tracking-[0.4em] uppercase mb-6 px-6 py-2 border border-brand-secondary/20 rounded-full bg-brand-secondary/5 backdrop-blur-sm shadow-[0_4px_20px_rgba(22,163,74,0.1)]"
                     >
                         Yoga Benefits
                     </motion.span>
@@ -67,7 +67,7 @@ const YogaBenefits = () => {
                         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-text tracking-tight mb-8"
                     >
                         Yoga Life for Greater <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark drop-shadow-[0_4px_10px_rgba(59,130,246,0.3)]">Self Control</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary drop-shadow-[0_4px_10px_rgba(59,130,246,0.3)]">Self Control</span>
                     </motion.h2>
                     {/* Decorative Line under title */}
                     <motion.div
@@ -75,7 +75,7 @@ const YogaBenefits = () => {
                         whileInView={{ width: "100px", opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="h-1 bg-gradient-to-r from-transparent via-brand-red-light to-transparent rounded-full"
+                        className="h-1 bg-gradient-to-r from-transparent via-brand-primary to-transparent rounded-full"
                     ></motion.div>
                 </div>
             </div>

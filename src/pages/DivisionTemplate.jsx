@@ -65,7 +65,7 @@ const divisionData = {
         overview: 'Yoga at YOGANESH is more than just movement; it is a clinical approach to structural integrity and mental clarity. We bridge the gap between traditional asana and contemporary physiological optimization.',
         programs: [
             { name: 'Dynamic Flow', time: 'Ashtanga | Vinyasa | Power', desc: 'High-intensity, breath-synchronized sequences designed for cardiovascular flow and elite structural strength.', size: 'medium', markers: ['Fluid Transitions', 'Metabolic Fire', 'Dynamic Power'], accent: 'from-orange-500/10 to-amber-500/5' },
-            { name: 'Alignment & Therapy', time: 'Hatha & Yin | Restorative | Iyengar', desc: 'Precision-focused practices emphasizing skeletal alignment, fascia release, and neuromuscular restoration.', size: 'medium', markers: ['Skeletal Integrity', 'Props & Precision', 'Spinal Health'], accent: 'from-brand-red-light/10 to-indigo-500/5' },
+            { name: 'Alignment & Therapy', time: 'Hatha & Yin | Restorative | Iyengar', desc: 'Precision-focused practices emphasizing skeletal alignment, fascia release, and neuromuscular restoration.', size: 'medium', markers: ['Skeletal Integrity', 'Props & Precision', 'Spinal Health'], accent: 'from-brand-primary/10 to-indigo-500/5' },
             { name: 'Spiritual Science', time: 'Kundalini | Hot & Bikram | Shuddhikriya', desc: 'Ancient cleansing, energetic protocols, and detoxifying heat to optimize the nervous system.', size: 'medium', markers: ['Pranayama Mastery', 'Neural Reset', 'Detox Flow'], accent: 'from-purple-500/10 to-fuchsia-500/5' },
             { name: 'Inclusive Wellness', time: 'Prenatal | Chair Yoga', desc: 'Accessible, specialized protocols designed for expectant mothers, limited mobility, or specific life stages.', size: 'medium', markers: ['Adaptive Flow', 'Nervous System Healing', 'Safe Mobility'], accent: 'from-emerald-500/10 to-teal-500/5' }
         ],
@@ -108,7 +108,7 @@ const divisionData = {
         overview: 'Elite conditioning is not random. It is calculated, progressive, and intense. Our fitness ecosystem is designed for those who demand measurable results and surgical precision in their training.',
         programs: [
             { name: 'Strength & Power', time: 'Hypertrophy | Powerlifting', desc: 'Surgical muscle development and raw force production protocols.', size: 'medium', markers: ['Massive Force', 'Skeletal Load', 'Elite Growth'], accent: 'from-red-500/10 to-orange-500/5' },
-            { name: 'Endurance & Flow', time: 'Metabolic | Zumba | Aerial', desc: 'Optimizing aerobic capacity and rhythmic athleticism for total-body vitality.', size: 'medium', markers: ['V02 Max', 'Agility Flow', 'Cardiac Engine'], accent: 'from-cyan-500/10 to-brand-red-light/5' },
+            { name: 'Endurance & Flow', time: 'Metabolic | Zumba | Aerial', desc: 'Optimizing aerobic capacity and rhythmic athleticism for total-body vitality.', size: 'medium', markers: ['V02 Max', 'Agility Flow', 'Cardiac Engine'], accent: 'from-cyan-500/10 to-brand-primary/5' },
             { name: 'Core & Control', time: 'Pilates | Functional', desc: 'Building an unbreakable foundation of joint stability and postural integrity.', size: 'medium', markers: ['Spinal Support', 'Deep Stabilizers', 'Kinetic Link'], accent: 'from-indigo-500/10 to-purple-500/5' },
             { name: 'Fuel & Recovery', time: 'Nutrition | Recovery Lab', desc: 'Personalized metabolic structuring and elite restoration cycles.', size: 'medium', markers: ['Metabolic Map', 'Macro Precision', 'Cellular Repair'], accent: 'from-rose-500/10 to-pink-500/5' }
         ],
@@ -265,7 +265,7 @@ const divisionData = {
             { name: 'Western Strings', time: 'Guitar | Violin | Cello | Viola', desc: 'From the versatile Guitar to the emotional depth of the Cello, master the art of the bow and pluck.', size: 'medium', markers: ['Bowing Tech', 'Plucking Control', 'Acoustic Body'], accent: 'from-amber-600/10 to-orange-600/5' },
             { name: 'Master Keys', time: 'Piano | Synth | Organ', desc: 'Build a complete musical foundation with the King of instruments and modern sound design.', size: 'medium', markers: ['Keyboard Theory', 'Sound Synthesis', 'Grand Scale'], accent: 'from-slate-500/10 to-gray-500/5' },
             { name: 'Eastern Roots', time: 'Sitar | Veena | Sarangi', desc: 'Explore the hypnotic, microtonal complexity and spiritual resonance of the East.', size: 'medium', markers: ['Raga Structure', 'Meend Mastery', 'Spiritual Depth'], accent: 'from-red-600/10 to-rose-600/5' },
-            { name: 'Rhythm & Wind', time: 'Drums | Octapad | Flute', desc: 'Master the heartbeat of timing or the ethereal breath control of soaring melodies.', size: 'medium', markers: ['Syncopation', 'Breath Control', 'Precision Beat'], accent: 'from-brand-red-light/10 to-indigo-400/5' }
+            { name: 'Rhythm & Wind', time: 'Drums | Octapad | Flute', desc: 'Master the heartbeat of timing or the ethereal breath control of soaring melodies.', size: 'medium', markers: ['Syncopation', 'Breath Control', 'Precision Beat'], accent: 'from-brand-primary/10 to-indigo-400/5' }
         ],
         uniqueSection: {
             title: 'The Global Gallery',
@@ -422,14 +422,14 @@ const DivisionTemplate = () => {
                         />
                         {/* Dramatic Lighting Overlays */}
                         <div className={`absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent`}></div>
-                        <div className={`absolute inset-0 opacity-40 mix-blend-multiply bg-brand-red-dark`}></div>
+                        <div className={`absolute inset-0 opacity-40 mix-blend-multiply bg-brand-secondary`}></div>
                         <div className="absolute inset-0 bg-black/50"></div>
 
                         {/* Animated Scanning Line */}
                         <motion.div
                             animate={{ top: ['0%', '100%', '0%'] }}
                             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                            className="absolute left-0 right-0 h-[1px] bg-brand-red-light/20 z-0 pointer-events-none"
+                            className="absolute left-0 right-0 h-[1px] bg-brand-primary/20 z-0 pointer-events-none"
                         ></motion.div>
                     </div>
 
@@ -450,8 +450,8 @@ const DivisionTemplate = () => {
                             transition={{ duration: 0.8, delay: 0.1 }}
                             className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-2xl px-8 py-3 rounded-xl border border-white/10 mb-12 shadow-[0_30px_60px_rgba(0,0,0,0.3)]"
                         >
-                            <span className="w-2.5 h-2.5 rounded-full bg-brand-red-light shadow-[0_0_15px_#3B82F6] animate-pulse"></span>
-                            <span className="text-[10px] font-black tracking-[0.5em] uppercase text-brand-red-light">System.Division.Active</span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-brand-primary shadow-[0_0_15px_#3B82F6] animate-pulse"></span>
+                            <span className="text-[10px] font-black tracking-[0.5em] uppercase text-brand-primary">System.Division.Active</span>
                         </motion.div>
 
                         <motion.h1
@@ -461,7 +461,7 @@ const DivisionTemplate = () => {
                             className="text-6xl md:text-[7rem] font-black mb-10 tracking-tighter text-white leading-[0.8] uppercase italic pr-24 drop-shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
                         >
                             YOGANESH <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark via-brand-red-light to-brand-red-light drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] block mt-4 pr-10">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary via-brand-primary to-brand-primary drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] block mt-4 pr-10">
                                 {data.title}
                             </span>
                         </motion.h1>
@@ -470,9 +470,9 @@ const DivisionTemplate = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-[10px] md:text-lg font-black text-brand-red-light px-12 py-5 bg-white/5 backdrop-blur-xl border border-white/10 tracking-[0.4em] max-w-4xl uppercase relative overflow-hidden group rounded-lg"
+                            className="text-[10px] md:text-lg font-black text-brand-primary px-12 py-5 bg-white/5 backdrop-blur-xl border border-white/10 tracking-[0.4em] max-w-4xl uppercase relative overflow-hidden group rounded-lg"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-brand-red-light/10 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-transparent"></div>
                             <span className="relative z-10 font-black tracking-[0.6em]">
                                 [ {data.tagline} ]
                             </span>
@@ -489,8 +489,8 @@ const DivisionTemplate = () => {
                             className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] px-2 md:px-6 py-2 flex items-center justify-between"
                         >
                             {/* Improved Back Button */}
-                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-red-light transition-all font-bold text-xs tracking-widest uppercase mr-4">
-                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-red-light/10 group-hover:border-brand-red-light/30 transition-all shadow-sm">
+                            <Link to="/divisions" className="flex items-center group text-brand-text-muted hover:text-brand-primary transition-all font-bold text-xs tracking-widest uppercase mr-4">
+                                <div className="w-9 h-9 rounded-full bg-brand-bg border border-brand-text/5 flex items-center justify-center mr-2 group-hover:bg-brand-primary/10 group-hover:border-brand-primary/30 transition-all shadow-sm">
                                     <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                                 </div>
                                 <span className="hidden sm:inline">Back</span>
@@ -510,7 +510,7 @@ const DivisionTemplate = () => {
                                         {activeSection === item.id && (
                                             <motion.div
                                                 layoutId="pill-active"
-                                                className="absolute inset-0 bg-brand-red-light rounded-full z-0 shadow-[0_5px_15px_rgba(37,99,235,0.2)]"
+                                                className="absolute inset-0 bg-brand-primary rounded-full z-0 shadow-[0_5px_15px_rgba(37,99,235,0.2)]"
                                                 transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                                             />
                                         )}
@@ -547,7 +547,7 @@ const DivisionTemplate = () => {
                                                     setIsMobileMenuOpen(false);
                                                 }}
                                                 className={`w-full text-center py-4 rounded-2xl font-black tracking-[0.2em] uppercase text-xs transition-all ${activeSection === item.id
-                                                    ? 'bg-brand-red-light text-white shadow-lg'
+                                                    ? 'bg-brand-primary text-white shadow-lg'
                                                     : 'bg-brand-bg-alt/50 text-brand-text-muted'
                                                     }`}
                                             >
@@ -579,7 +579,7 @@ const DivisionTemplate = () => {
                         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative">
                                 {/* Background Decorative Number */}
-                                <div className="absolute -top-20 -left-10 text-[250px] font-black text-brand-red-light opacity-[0.03] select-none pointer-events-none hidden md:block">01</div>
+                                <div className="absolute -top-20 -left-10 text-[250px] font-black text-brand-primary opacity-[0.03] select-none pointer-events-none hidden md:block">01</div>
 
                                 <div className="w-full lg:w-3/5 relative z-10">
                                     <motion.div
@@ -591,16 +591,16 @@ const DivisionTemplate = () => {
                                     >
                                         <div className="space-y-6">
                                             <div className="flex items-center space-x-4">
-                                                <div className="w-8 h-[1px] bg-brand-red-light"></div>
-                                                <span className="text-brand-red-light font-black uppercase tracking-[0.5em] text-[9px] px-3 py-1 bg-brand-red-light/5 rounded-full border border-brand-red-light/10">Strategic Blueprint</span>
+                                                <div className="w-8 h-[1px] bg-brand-primary"></div>
+                                                <span className="text-brand-primary font-black uppercase tracking-[0.5em] text-[9px] px-3 py-1 bg-brand-primary/5 rounded-full border border-brand-primary/10">Strategic Blueprint</span>
                                             </div>
                                             <h2 className="text-4xl md:text-6xl font-black tracking-tight text-brand-text italic uppercase leading-[0.85] pr-16">
                                                 About The <br />
-                                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light inline-block pr-4">Division</span>
+                                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary inline-block pr-4">Division</span>
                                             </h2>
                                         </div>
 
-                                        <p className="text-brand-text-muted text-lg md:text-xl font-medium leading-relaxed max-w-2xl border-l-4 border-brand-red-light/10 pl-10 py-2">
+                                        <p className="text-brand-text-muted text-lg md:text-xl font-medium leading-relaxed max-w-2xl border-l-4 border-brand-primary/10 pl-10 py-2">
                                             {data.overview}
                                         </p>
 
@@ -618,18 +618,18 @@ const DivisionTemplate = () => {
                                             className="bg-brand-text p-12 md:p-16 rounded-[4rem] text-white shadow-2xl relative overflow-hidden group"
                                         >
                                             {/* Technical Decorations */}
-                                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red-light/20 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-1000"></div>
-                                            <div className="absolute top-12 right-12 w-2 h-2 bg-brand-red-light rounded-full animate-pulse"></div>
+                                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-1000"></div>
+                                            <div className="absolute top-12 right-12 w-2 h-2 bg-brand-primary rounded-full animate-pulse"></div>
 
                                             <div className="relative z-10 space-y-8">
                                                 <div className="flex items-center space-x-3">
-                                                    <div className="w-6 h-6 rounded-lg bg-brand-red-light/20 flex items-center justify-center">
-                                                        <div className="w-2 h-2 bg-brand-red-light rounded-sm rotate-45"></div>
+                                                    <div className="w-6 h-6 rounded-lg bg-brand-primary/20 flex items-center justify-center">
+                                                        <div className="w-2 h-2 bg-brand-primary rounded-sm rotate-45"></div>
                                                     </div>
-                                                    <span className="text-brand-red-light font-black uppercase tracking-[0.3em] text-[10px]">Enrollment Protocol</span>
+                                                    <span className="text-brand-primary font-black uppercase tracking-[0.3em] text-[10px]">Enrollment Protocol</span>
                                                 </div>
 
-                                                <h3 className="text-brand-red-light font-black uppercase tracking-widest text-sm italic">Who It's For</h3>
+                                                <h3 className="text-brand-primary font-black uppercase tracking-widest text-sm italic">Who It's For</h3>
 
                                                 <p className="text-xl md:text-2xl font-bold leading-tight italic tracking-tight text-white/90">
                                                     {data.who}
@@ -658,8 +658,8 @@ const DivisionTemplate = () => {
                                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                                     <div className="max-w-2xl">
                                         <div className="flex items-center space-x-4 mb-6">
-                                            <div className="w-12 h-[2px] bg-brand-red-light"></div>
-                                            <span className="text-brand-red-light font-black uppercase tracking-[0.4em] text-xs">The Methodology</span>
+                                            <div className="w-12 h-[2px] bg-brand-primary"></div>
+                                            <span className="text-brand-primary font-black uppercase tracking-[0.4em] text-xs">The Methodology</span>
                                         </div>
                                         <h2 className="text-5xl md:text-7xl font-black tracking-tight text-brand-text leading-none uppercase italic pr-20">
                                             Programs
@@ -701,7 +701,7 @@ const DivisionTemplate = () => {
                                             <div className="relative z-10 p-10 h-full flex flex-col justify-between">
                                                 <div>
                                                     <div className="flex items-center justify-between mb-8">
-                                                        <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-brand-red-light group-hover:text-white group-hover:border-transparent'}`}>
+                                                        <div className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border transition-all ${!prog.img ? 'bg-white/40 text-brand-text border-brand-text/10 group-hover:bg-brand-text group-hover:text-white' : 'bg-brand-bg text-brand-text border-brand-text/5 group-hover:bg-brand-primary group-hover:text-white group-hover:border-transparent'}`}>
                                                             {prog.time}
                                                         </div>
                                                         {/* Program Icon Removed */}
@@ -722,7 +722,7 @@ const DivisionTemplate = () => {
                                                     {prog.markers && (
                                                         <div className="flex flex-wrap gap-2">
                                                             {prog.markers.map((marker, m) => (
-                                                                <span key={m} className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${!prog.img ? 'bg-white/30 text-brand-text-muted group-hover:bg-white/60 group-hover:text-brand-text' : 'bg-brand-text/5 text-brand-text-muted group-hover:bg-white/10 group-hover:text-brand-red-light'}`}>
+                                                                <span key={m} className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all ${!prog.img ? 'bg-white/30 text-brand-text-muted group-hover:bg-white/60 group-hover:text-brand-text' : 'bg-brand-text/5 text-brand-text-muted group-hover:bg-white/10 group-hover:text-brand-primary'}`}>
                                                                     {marker}
                                                                 </span>
                                                             ))}
@@ -748,15 +748,15 @@ const DivisionTemplate = () => {
                             className="py-24 md:py-48 scroll-mt-20 bg-brand-text relative overflow-hidden"
                         >
                             {/* Animated Background Orbs */}
-                            <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-red-light/10 rounded-full blur-[120px] animate-pulse"></div>
-                            <div className="absolute bottom-0 left-0 w-[30%] h-[30%] bg-brand-red-light/5 rounded-full blur-[100px]"></div>
+                            <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-brand-primary/10 rounded-full blur-[120px] animate-pulse"></div>
+                            <div className="absolute bottom-0 left-0 w-[30%] h-[30%] bg-brand-primary/5 rounded-full blur-[100px]"></div>
 
                             <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                                 <div className="flex flex-col mb-20">
-                                    <div className="inline-block px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] text-brand-red-light mb-6 w-fit">Academic Excellence</div>
+                                    <div className="inline-block px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary mb-6 w-fit">Academic Excellence</div>
                                     <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-none text-white italic uppercase pr-12">
                                         The Learning <br />
-                                        <span className="text-brand-red-light">Ecosystem</span>
+                                        <span className="text-brand-primary">Ecosystem</span>
                                     </h2>
                                 </div>
 
@@ -781,13 +781,13 @@ const DivisionTemplate = () => {
                                                             <h4 className={`font-black text-xl tracking-tight transition-colors ${activeCourse === i ? 'text-brand-text' : 'text-white/60'}`}>
                                                                 {course.name}
                                                             </h4>
-                                                            <p className={`text-[10px] font-bold uppercase tracking-widest ${activeCourse === i ? 'text-brand-red-light' : 'text-white/30'}`}>
+                                                            <p className={`text-[10px] font-bold uppercase tracking-widest ${activeCourse === i ? 'text-brand-primary' : 'text-white/30'}`}>
                                                                 {course.levels}
                                                             </p>
                                                         </div>
                                                     </div>
                                                     <FaArrowRight className={`transition-all duration-500 ${activeCourse === i
-                                                        ? 'text-brand-red-light opacity-100 translate-x-0'
+                                                        ? 'text-brand-primary opacity-100 translate-x-0'
                                                         : 'text-white/0 -translate-x-4'
                                                         }`} />
                                                 </motion.button>
@@ -832,7 +832,7 @@ const DivisionTemplate = () => {
                                                         transition={{ delay: 0.2 }}
                                                         className="space-y-6"
                                                     >
-                                                        <div className="w-20 h-1 bg-brand-red-light"></div>
+                                                        <div className="w-20 h-1 bg-brand-primary"></div>
                                                         <h3 className="text-4xl font-black text-white italic uppercase tracking-tighter">
                                                             {data.universityCourses[activeCourse].name}
                                                         </h3>
@@ -878,7 +878,7 @@ const DivisionTemplate = () => {
                                 {data.uniqueSection.isLargeGrid ? (
                                     <div className="space-y-16">
                                         <div className="text-center max-w-3xl mx-auto space-y-6">
-                                            <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-brand-red-light">The Conservatory</div>
+                                            <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-brand-primary">The Conservatory</div>
                                             <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
                                             <p className="text-lg text-white/70 leading-relaxed">
                                                 {data.uniqueSection.desc}
@@ -904,7 +904,7 @@ const DivisionTemplate = () => {
                                                         <h4 className="text-xl font-black text-white uppercase italic mb-2 tracking-tighter">{item.label}</h4>
                                                         <p className="text-white/50 text-sm leading-relaxed">{item.detail}</p>
                                                     </div>
-                                                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-red-light/20 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:bg-brand-red-light transition-colors">
+                                                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-primary/20 backdrop-blur-md flex items-center justify-center border border-white/10 group-hover:bg-brand-primary transition-colors">
                                                         <FaArrowRight className="text-white text-xs" />
                                                     </div>
                                                 </motion.div>
@@ -920,7 +920,7 @@ const DivisionTemplate = () => {
                                                 viewport={{ once: true }}
                                                 className="space-y-8"
                                             >
-                                                <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-brand-red-light">System Protocol</div>
+                                                <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-brand-primary">System Protocol</div>
                                                 <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-tight italic uppercase pr-24 relative z-10">{data.uniqueSection.title}</h2>
                                                 <p className="text-lg text-white/70 leading-relaxed max-w-xl">
                                                     {data.uniqueSection.desc}
@@ -935,7 +935,7 @@ const DivisionTemplate = () => {
                                                             transition={{ delay: idx * 0.1 }}
                                                             className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group"
                                                         >
-                                                            <h4 className="text-brand-red-light font-black text-sm uppercase tracking-widest mb-1 group-hover:translate-x-1 transition-transform">{item.label}</h4>
+                                                            <h4 className="text-brand-primary font-black text-sm uppercase tracking-widest mb-1 group-hover:translate-x-1 transition-transform">{item.label}</h4>
                                                             <p className="text-white/50 text-sm">{item.detail}</p>
                                                         </motion.div>
                                                     ))}
@@ -956,7 +956,7 @@ const DivisionTemplate = () => {
                                                         onClick={() => setSelectedImg(divisionId === 'yoga-classes' ? yogaSpecialImg : divisionId === 'fitness-classes' ? fitnessSpecialImg : data.img)}
                                                     />
 
-                                                    <div className="absolute -bottom-10 -right-10 bg-brand-red-light p-8 rounded-3xl shadow-2xl z-20 max-w-[240px] transform hover:scale-105 transition-transform hidden md:block">
+                                                    <div className="absolute -bottom-10 -right-10 bg-brand-primary p-8 rounded-3xl shadow-2xl z-20 max-w-[240px] transform hover:scale-105 transition-transform hidden md:block">
                                                         <div className="text-white font-black text-xs uppercase tracking-widest mb-2 opacity-80">Ecosystem Integrity</div>
                                                         <div className="text-white text-2xl font-black italic">100%</div>
                                                         <div className="text-white/60 text-[10px] mt-2 leading-tight uppercase font-bold tracking-widest">Validated Performance Protocols</div>
@@ -990,12 +990,12 @@ const DivisionTemplate = () => {
                                     className="max-w-2xl"
                                 >
                                     <div className="flex items-center space-x-4 mb-6">
-                                        <div className="w-12 h-[2px] bg-brand-red-light"></div>
-                                        <span className="text-brand-red-light font-black uppercase tracking-[0.4em] text-xs">The Advantage</span>
+                                        <div className="w-12 h-[2px] bg-brand-primary"></div>
+                                        <span className="text-brand-primary font-black uppercase tracking-[0.4em] text-xs">The Advantage</span>
                                     </div>
                                     <h2 className="text-4xl md:text-6xl font-black tracking-tight text-brand-text leading-[0.9] pr-12">
                                         WHY CHOOSE <br />
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark via-brand-red-light to-brand-red-light">YOGANESH</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary via-brand-primary to-brand-primary">YOGANESH</span>
                                     </h2>
                                 </motion.div>
                                 <motion.p
@@ -1029,7 +1029,7 @@ const DivisionTemplate = () => {
                                                 {/* Icon Header Removed */}
 
                                                 <div className="relative z-10">
-                                                    <h4 className="text-lg font-black text-brand-text mb-4 tracking-tight leading-tight group-hover:text-brand-red-dark transition-colors">
+                                                    <h4 className="text-lg font-black text-brand-text mb-4 tracking-tight leading-tight group-hover:text-brand-secondary transition-colors">
                                                         {benefit.title}
                                                     </h4>
                                                     <p className="text-brand-text-muted text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
@@ -1040,10 +1040,10 @@ const DivisionTemplate = () => {
 
 
                                                 {/* Sophisticated Glow */}
-                                                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-red-light/5 blur-[50px] group-hover:bg-brand-red-light/10 rounded-full transition-all duration-700"></div>
+                                                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-primary/5 blur-[50px] group-hover:bg-brand-primary/10 rounded-full transition-all duration-700"></div>
 
                                                 {/* Subtle Animated Border Bottom */}
-                                                <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-red-light transition-all duration-700 ease-out group-hover:w-full"></div>
+                                                <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-primary transition-all duration-700 ease-out group-hover:w-full"></div>
                                             </div>
                                         </TiltWrapper>
                                     </motion.div>
@@ -1073,7 +1073,7 @@ const DivisionTemplate = () => {
                                     className="bg-white/80 backdrop-blur-xl border border-brand-text/10 rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] p-8 md:p-12 relative overflow-hidden group"
                                 >
 
-                                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red-dark/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
+                                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-secondary/5 blur-[100px] rounded-full pointer-events-none transition-opacity duration-1000"></div>
 
                                     <div className="text-center mb-6 relative z-10">
                                         <h2 className="text-2xl md:text-3xl font-extrabold mb-2 tracking-tight">Ready to Begin?</h2>
@@ -1090,7 +1090,7 @@ const DivisionTemplate = () => {
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     type="text"
-                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner"
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-primary focus:bg-white transition-all shadow-inner"
                                                     placeholder="John Doe"
                                                 />
                                             </motion.div>
@@ -1102,7 +1102,7 @@ const DivisionTemplate = () => {
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     type="tel"
-                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner"
+                                                    className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-primary focus:bg-white transition-all shadow-inner"
                                                     placeholder="+91 80979 23924"
                                                 />
                                             </motion.div>
@@ -1116,7 +1116,7 @@ const DivisionTemplate = () => {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 type="email"
-                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner"
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-primary focus:bg-white transition-all shadow-inner"
                                                 placeholder="john@example.com"
                                             />
                                         </motion.div>
@@ -1128,7 +1128,7 @@ const DivisionTemplate = () => {
                                                 value={formData.message}
                                                 onChange={handleChange}
                                                 rows="2"
-                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-red-light focus:bg-white transition-all shadow-inner resize-none"
+                                                className="w-full bg-brand-bg-alt/50 border border-brand-text/10 rounded-2xl px-6 py-4 text-brand-text focus:outline-none focus:border-brand-primary focus:bg-white transition-all shadow-inner resize-none"
                                                 placeholder={`I'd like to enquiry about ${data.title}...`}
                                             ></textarea>
                                         </motion.div>
@@ -1136,7 +1136,7 @@ const DivisionTemplate = () => {
                                         <div className="text-center pt-4">
                                             <button
                                                 type="submit"
-                                                className="inline-flex flex-col items-center justify-center px-12 py-5 rounded-[2rem] bg-brand-red-dark text-white font-extrabold text-lg tracking-widest uppercase hover:bg-brand-red-light hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-auto"
+                                                className="inline-flex flex-col items-center justify-center px-12 py-5 rounded-[2rem] bg-brand-secondary text-white font-extrabold text-lg tracking-widest uppercase hover:bg-brand-primary hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] transform hover:-translate-y-1 transition-all duration-300 w-full lg:w-auto"
                                             >
                                                 <div className="flex items-center">
                                                     Submit Message
@@ -1164,7 +1164,7 @@ const DivisionTemplate = () => {
                                                 </p>
                                                 <button
                                                     onClick={() => setIsSubmitted(false)}
-                                                    className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-red-light transition-all"
+                                                    className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-primary transition-all"
                                                 >
                                                     Send Another
                                                 </button>

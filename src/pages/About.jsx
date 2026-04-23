@@ -22,7 +22,7 @@ const About = () => {
                         <span className="text-[100px] md:text-[200px] font-black tracking-tighter text-brand-text whitespace-nowrap uppercase">Yoganesh Health Institute</span>
                     </div>
 
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(192,0,0,0.05),transparent_70%)] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(22,163,74,0.05),transparent_70%)] pointer-events-none"></div>
 
                     <div className="container mx-auto px-4 md:px-8 relative z-10 text-center max-w-4xl">
                         <motion.div
@@ -31,7 +31,7 @@ const About = () => {
                             transition={{ duration: 0.8 }}
                             className="inline-flex items-center space-x-2 bg-brand-bg-alt px-6 py-2 rounded-full border border-brand-text/5 mb-8 shadow-sm"
                         >
-                            <span className="w-2 h-2 rounded-full bg-brand-red-light animate-pulse"></span>
+                            <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                             <span className="text-sm font-bold tracking-widest uppercase text-brand-text-muted">Our Heritage</span>
                         </motion.div>
 
@@ -42,7 +42,7 @@ const About = () => {
                             className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-[1.1]"
                         >
                             The Story of <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light">YOGANESH</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary to-brand-primary">YOGANESH</span>
                         </motion.h1>
 
                         <motion.p
@@ -71,13 +71,13 @@ const About = () => {
                             >
                                 <TiltWrapper intensity={10} scaleOnHover={1.02}>
                                     <div className="aspect-[4/5] rounded-[3rem] relative overflow-hidden group shadow-[0_30px_60px_rgba(0,0,0,0.1)] border border-brand-text/5 bg-brand-bg-alt cursor-pointer">
-                                        <div className="absolute inset-0 bg-brand-red-dark/5 group-hover:bg-brand-red-dark/10 transition-colors duration-500 flex items-center justify-center">
+                                        <div className="absolute inset-0 bg-brand-secondary/5 group-hover:bg-brand-secondary/10 transition-colors duration-500 flex items-center justify-center">
                                             <span className="text-brand-text/20 font-black tracking-widest uppercase text-2xl rotate-[-90deg]">Founder Portrait</span>
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent opacity-80 z-10"></div>
 
                                         {/* Premium Overlay Trim */}
-                                        <div className="absolute inset-6 border border-brand-text/10 rounded-[2rem] z-20 pointer-events-none group-hover:border-brand-red-light/30 transition-colors duration-500"></div>
+                                        <div className="absolute inset-6 border border-brand-text/10 rounded-[2rem] z-20 pointer-events-none group-hover:border-brand-primary/30 transition-colors duration-500"></div>
                                     </div>
                                 </TiltWrapper>
                             </motion.div>
@@ -91,7 +91,7 @@ const About = () => {
                                 className="w-full lg:w-1/2 space-y-8"
                             >
                                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-text">The Visionary Behind the Movement.</h2>
-                                <div className="w-20 h-1.5 bg-gradient-to-r from-brand-red-dark to-brand-red-light rounded-full"></div>
+                                <div className="w-20 h-1.5 bg-gradient-to-r from-brand-secondary to-brand-primary rounded-full"></div>
 
                                 <div className="space-y-6 text-brand-text-muted text-lg md:text-xl leading-relaxed">
                                     <p>
@@ -111,7 +111,7 @@ const About = () => {
 
                 {/* 3. Vision & Mission & Core Values */}
                 <section className="py-32 bg-brand-bg-alt border-y border-brand-text/5 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(192,0,0,0.03),transparent_60%)] pointer-events-none"></div>
+                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.03),transparent_60%)] pointer-events-none"></div>
 
                     <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
                         <div className="text-center mb-20 max-w-3xl mx-auto">
@@ -134,15 +134,15 @@ const About = () => {
                                     className="h-full"
                                 >
                                     <TiltWrapper intensity={10} scaleOnHover={1.03}>
-                                        <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 p-10 rounded-[2rem] h-full flex flex-col group hover:bg-white hover:border-brand-red-light/30 hover:shadow-[0_20px_40px_rgba(192,0,0,0.08)] transition-all duration-500 overflow-hidden relative text-center">
+                                        <div className="bg-white/80 backdrop-blur-md border border-brand-text/5 p-10 rounded-[2rem] h-full flex flex-col group hover:bg-white hover:border-brand-primary/30 hover:shadow-[0_20px_40px_rgba(22,163,74,0.08)] transition-all duration-500 overflow-hidden relative text-center">
 
-                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(192,0,0,0.04),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(22,163,74,0.04),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-                                            <div className="w-20 h-20 mx-auto bg-brand-bg-alt rounded-2xl flex items-center justify-center mb-8 border border-brand-text/5 group-hover:scale-110 group-hover:bg-brand-red-light group-hover:-rotate-3 transition-all duration-500 shadow-sm relative z-10">
-                                                <item.icon className="text-3xl text-brand-red-dark group-hover:text-white transition-colors duration-500" />
+                                            <div className="w-20 h-20 mx-auto bg-brand-bg-alt rounded-2xl flex items-center justify-center mb-8 border border-brand-text/5 group-hover:scale-110 group-hover:bg-brand-primary group-hover:-rotate-3 transition-all duration-500 shadow-sm relative z-10">
+                                                <item.icon className="text-3xl text-brand-secondary group-hover:text-white transition-colors duration-500" />
                                             </div>
 
-                                            <h3 className="text-2xl font-extrabold mb-4 group-hover:text-brand-red-dark transition-colors duration-300 relative z-10">{item.title}</h3>
+                                            <h3 className="text-2xl font-extrabold mb-4 group-hover:text-brand-secondary transition-colors duration-300 relative z-10">{item.title}</h3>
 
                                             <p className="text-brand-text-muted text-lg leading-relaxed group-hover:text-brand-text/80 transition-colors duration-300 relative z-10 flex-grow">
                                                 {item.desc}
@@ -165,7 +165,7 @@ const About = () => {
 
                         <div className="relative">
                             {/* Central Line */}
-                            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-red-dark via-brand-red-light to-transparent md:-translate-x-1/2 opacity-20"></div>
+                            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-secondary via-brand-primary to-transparent md:-translate-x-1/2 opacity-20"></div>
 
                             <div className="space-y-16">
                                 {[
@@ -183,8 +183,8 @@ const About = () => {
                                         className={`relative flex flex-col md:flex-row items-center md:justify-between group cursor-pointer ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                                     >
                                         {/* Timeline Node */}
-                                        <div className="absolute left-0 md:left-1/2 top-4 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full border-4 border-brand-bg bg-brand-bg-alt flex items-center justify-center z-10 group-hover:bg-brand-red-light group-hover:scale-125 transition-all duration-500 shadow-md">
-                                            <div className="w-3 h-3 rounded-full bg-brand-red-dark group-hover:bg-white group-hover:animate-ping transition-colors"></div>
+                                        <div className="absolute left-0 md:left-1/2 top-4 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full border-4 border-brand-bg bg-brand-bg-alt flex items-center justify-center z-10 group-hover:bg-brand-primary group-hover:scale-125 transition-all duration-500 shadow-md">
+                                            <div className="w-3 h-3 rounded-full bg-brand-secondary group-hover:bg-white group-hover:animate-ping transition-colors"></div>
                                         </div>
 
                                         {/* Spacer for MD */}
@@ -193,9 +193,9 @@ const About = () => {
                                         {/* Content Card */}
                                         <div className="w-full md:w-[45%] pl-20 md:pl-0">
                                             <TiltWrapper intensity={8} scaleOnHover={1.02}>
-                                                <div className={`bg-brand-bg-alt border border-brand-text/5 p-8 rounded-[2rem] shadow-lg group-hover:border-brand-red-light/30 group-hover:shadow-[0_20px_40px_rgba(192,0,0,0.08)] transition-all duration-500 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                                                    <span className="text-brand-red-light font-black text-2xl mb-2 block">{item.year}</span>
-                                                    <h3 className="font-extrabold text-2xl mb-4 text-brand-text group-hover:text-brand-red-dark transition-colors duration-300">{item.title}</h3>
+                                                <div className={`bg-brand-bg-alt border border-brand-text/5 p-8 rounded-[2rem] shadow-lg group-hover:border-brand-primary/30 group-hover:shadow-[0_20px_40px_rgba(22,163,74,0.08)] transition-all duration-500 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                                                    <span className="text-brand-primary font-black text-2xl mb-2 block">{item.year}</span>
+                                                    <h3 className="font-extrabold text-2xl mb-4 text-brand-text group-hover:text-brand-secondary transition-colors duration-300">{item.title}</h3>
                                                     <p className="text-brand-text-muted leading-relaxed text-lg">{item.desc}</p>
                                                 </div>
                                             </TiltWrapper>
@@ -237,12 +237,12 @@ const About = () => {
                                             </div>
 
                                             {/* Hover Profile Reveal Overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-brand-red-dark/90 via-brand-red-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-end p-6">
+                                            <div className="absolute inset-0 bg-gradient-to-t from-brand-secondary/90 via-brand-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-end p-6">
                                                 <div className="flex space-x-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                                                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-brand-red-dark transition-colors">
+                                                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-brand-secondary transition-colors">
                                                         <FaInstagram className="text-lg" />
                                                     </a>
-                                                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-brand-red-dark transition-colors">
+                                                    <a href="#" className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-brand-secondary transition-colors">
                                                         <FaLinkedinIn className="text-lg" />
                                                     </a>
                                                 </div>
@@ -250,7 +250,7 @@ const About = () => {
                                         </div>
                                     </TiltWrapper>
                                     <div className="text-center md:text-left pl-2">
-                                        <h4 className="text-xl font-extrabold text-brand-text group-hover:text-brand-red-light transition-colors duration-300">{member.name}</h4>
+                                        <h4 className="text-xl font-extrabold text-brand-text group-hover:text-brand-primary transition-colors duration-300">{member.name}</h4>
                                         <p className="text-brand-text-muted text-sm font-semibold uppercase tracking-wider mt-1">{member.role}</p>
                                     </div>
                                 </motion.div>
@@ -262,18 +262,18 @@ const About = () => {
                 {/* 6. Stunning CTA */}
                 <section className="py-24 md:py-32 relative overflow-hidden bg-brand-bg">
                     {/* Immersive Background */}
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(192,0,0,0.08),transparent_70%)] pointer-events-none z-0"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(22,163,74,0.08),transparent_70%)] pointer-events-none z-0"></div>
 
                     <div className="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center">
                         <TiltWrapper intensity={5} scaleOnHover={1.02}>
                             <div className="w-full max-w-5xl bg-brand-bg-alt border border-brand-text/10 rounded-[3rem] p-12 md:p-20 text-center shadow-[0_30px_60px_rgba(0,0,0,0.05)] relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark/5 to-transparent z-0"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/5 to-transparent z-0"></div>
 
                                 <div className="relative z-10">
                                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 tracking-tight">Become the 1%. <br className="hidden md:block" />Join The YOGANESH Community.</h2>
                                     <Link
                                         to="/contact"
-                                        className="inline-flex items-center justify-center px-10 py-5 rounded-[2rem] bg-brand-red-dark text-white font-extrabold text-lg hover:bg-brand-red-light hover:shadow-[0_20px_40px_rgba(192,0,0,0.2)] hover:-translate-y-1 transition-all duration-300 group/btn"
+                                        className="inline-flex items-center justify-center px-10 py-5 rounded-[2rem] bg-brand-secondary text-white font-extrabold text-lg hover:bg-brand-primary hover:shadow-[0_20px_40px_rgba(22,163,74,0.2)] hover:-translate-y-1 transition-all duration-300 group/btn"
                                     >
                                         Start Exploring Today
                                         <FaArrowRight className="ml-3 group-hover/btn:translate-x-2 transition-transform duration-300" />

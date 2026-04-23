@@ -64,7 +64,7 @@ const YogaContact = () => {
     return (
         <section id="contact" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden">
             {/* Background decorations */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-red-dark/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-secondary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Top Area: Image & Contact Cards */}
@@ -77,7 +77,7 @@ const YogaContact = () => {
                         className="mb-12"
                     >
                         <TiltWrapper intensity={20} scaleOnHover={1.03} className="relative w-full h-[300px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group block">
-                            <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
+                            <div className="absolute inset-0 bg-brand-secondary/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
                             <img
                                 src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/group-e1750968404152.jpg"
                                 alt="Yoga Mudra Focus Group"
@@ -97,10 +97,10 @@ const YogaContact = () => {
                                 transition={{ delay: 0.1 * idx }}
                                 className="bg-white p-8 rounded-[2rem] shadow-[0_15px_30px_rgba(0,0,0,0.06)] border border-brand-text/5 text-center group hover:-translate-y-2 transition-transform duration-300"
                             >
-                                <div className="w-16 h-16 mx-auto bg-brand-bg rounded-full flex items-center justify-center mb-6 text-brand-red-light group-hover:scale-110 group-hover:bg-brand-red-light/10 group-hover:shadow-[0_0_20px_rgba(192,0,0,0.1)] transition-all duration-300">
+                                <div className="w-16 h-16 mx-auto bg-brand-bg rounded-full flex items-center justify-center mb-6 text-brand-primary group-hover:scale-110 group-hover:bg-brand-primary/10 group-hover:shadow-[0_0_20px_rgba(22,163,74,0.1)] transition-all duration-300">
                                     {card.icon}
                                 </div>
-                                <h4 className="text-xl font-bold text-brand-text mb-4 transition-colors group-hover:text-brand-red-light">{card.title}</h4>
+                                <h4 className="text-xl font-bold text-brand-text mb-4 transition-colors group-hover:text-brand-primary">{card.title}</h4>
                                 <p className="text-brand-text-muted font-medium leading-relaxed max-w-[250px] mx-auto text-[15px]">
                                     {card.desc}
                                 </p>
@@ -117,13 +117,13 @@ const YogaContact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
+                        <span className="text-brand-primary font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
                         <h2 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-8 leading-tight">
                             Feel Free To Contact <br /> And Reach Us !
                         </h2>
 
                         <div className="flex items-start gap-4 mb-8">
-                            <div className="mt-1 text-brand-red-light">
+                            <div className="mt-1 text-brand-primary">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                             </div>
                             <p className="text-brand-text-muted text-lg leading-relaxed font-medium">
@@ -133,7 +133,7 @@ const YogaContact = () => {
 
                         {/* Gorgeous Filtered Map Frame */}
                         <div className="relative w-full h-80 rounded-[2rem] overflow-hidden shadow-xl border border-brand-text/5 group">
-                            <div className="absolute inset-0 bg-brand-red-dark/10 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10 mix-blend-color"></div>
+                            <div className="absolute inset-0 bg-brand-secondary/10 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10 mix-blend-color"></div>
                             <div className="absolute inset-0 ring-1 ring-inset ring-brand-text/5 rounded-[2rem] z-20 pointer-events-none"></div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693190868846!2d73.02325011119523!3d18.968080282121045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3ba8109ed8d%3A0x6b29ebd836d5b038!2sNMS%20ICON!5e0!3m2!1sen!2sin!4v1710849202157!5m2!1sen!2sin"
@@ -170,7 +170,7 @@ const YogaContact = () => {
                                     </p>
                                     <button
                                         onClick={() => setIsSubmitted(false)}
-                                        className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-red-light transition-all"
+                                        className="px-10 py-4 bg-brand-text text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-brand-primary transition-all"
                                     >
                                         Send Another
                                     </button>
@@ -188,7 +188,7 @@ const YogaContact = () => {
                                     onChange={handleChange}
                                     type="text"
                                     placeholder="Your Name.."
-                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
+                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-primary/30 focus:bg-white focus:ring-4 focus:ring-brand-primary/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
                                 />
                             </div>
                             <div className="group">
@@ -199,7 +199,7 @@ const YogaContact = () => {
                                     onChange={handleChange}
                                     type="email"
                                     placeholder="Your Email.."
-                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
+                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-primary/30 focus:bg-white focus:ring-4 focus:ring-brand-primary/10 transition-all outline-none placeholder:text-brand-text/30 font-medium"
                                 />
                             </div>
                             <div className="group">
@@ -210,12 +210,12 @@ const YogaContact = () => {
                                     onChange={handleChange}
                                     placeholder="Enter Your Message.."
                                     rows="5"
-                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-red-light/30 focus:bg-white focus:ring-4 focus:ring-brand-red-light/10 transition-all outline-none placeholder:text-brand-text/30 resize-none font-medium"
+                                    className="w-full px-6 py-4 bg-brand-bg-alt text-brand-text rounded-[1.5rem] border border-transparent focus:border-brand-primary/30 focus:bg-white focus:ring-4 focus:ring-brand-primary/10 transition-all outline-none placeholder:text-brand-text/30 resize-none font-medium"
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full py-4 bg-gradient-primary text-white font-extrabold rounded-full hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] hover:-translate-y-1 transition-all duration-300 tracking-wider text-sm mt-4"
+                                className="w-full py-4 bg-gradient-primary text-white font-extrabold rounded-full hover:shadow-[0_15px_30px_rgba(22,163,74,0.25)] hover:-translate-y-1 transition-all duration-300 tracking-wider text-sm mt-4"
                             >
                                 SUBMIT MESSAGE
                             </button>

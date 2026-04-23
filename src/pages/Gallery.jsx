@@ -96,7 +96,7 @@ const Gallery = () => {
                                 key={cat}
                                 onClick={() => setActiveTab(cat)}
                                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeTab === cat
-                                    ? 'bg-gradient-primary text-white shadow-[0_0_15px_rgba(192,0,0,0.4)]'
+                                    ? 'bg-gradient-primary text-white shadow-[0_0_15px_rgba(22,163,74,0.4)]'
                                     : 'bg-brand-text/5 text-brand-text-muted hover:bg-brand-text/10 hover:text-brand-text'
                                     }`}
                             >
@@ -147,7 +147,7 @@ const Gallery = () => {
                             onClick={() => setSelectedImg(null)}
                         >
                             <button
-                                className="absolute top-6 right-8 text-white text-4xl hover:text-brand-red-light transition-colors z-[70]"
+                                className="absolute top-6 right-8 text-white text-4xl hover:text-brand-primary transition-colors z-[70]"
                                 onClick={() => setSelectedImg(null)}
                             >
                                 &times;

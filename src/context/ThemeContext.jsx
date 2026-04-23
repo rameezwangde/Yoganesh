@@ -5,10 +5,10 @@ const ThemeContext = createContext();
 export const themes = [
     { 
         id: 'clinical', 
-        name: 'Mastery Crimson', 
+        name: 'Nature Zen', 
         class: '', 
-        color: '#E11D48',
-        colors: { bg: '#FFFFFF', primary: '#E11D48', secondary: '#881337' }
+        color: '#16A34A',
+        colors: { bg: '#FFFFFF', primary: '#16A34A', secondary: '#064E3B' }
     }
 ];
 

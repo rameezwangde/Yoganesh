@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaArrowRight } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import brandLogo from '../../assets/images/brand-logo.jpeg'
 
 const Footer = () => {
     return (
@@ -15,15 +16,28 @@ const Footer = () => {
             </div>
 
             {/* Glowing Top Border Line */}
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red-light/30 to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent"></div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10 pt-24 pb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
 
                     {/* Brand Col */}
                     <div className="lg:col-span-4 pr-0 lg:pr-12">
-                        <Link to="/" className="text-3xl font-extrabold tracking-tight text-brand-text block mb-6 group">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-dark to-brand-red-light group-hover:to-brand-red-dark transition-all duration-500">Yoganesh</span> Health Institute
+                        <Link to="/" className="flex items-center group py-1 space-x-4 mb-8">
+                            <img 
+                                src={brandLogo} 
+                                alt="Yoganesh Logo" 
+                                className="h-16 md:h-20 w-auto rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-sm"
+                            />
+                            <div className="flex flex-col justify-center">
+                                <div className="flex items-baseline">
+                                    <span className="text-3xl md:text-5xl font-black tracking-tighter text-brand-primary">YOGA</span>
+                                    <span className="text-3xl md:text-5xl font-black tracking-tighter text-brand-secondary ml-0.5">NESH</span>
+                                </div>
+                                <span className="text-xs md:text-sm font-black tracking-[0.3em] uppercase text-brand-secondary/60 -mt-1">
+                                    Health Institute
+                                </span>
+                            </div>
                         </Link>
                         <p className="text-brand-text-muted text-base leading-relaxed mb-8">
                             A Complete Wellness Ecosystem. Train your body, strengthen your mind. Heal, Learn, Prevent. We engineer your ultimate transformation.
@@ -41,7 +55,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     whileHover={{ y: -5, scale: 1.1 }}
-                                    className="w-12 h-12 rounded-[1rem] bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-red-light transition-colors duration-300 hover:text-white shadow-sm border border-brand-text/5"
+                                    className="w-12 h-12 rounded-[1rem] bg-brand-text/5 flex items-center justify-center text-brand-text hover:bg-brand-primary transition-colors duration-300 hover:text-white shadow-sm border border-brand-text/5"
                                 >
                                     <item.Icon className="text-xl" />
                                 </motion.a>
@@ -51,12 +65,12 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="lg:col-span-2">
-                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Discover</h4>
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-primary mr-3"></span> Discover</h4>
                         <ul className="space-y-4">
                             {['About Us', 'Our Divisions', 'Gallery', 'Testimonials', 'Contact Us'].map((link, i) => (
                                 <li key={i}>
-                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group">
-                                        <FaArrowRight className="mr-2 text-brand-red-light opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-primary transition-all duration-300 text-sm font-medium flex items-center group">
+                                        <FaArrowRight className="mr-2 text-brand-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                                         <span className="-translate-x-4 group-hover:translate-x-0 transition-transform duration-300">{link}</span>
                                     </Link>
                                 </li>
@@ -66,12 +80,12 @@ const Footer = () => {
 
                     {/* Divisions */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Divisions</h4>
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-primary mr-3"></span> Divisions</h4>
                         <ul className="space-y-4 flex flex-col">
                             {['Health Institute', 'Yoga Classes', 'Fitness Classes', 'Wellness Center', 'Dance Classes'].map((link, i) => (
                                 <li key={i}>
-                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-text/10 mr-3 group-hover:bg-brand-red-light group-hover:scale-150 transition-all duration-300"></span>
+                                    <Link to={`/${link.toLowerCase().replace(' ', '-')}`} className="text-brand-text-muted hover:text-brand-primary transition-all duration-300 text-sm font-medium flex items-center group">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-text/10 mr-3 group-hover:bg-brand-primary group-hover:scale-150 transition-all duration-300"></span>
                                         {link}
                                     </Link>
                                 </li>
@@ -81,25 +95,25 @@ const Footer = () => {
 
                     {/* Contact Details */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Headquarters</h4>
+                        <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-primary mr-3"></span> Headquarters</h4>
                         <ul className="space-y-6">
                             <li className="flex items-start text-sm text-brand-text-muted group">
-                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
-                                    <FaMapMarkerAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">
+                                    <FaMapMarkerAlt className="text-brand-secondary group-hover:text-white transition-colors" />
                                 </div>
                                 <span className="pt-1 leading-relaxed">NMS Icon, 901, 902, Plot No. 194,<br />Near Bamandongri Railway Station,<br />Sector 19, Ulwe, Navi Mumbai - 410206</span>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted group">
-                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
-                                    <FaPhoneAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">
+                                    <FaPhoneAlt className="text-brand-secondary group-hover:text-white transition-colors" />
                                 </div>
-                                <a href="tel:+918097923924" className="hover:text-brand-red-light transition-colors font-semibold tracking-wide">+91 8097923924</a>
+                                <a href="tel:+918097923924" className="hover:text-brand-primary transition-colors font-semibold tracking-wide">+91 8097923924</a>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted group">
-                                <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
-                                    <FaEnvelope className="text-brand-red-dark group-hover:text-white transition-colors" />
+                                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">
+                                    <FaEnvelope className="text-brand-secondary group-hover:text-white transition-colors" />
                                 </div>
-                                <a href="mailto:yoganeshhealthinstitute@gmail.com" className="hover:text-brand-red-light transition-colors">yoganeshhealthinstitute@gmail.com</a>
+                                <a href="mailto:yoganeshhealthinstitute@gmail.com" className="hover:text-brand-primary transition-colors">yoganeshhealthinstitute@gmail.com</a>
                             </li>
                             <li>
                                 <a href="https://wa.me/918097923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-brand-text-muted hover:text-[#25D366] transition-colors mt-2 group">
@@ -113,11 +127,11 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center relative z-10">
                     <p className="text-brand-text-muted text-xs mb-4 md:mb-0 font-medium tracking-wide">
-                        © {new Date().getFullYear()} YOGANESH. All rights reserved. <span className="mx-2 opacity-30">|</span> Engineered for Excellence <span className="mx-2 opacity-30">|</span> Developed by <a href="https://rameezwangde.com" target="_blank" rel="noopener noreferrer" className="text-brand-red-light hover:text-brand-red-dark transition-colors font-black">Rameez Wangde</a>
+                        © {new Date().getFullYear()} YOGANESH. All rights reserved. <span className="mx-2 opacity-30">|</span> Engineered for Excellence <span className="mx-2 opacity-30">|</span> Developed by <a href="https://rameezwangde.com" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:text-brand-secondary transition-colors font-black">Rameez Wangde</a>
                     </p>
                     <div className="flex space-x-8">
-                        <Link to="/privacy-policy" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Privacy Policy</Link>
-                        <Link to="/terms" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Terms of Service</Link>
+                        <Link to="/privacy-policy" className="text-brand-text-muted text-xs font-semibold hover:text-brand-primary transition-colors uppercase tracking-widest">Privacy Policy</Link>
+                        <Link to="/terms" className="text-brand-text-muted text-xs font-semibold hover:text-brand-primary transition-colors uppercase tracking-widest">Terms of Service</Link>
                     </div>
                 </div>
             </div>

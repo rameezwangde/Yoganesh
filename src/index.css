@@ -3,8 +3,8 @@
 @theme {
   --color-brand-bg: var(--brand-bg);
   --color-brand-bg-alt: var(--brand-bg-alt);
-  --color-brand-red-light: var(--brand-primary);
-  --color-brand-red-dark: var(--brand-secondary);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
   --color-brand-text: var(--brand-text);
   --color-brand-text-muted: var(--brand-text-muted);
 
@@ -13,13 +13,13 @@
 }
 
 :root {
-  /* Permanent Brand Theme: Mastery Crimson */
+  /* Permanent Brand Theme: Nature Zen (Green & White) */
   --brand-bg: #FFFFFF;
-  --brand-bg-alt: #FFF1F2;
-  --brand-primary: #E11D48;
-  --brand-secondary: #881337;
-  --brand-text: #1E293B;
-  --brand-text-muted: #64748B;
+  --brand-bg-alt: #F0FDF4;
+  --brand-primary: #16A34A;
+  --brand-secondary: #064E3B;
+  --brand-text: #064E3B;
+  --brand-text-muted: #475569;
 }
 
 .font-mastery {
@@ -46,11 +46,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, var(--color-brand-red-light), var(--color-brand-red-dark));
+    background-image: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
   }
 
   .bg-gradient-primary {
-    background-image: linear-gradient(to right, var(--color-brand-red-light), var(--color-brand-red-dark));
+    background-image: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
   }
 
   .bg-glass {

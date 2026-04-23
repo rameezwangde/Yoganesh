@@ -30,15 +30,15 @@ const InstagramFeed = () => {
                         transition={{ duration: 0.6 }}
                         className="flex flex-col items-center justify-center"
                     >
-                        <div className="w-16 h-16 bg-brand-red-dark/10 rounded-full flex items-center justify-center mb-6">
-                            <FaInstagram className="text-3xl text-brand-red-light" />
+                        <div className="w-16 h-16 bg-brand-secondary/10 rounded-full flex items-center justify-center mb-6">
+                            <FaInstagram className="text-3xl text-brand-primary" />
                         </div>
                         <h2 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-4">Follow Our Journey</h2>
                         <a 
                             href="https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-xl text-brand-text font-bold hover:text-brand-red-light transition-colors border-b-2 border-transparent hover:border-brand-red-light pb-1"
+                            className="text-xl text-brand-text font-bold hover:text-brand-primary transition-colors border-b-2 border-transparent hover:border-brand-primary pb-1"
                         >
                             @yoganeshfitnessclasses
                         </a>
@@ -83,7 +83,7 @@ const InstagramFeed = () => {
                                 {/* Hover Overlay */}
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-6 backdrop-blur-[2px] z-20">
                                     <div className="flex flex-col items-center text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                        <FaHeart className="mb-2 text-2xl text-brand-red-light drop-shadow-md" /> 
+                                        <FaHeart className="mb-2 text-2xl text-brand-primary drop-shadow-md" /> 
                                         <span>{item.likes}</span>
                                     </div>
                                     <div className="flex flex-col items-center text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">

@@ -17,7 +17,7 @@ const YogaFAQ = () => {
         <section id="faq" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden">
             {/* Background accoutrements */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-text/10 to-transparent"></div>
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-red-dark/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
@@ -30,10 +30,10 @@ const YogaFAQ = () => {
                             viewport={{ once: true }}
                             className="mb-10"
                         >
-                            <span className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Knowledge Base</span>
+                            <span className="text-brand-primary font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Knowledge Base</span>
                             <h2 className="text-4xl lg:text-5xl font-extrabold text-brand-text mb-6 leading-tight">
                                 Frequently Asked <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Questions</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Questions</span>
                             </h2>
                             <p className="text-brand-text-muted text-lg">Everything you need to know before starting your journey with us.</p>
                         </motion.div>
@@ -46,14 +46,14 @@ const YogaFAQ = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className={`border rounded-2xl overflow-hidden transition-all duration-300 ${activeFaq === index ? 'bg-white border-brand-red-light/30 shadow-[0_10px_30px_rgba(192,0,0,0.05)]' : 'bg-brand-bg-alt border-brand-text/5 hover:border-brand-text/10'}`}
+                                    className={`border rounded-2xl overflow-hidden transition-all duration-300 ${activeFaq === index ? 'bg-white border-brand-primary/30 shadow-[0_10px_30px_rgba(22,163,74,0.05)]' : 'bg-brand-bg-alt border-brand-text/5 hover:border-brand-text/10'}`}
                                 >
                                     <button
                                         className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none"
                                         onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
                                     >
-                                        <span className={`font-bold pr-4 transition-colors ${activeFaq === index ? 'text-brand-red-light' : 'text-brand-text'}`}>{faq.q}</span>
-                                        <span className={`text-2xl transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${activeFaq === index ? 'rotate-45 text-brand-red-light' : 'text-brand-text/50'}`}>+</span>
+                                        <span className={`font-bold pr-4 transition-colors ${activeFaq === index ? 'text-brand-primary' : 'text-brand-text'}`}>{faq.q}</span>
+                                        <span className={`text-2xl transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${activeFaq === index ? 'rotate-45 text-brand-primary' : 'text-brand-text/50'}`}>+</span>
                                     </button>
                                     <div
                                         className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${activeFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
@@ -82,12 +82,12 @@ const YogaFAQ = () => {
                                     <button
                                         key={idx}
                                         onClick={() => setActiveTab(idx)}
-                                        className={`relative px-6 py-3 rounded-full text-sm font-bold transition-all duration-500 overflow-hidden ${activeTab === idx ? 'text-white shadow-[0_10px_20px_rgba(192,0,0,0.2)] scale-105' : 'bg-brand-bg-alt text-brand-text/60 hover:bg-brand-bg hover:text-brand-text hover:shadow-md'}`}
+                                        className={`relative px-6 py-3 rounded-full text-sm font-bold transition-all duration-500 overflow-hidden ${activeTab === idx ? 'text-white shadow-[0_10px_20px_rgba(22,163,74,0.2)] scale-105' : 'bg-brand-bg-alt text-brand-text/60 hover:bg-brand-bg hover:text-brand-text hover:shadow-md'}`}
                                     >
                                         {activeTab === idx && (
                                             <motion.div
                                                 layoutId="activeTabBadge"
-                                                className="absolute inset-0 bg-gradient-to-r from-brand-red-light to-brand-red-dark"
+                                                className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary"
                                                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                             />
                                         )}
@@ -99,7 +99,7 @@ const YogaFAQ = () => {
                             {/* Image Wrapper */}
                             <div className="relative w-full h-80 sm:h-96 md:h-[400px] rounded-3xl overflow-hidden group shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]">
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
-                                <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
+                                <div className="absolute inset-0 bg-brand-secondary/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
                                 <img
                                     src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/new11-e1750943845290.jpg"
                                     alt="Yoga Mudra Class"
@@ -109,14 +109,14 @@ const YogaFAQ = () => {
                                 {/* Floating Badge */}
                                 <div className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-md px-6 py-3 rounded-2xl shadow-2xl hidden sm:block border border-white/20 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                                     <span className="block text-[10px] font-extrabold text-brand-text/50 uppercase tracking-[0.2em] mb-1">Established</span>
-                                    <span className="block text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">365 Days</span>
+                                    <span className="block text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">365 Days</span>
                                 </div>
                             </div>
 
                             {/* Content Area */}
                             <div className="mt-10 relative">
                                 <h3 className="text-2xl font-extrabold text-brand-text mb-6 flex items-center gap-4">
-                                    <span className="w-8 h-1 bg-gradient-to-r from-brand-red-light to-brand-red-dark rounded-full"></span>
+                                    <span className="w-8 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></span>
                                     About Yoga Mudra Fitness Classes
                                 </h3>
                                 <div className="space-y-4 text-brand-text-muted leading-relaxed font-medium text-[15px] md:text-base">

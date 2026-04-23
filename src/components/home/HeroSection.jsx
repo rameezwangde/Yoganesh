@@ -98,13 +98,13 @@ const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red-dark/30 rounded-full blur-[120px]"
+                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-secondary/30 rounded-full blur-[120px]"
                 />
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ scale: [1, 1.1, 1], x: [0, 50, -20, 0], y: [0, -30, 20, 0], opacity: [0.1, 0.15, 0.1] }}
                     transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-red-light/20 rounded-full blur-[150px]"
+                    className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-[150px]"
                 />
             </motion.div>
 
@@ -145,13 +145,13 @@ const HeroSection = () => {
                     animate="visible"
                     className="relative z-20 flex flex-col items-center max-w-5xl"
                 >
-                    <motion.div variants={itemVariants} className="inline-block mb-10 px-6 py-2.5 border border-brand-red-dark/40 rounded-full bg-brand-red-dark/10 backdrop-blur-xl relative overflow-hidden group shadow-[0_0_20px_rgba(192,0,0,0.2)]">
+                    <motion.div variants={itemVariants} className="inline-block mb-10 px-6 py-2.5 border border-brand-secondary/40 rounded-full bg-brand-secondary/10 backdrop-blur-xl relative overflow-hidden group shadow-[0_0_20px_rgba(22,163,74,0.2)]">
                         <motion.div
                             animate={{ x: ["-100%", "200%"] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1 }}
                             className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
                         />
-                        <span className="text-brand-red-light font-black text-[10px] md:text-xs uppercase tracking-[0.5em] relative z-10">A Complete Wellness Ecosystem</span>
+                        <span className="text-brand-primary font-black text-[10px] md:text-xs uppercase tracking-[0.5em] relative z-10">A Complete Wellness Ecosystem</span>
                     </motion.div>
 
                     <motion.h1 variants={itemVariants} className="text-3xl md:text-[6.5rem] font-black text-brand-text leading-[0.85] mb-10 tracking-tighter drop-shadow-2xl flex flex-col items-center">
@@ -164,7 +164,7 @@ const HeroSection = () => {
                                     animate={{ y: 0, opacity: 1, rotateX: 0 }}
                                     exit={{ y: -40, opacity: 0, rotateX: 90 }}
                                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light via-brand-red-dark to-brand-red-light animate-gradient-x drop-shadow-xl inline-block"
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary animate-gradient-x drop-shadow-xl inline-block"
                                 >
                                     {phrases[textIndex]}
                                 </motion.span>
@@ -173,11 +173,11 @@ const HeroSection = () => {
                     </motion.h1>
 
                     <motion.p variants={itemVariants} className="text-base md:text-2xl text-brand-text-muted mb-14 max-w-4xl leading-relaxed font-medium tracking-tight px-4 md:px-0">
-                        Health Institute <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
-                        Yoga Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
-                        Fitness Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
-                        Wellness Center <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
-                        Dance Classes <span className="mx-2 text-brand-red-light/30 hidden md:inline">|</span> 
+                        Health Institute <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
+                        Yoga Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
+                        Fitness Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
+                        Wellness Center <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
+                        Dance Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
                         Music Classes
                         <span className="md:hidden block mt-2 text-sm opacity-60">Integrated Human Performance System</span>
                     </motion.p>
@@ -191,7 +191,7 @@ const HeroSection = () => {
                         >
                             <Link
                                 to="/contact"
-                                className="relative block overflow-hidden px-12 py-6 rounded-full bg-gradient-primary text-white font-black shadow-[0_10px_30px_rgba(192,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(192,0,0,0.5)] transition-all text-center group"
+                                className="relative block overflow-hidden px-12 py-6 rounded-full bg-gradient-primary text-white font-black shadow-[0_10px_30px_rgba(22,163,74,0.3)] hover:shadow-[0_20px_50px_rgba(22,163,74,0.5)] transition-all text-center group"
                             >
                                 <span className="relative z-10 flex items-center justify-center gap-3 tracking-[0.2em] uppercase text-[10px] md:text-xs">
                                     Start Your Transformation
@@ -203,7 +203,7 @@ const HeroSection = () => {
 
                         <Link
                             to="/divisions"
-                            className="w-full sm:w-auto px-12 py-6 rounded-full border-2 border-brand-text/10 text-brand-text font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:border-brand-red-light/40 hover:bg-brand-red-dark/5 hover:-translate-y-1 transition-all text-center backdrop-blur-md"
+                            className="w-full sm:w-auto px-12 py-6 rounded-full border-2 border-brand-text/10 text-brand-text font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:border-brand-primary/40 hover:bg-brand-secondary/5 hover:-translate-y-1 transition-all text-center backdrop-blur-md"
                         >
                             Explore Divisions
                         </Link>

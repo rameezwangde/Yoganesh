@@ -21,8 +21,8 @@ const YogaServices = () => {
     return (
         <section id="services" className="py-24 md:py-32 bg-brand-bg-alt relative overflow-hidden border-b border-brand-text/5">
             {/* Background glows */}
-            <div className="absolute top-1/4 left-0 w-96 h-96 bg-brand-red-light/5 rounded-full blur-[150px] pointer-events-none"></div>
-            <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-brand-red-dark/10 rounded-full blur-[150px] pointer-events-none"></div>
+            <div className="absolute top-1/4 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+            <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
@@ -30,7 +30,7 @@ const YogaServices = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block"
+                        className="text-brand-primary font-bold text-sm tracking-[0.3em] uppercase mb-4 block"
                     >
                         What We Offer
                     </motion.span>
@@ -41,7 +41,7 @@ const YogaServices = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight"
                     >
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Services</span>
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Services</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ const YogaServices = () => {
                         We offer a wide range of holistic fitness, yoga, and wellness services designed for all levels. Experience transformation through mindfulness, movement, and community.
                     </motion.p>
                     <div className="flex justify-center mt-8">
-                        <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-red-light to-transparent"></div>
+                        <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-primary to-transparent"></div>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ const YogaServices = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: (idx % 3) * 0.1, duration: 0.6 }}
-                            className="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-text/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(192,0,0,0.15)] transition-all duration-500 flex flex-col"
+                            className="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-text/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(22,163,74,0.15)] transition-all duration-500 flex flex-col"
                         >
                             <div className="relative h-64 w-full overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
@@ -76,7 +76,7 @@ const YogaServices = () => {
                                     className="w-full h-full object-cover transform group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700 ease-out"
                                 />
                                 <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-md w-10 h-10 rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <FaLeaf className="text-brand-red-light" />
+                                    <FaLeaf className="text-brand-primary" />
                                 </div>
                                 <div className="absolute bottom-6 left-6 z-20 pr-6">
                                     <h3 className="text-2xl font-black text-white leading-tight">
@@ -88,7 +88,7 @@ const YogaServices = () => {
                                 <p className="text-brand-text-muted leading-relaxed font-medium mb-6">
                                     {service.desc}
                                 </p>
-                                <div className="flex items-center text-brand-red-light font-bold text-sm uppercase tracking-widest group-hover:tracking-[0.2em] transition-all duration-300 cursor-pointer">
+                                <div className="flex items-center text-brand-primary font-bold text-sm uppercase tracking-widest group-hover:tracking-[0.2em] transition-all duration-300 cursor-pointer">
                                     <span className="mr-2">Explore</span>
                                     <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                 </div>

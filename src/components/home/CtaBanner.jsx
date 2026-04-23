@@ -30,7 +30,7 @@ const CtaBanner = () => {
                                     className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity"
                                     alt="Background"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark via-brand-red-dark/95 to-brand-red-light/80 mix-blend-multiply"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary via-brand-secondary/95 to-brand-primary/80 mix-blend-multiply"></div>
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,23,42,0.8)_100%)]"></div>
                             </div>
 
@@ -68,7 +68,7 @@ const CtaBanner = () => {
                                     viewport={{ once: true }}
                                     className="inline-flex items-center space-x-3 bg-white/5 backdrop-blur-2xl px-8 py-3 rounded-full border border-white/10 mb-12 shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
                                 >
-                                    <span className="w-2 h-2 rounded-full bg-brand-red-light shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse"></span>
+                                    <span className="w-2 h-2 rounded-full bg-brand-primary shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse"></span>
                                     <span className="text-[10px] font-black tracking-[0.5em] uppercase text-white/70">Transformation Integrity</span>
                                 </motion.div>
 
@@ -87,7 +87,7 @@ const CtaBanner = () => {
                                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8 w-full sm:w-auto">
                                     <Link
                                         to="/contact"
-                                        className="relative overflow-hidden flex items-center justify-center px-8 py-4 md:px-12 md:py-6 rounded-full bg-white text-brand-red-dark font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] hover:-translate-y-1.5 transition-all duration-500 w-full sm:w-auto group shadow-2xl"
+                                        className="relative overflow-hidden flex items-center justify-center px-8 py-4 md:px-12 md:py-6 rounded-full bg-white text-brand-secondary font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] hover:-translate-y-1.5 transition-all duration-500 w-full sm:w-auto group shadow-2xl"
                                     >
                                         <span className="relative z-10">Initiate Contact</span>
                                         <FaArrowRight className="ml-3 relative z-10 group-hover:translate-x-2 transition-transform duration-500 text-sm" />
