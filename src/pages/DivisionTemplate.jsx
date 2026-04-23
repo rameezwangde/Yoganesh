@@ -64,10 +64,10 @@ const divisionData = {
         tagline: 'Ancient Wisdom. Modern Biology.',
         overview: 'Yoga at YOGANESH is more than just movement; it is a clinical approach to structural integrity and mental clarity. We bridge the gap between traditional asana and contemporary physiological optimization.',
         programs: [
-            { name: 'Vinyasa & Flow', time: 'Ashtanga | Power | Vinyasa', desc: 'High-energy, breath-synchronized sequences designed for cardiovascular flow and structural strength.', size: 'medium', markers: ['Fluid Transitions', 'Metabolic Fire', 'Dynamic Power'], accent: 'from-orange-500/10 to-amber-500/5' },
-            { name: 'Alignment & Therapy', time: 'Hatha | Iyengar | Restorative', desc: 'Precision-focused practices emphasizing skeletal alignment and neuromuscular restoration.', size: 'medium', markers: ['Skeletal Integrity', 'Props & Precision', 'Spinal Health'], accent: 'from-brand-red-light/10 to-indigo-500/5' },
-            { name: 'Spiritual Science', time: 'Kundalini | Shuddhikriya', desc: 'Ancient cleansing and energetic protocols to optimize the nervous system and mental focus.', size: 'medium', markers: ['Pranayama Mastery', 'Neural Reset', 'Aura Cleansing'], accent: 'from-purple-500/10 to-fuchsia-500/5' },
-            { name: 'Inclusive Wellness', time: 'Prenatal | Chair | Yin', desc: 'Accessible, specialized protocols for targeted recovery and specific life stages.', size: 'medium', markers: ['Fascia Release', 'Nervous System Healing', 'Adaptive Protocols'], accent: 'from-emerald-500/10 to-teal-500/5' }
+            { name: 'Dynamic Flow', time: 'Ashtanga | Vinyasa | Power', desc: 'High-intensity, breath-synchronized sequences designed for cardiovascular flow and elite structural strength.', size: 'medium', markers: ['Fluid Transitions', 'Metabolic Fire', 'Dynamic Power'], accent: 'from-orange-500/10 to-amber-500/5' },
+            { name: 'Alignment & Therapy', time: 'Hatha & Yin | Restorative | Iyengar', desc: 'Precision-focused practices emphasizing skeletal alignment, fascia release, and neuromuscular restoration.', size: 'medium', markers: ['Skeletal Integrity', 'Props & Precision', 'Spinal Health'], accent: 'from-brand-red-light/10 to-indigo-500/5' },
+            { name: 'Spiritual Science', time: 'Kundalini | Hot & Bikram | Shuddhikriya', desc: 'Ancient cleansing, energetic protocols, and detoxifying heat to optimize the nervous system.', size: 'medium', markers: ['Pranayama Mastery', 'Neural Reset', 'Detox Flow'], accent: 'from-purple-500/10 to-fuchsia-500/5' },
+            { name: 'Inclusive Wellness', time: 'Prenatal | Chair Yoga', desc: 'Accessible, specialized protocols designed for expectant mothers, limited mobility, or specific life stages.', size: 'medium', markers: ['Adaptive Flow', 'Nervous System Healing', 'Safe Mobility'], accent: 'from-emerald-500/10 to-teal-500/5' }
         ],
         uniqueSection: {
             title: 'The Asana Gallery',
@@ -466,7 +466,7 @@ const DivisionTemplate = () => {
                             </span>
                         </motion.h1>
 
-                        <motion.p
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
@@ -476,7 +476,7 @@ const DivisionTemplate = () => {
                             <span className="relative z-10 font-black tracking-[0.6em]">
                                 [ {data.tagline} ]
                             </span>
-                        </motion.p>
+                        </motion.div>
                     </motion.div>
                 </section>
 

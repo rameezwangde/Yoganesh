@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
     return (
-        <footer className="bg-brand-bg-alt relative border-t border-brand-text/5 overflow-hidden">
+        <footer className="bg-brand-bg relative border-t border-brand-text/5 overflow-hidden">
 
             {/* Massive Parallax Brand Watermark */}
             <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">

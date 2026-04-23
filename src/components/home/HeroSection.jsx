@@ -154,7 +154,7 @@ const HeroSection = () => {
                         <span className="text-brand-red-light font-black text-[10px] md:text-xs uppercase tracking-[0.5em] relative z-10">A Complete Wellness Ecosystem</span>
                     </motion.div>
 
-                    <motion.h1 variants={itemVariants} className="text-4xl md:text-[6.5rem] font-black text-brand-text leading-[0.85] mb-10 tracking-tighter drop-shadow-2xl flex flex-col items-center">
+                    <motion.h1 variants={itemVariants} className="text-3xl md:text-[6.5rem] font-black text-brand-text leading-[0.85] mb-10 tracking-tighter drop-shadow-2xl flex flex-col items-center">
                         <span className="opacity-90">OPTIMIZE YOUR BODY.</span>
                         <div className="min-h-[1.2em] relative flex items-center justify-center mt-6 w-full">
                             <AnimatePresence mode="wait">
