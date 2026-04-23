@@ -172,14 +172,13 @@ const HeroSection = () => {
                         </div>
                     </motion.h1>
 
-                    <motion.p variants={itemVariants} className="text-base md:text-2xl text-brand-text-muted mb-14 max-w-4xl leading-relaxed font-medium tracking-tight px-4 md:px-0">
-                        Health Institute <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
-                        Yoga Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
-                        Fitness Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
-                        Wellness Center <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
-                        Dance Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
-                        Music Classes
-                        <span className="md:hidden block mt-2 text-sm opacity-60">Integrated Human Performance System</span>
+                    <motion.p variants={itemVariants} className="text-base md:text-2xl text-brand-text-muted mb-14 max-w-4xl leading-relaxed font-medium tracking-tight px-4 md:px-0 flex flex-wrap justify-center items-center gap-y-2">
+                        <span className="whitespace-nowrap">Health Institute</span> <span className="text-brand-primary/30 mx-1 md:mx-2">|</span>
+                        <span className="whitespace-nowrap">Yoga Classes</span> <span className="text-brand-primary/30 mx-1 md:mx-2">|</span>
+                        <span className="whitespace-nowrap">Fitness Classes</span> <span className="text-brand-primary/30 mx-1 md:mx-2">|</span>
+                        <span className="whitespace-nowrap">Wellness Center</span> <span className="text-brand-primary/30 mx-1 md:mx-2">|</span>
+                        <span className="whitespace-nowrap">Dance Classes</span> <span className="text-brand-primary/30 mx-1 md:mx-2">|</span>
+                        <span className="whitespace-nowrap">Music Classes</span>
                     </motion.p>
 
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 items-center justify-center w-full px-8 md:px-0">
