@@ -113,7 +113,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center relative z-10">
                     <p className="text-brand-text-muted text-xs mb-4 md:mb-0 font-medium tracking-wide">
-                        © {new Date().getFullYear()}. Engineered for Results. All rights reserved.
+                        © {new Date().getFullYear()} YOGANESH. All rights reserved. <span className="mx-2 opacity-30">|</span> Engineered for Excellence <span className="mx-2 opacity-30">|</span> Developed by <a href="https://rameezwangde.com" target="_blank" rel="noopener noreferrer" className="text-brand-red-light hover:text-brand-red-dark transition-colors font-black">Rameez Wangde</a>
                     </p>
                     <div className="flex space-x-8">
                         <Link to="/privacy-policy" className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest">Privacy Policy</Link>
