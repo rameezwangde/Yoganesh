@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import TiltWrapper from './../ui/TiltWrapper'
-import yogaImage from './../../assets/yoga_zen_serenity_1776663193234.png'
+import yogaImage from './../../assets/images/hero-cover.jpeg'
 
 const VideoTourSection = () => {
     return (
@@ -57,26 +57,16 @@ const VideoTourSection = () => {
                         {/* Glowing Aura Behind Image */}
                         <div className="absolute -inset-2 bg-gradient-to-r from-brand-primary/20 via-brand-secondary/10 to-brand-primary/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-1000 -z-10"></div>
 
-                        <div className="relative rounded-[2.5rem] overflow-hidden bg-black aspect-[21/9] md:aspect-video flex items-center justify-center">
+                        <div className="relative rounded-[2.5rem] overflow-hidden bg-brand-bg-alt flex items-center justify-center">
                             <img
                                 src={yogaImage}
                                 alt="Serene Yoga Studio Sanctuary"
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                className="w-full h-auto transition-transform duration-1000 group-hover:scale-105"
                             />
 
                             {/* Subtle Overlay Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
 
-                            {/* Decorative Corner Element */}
-                            <div className="absolute bottom-8 left-8 flex items-center space-x-4">
-                                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
-                                    <div className="w-2 h-2 rounded-full bg-brand-primary animate-ping"></div>
-                                </div>
-                                <div className="text-white/90">
-                                    <p className="text-xs uppercase tracking-widest font-semibold opacity-60">Location</p>
-                                    <p className="text-sm font-medium">Main Studio Hall</p>
-                                </div>
-                            </div>
                         </div>
                     </motion.div>
                 </TiltWrapper>

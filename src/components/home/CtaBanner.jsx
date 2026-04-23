@@ -19,14 +19,14 @@ const CtaBanner = () => {
                 >
                     <TiltWrapper intensity={3} scaleOnHover={1.01}>
                         <div className="relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden p-6 md:p-32 shadow-[0_50px_100px_rgba(0,0,0,0.2)] group border-none md:border md:border-white/20 min-h-[400px] md:min-h-[600px] flex items-center justify-center">
-                            
+
                             {/* Cinematic Background Image */}
                             <div className="absolute inset-0 z-0">
-                                <motion.img 
+                                <motion.img
                                     initial={{ scale: 1.1 }}
                                     whileInView={{ scale: 1 }}
                                     transition={{ duration: 2 }}
-                                    src={heroImage} 
+                                    src={heroImage}
                                     className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity"
                                     alt="Background"
                                 />
@@ -39,19 +39,19 @@ const CtaBanner = () => {
                                 {[...Array(6)].map((_, i) => (
                                     <motion.div
                                         key={i}
-                                        animate={{ 
+                                        animate={{
                                             y: [0, -100, 0],
                                             opacity: [0, 0.3, 0],
                                             scale: [1, 1.5, 1]
                                         }}
-                                        transition={{ 
-                                            duration: 10 + i * 2, 
-                                            repeat: Infinity, 
+                                        transition={{
+                                            duration: 10 + i * 2,
+                                            repeat: Infinity,
                                             ease: "easeInOut",
                                             delay: i * 1.5
                                         }}
                                         className="absolute w-32 h-32 bg-white/10 rounded-full blur-3xl"
-                                        style={{ 
+                                        style={{
                                             left: `${Math.random() * 100}%`,
                                             top: `${Math.random() * 100}%`
                                         }}

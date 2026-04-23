@@ -109,7 +109,7 @@ const HeroSection = () => {
             </motion.div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center justify-center text-center min-h-[80vh]">
-                
+
                 {/* Background 3D Cinematic Frame - Centered and behind text */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -173,11 +173,11 @@ const HeroSection = () => {
                     </motion.h1>
 
                     <motion.p variants={itemVariants} className="text-base md:text-2xl text-brand-text-muted mb-14 max-w-4xl leading-relaxed font-medium tracking-tight px-4 md:px-0">
-                        Health Institute <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
-                        Yoga Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
-                        Fitness Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
-                        Wellness Center <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
-                        Dance Classes <span className="mx-2 text-brand-primary/30 hidden md:inline">|</span> 
+                        Health Institute <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
+                        Yoga Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
+                        Fitness Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
+                        Wellness Center <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
+                        Dance Classes <span className="inline mx-1 md:mx-2 text-brand-primary/30">|</span>
                         Music Classes
                         <span className="md:hidden block mt-2 text-sm opacity-60">Integrated Human Performance System</span>
                     </motion.p>
