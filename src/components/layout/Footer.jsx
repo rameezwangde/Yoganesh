@@ -30,9 +30,10 @@ const Footer = () => {
                         </p>
                         <div className="flex space-x-4">
                             {[
-                                { Icon: FaInstagram, link: "https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw%3D%3D" },
-                                { Icon: FaFacebookF, link: "#" },
-                                { Icon: FaYoutube, link: "#" }
+                                { Icon: FaInstagram, link: "https://www.instagram.com/yoganeshhealthinstitute/" },
+                                { Icon: FaFacebookF, link: "https://www.facebook.com/profile.php?id=61560723054900" },
+                                { Icon: FaYoutube, link: "https://www.youtube.com/channel/UCs2UwA0ip4vMW0Z24PZKLcA" },
+                                { Icon: FaWhatsapp, link: "https://wa.me/918097923924" }
                             ].map((item, i) => (
                                 <motion.a
                                     key={i}
@@ -86,22 +87,22 @@ const Footer = () => {
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
                                     <FaMapMarkerAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
                                 </div>
-                                <span className="pt-1 leading-relaxed">Nms Icon, 901,902, PLOT NO. 194,<br />near Bamandongri Railway Station,<br />Sector 19, Ulwe, Navi Mumbai - 410206</span>
+                                <span className="pt-1 leading-relaxed">NMS Icon, 901, 902, Plot No. 194,<br />Near Bamandongri Railway Station,<br />Sector 19, Ulwe, Navi Mumbai - 410206</span>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted group">
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
                                     <FaPhoneAlt className="text-brand-red-dark group-hover:text-white transition-colors" />
                                 </div>
-                                <a href="tel:+918422923924" className="hover:text-brand-red-light transition-colors font-semibold tracking-wide">+91 8422923924</a>
+                                <a href="tel:+918097923924" className="hover:text-brand-red-light transition-colors font-semibold tracking-wide">+91 8097923924</a>
                             </li>
                             <li className="flex items-center text-sm text-brand-text-muted group">
                                 <div className="w-8 h-8 rounded-full bg-brand-red-light/10 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-brand-red-light transition-colors duration-300">
                                     <FaEnvelope className="text-brand-red-dark group-hover:text-white transition-colors" />
                                 </div>
-                                <a href="mailto:yoganeshfitnessclasses@gmail.com" className="hover:text-brand-red-light transition-colors">yoganeshfitnessclasses@gmail.com</a>
+                                <a href="mailto:yoganeshhealthinstitute@gmail.com" className="hover:text-brand-red-light transition-colors">yoganeshhealthinstitute@gmail.com</a>
                             </li>
                             <li>
-                                <a href="https://wa.me/918422923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-brand-text-muted hover:text-[#25D366] transition-colors mt-2 group">
+                                <a href="https://wa.me/918097923924" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-brand-text-muted hover:text-[#25D366] transition-colors mt-2 group">
                                     <FaWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" /> Chat on WhatsApp
                                 </a>
                             </li>

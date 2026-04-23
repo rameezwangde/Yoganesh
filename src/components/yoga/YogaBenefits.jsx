@@ -16,9 +16,9 @@ const YogaBenefits = () => {
             icon: FaYinYang,
             title: "Balance Life",
             desc: "Yoga helps balance life by reducing stress daily.",
-            color: "from-blue-400 to-indigo-500",
-            hoverShadow: "hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]",
-            iconColor: "text-blue-500"
+            color: "from-brand-red-light to-rose-500",
+            hoverShadow: "hover:shadow-[0_20px_40px_rgba(225,29,72,0.2)]",
+            iconColor: "text-brand-red-light"
         },
         {
             icon: FaHeartbeat,

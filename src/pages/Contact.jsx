@@ -27,10 +27,10 @@ const Contact = () => {
         const textMessage = `*New Enquiry from Website*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service:* ${service || 'General Enquiry'}\n*Message:* ${message}`;
 
         // WhatsApp URL
-        const whatsappUrl = `https://wa.me/918422923924?text=${encodeURIComponent(textMessage)}`;
+        const whatsappUrl = `https://wa.me/918097923924?text=${encodeURIComponent(textMessage)}`;
 
         // Mailto URL
-        const mailtoUrl = `mailto:yoganeshfitnessclasses@gmail.com?subject=New Enquiry from ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
+        const mailtoUrl = `mailto:yoganeshhealthinstitute@gmail.com?subject=New Enquiry from ${name}&body=${encodeURIComponent(textMessage.replace(/\*/g, ''))}`;
 
         // Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
@@ -215,7 +215,7 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Phone Number</h4>
-                                                <a href="tel:+918422923924" className="text-brand-text-muted hover:text-brand-text transition-colors block">+91 8422923924</a>
+                                                <a href="tel:+918097923924" className="text-brand-text-muted hover:text-brand-text transition-colors block">+91 8097923924</a>
                                             </div>
                                         </div>
 
@@ -225,13 +225,13 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-lg mb-1">Email Address</h4>
-                                                <a href="mailto:yoganeshfitnessclasses@gmail.com" className="text-brand-text-muted hover:text-brand-text transition-colors block">yoganeshfitnessclasses@gmail.com</a>
+                                                <a href="mailto:yoganeshhealthinstitute@gmail.com" className="text-brand-text-muted hover:text-brand-text transition-colors block">yoganeshhealthinstitute@gmail.com</a>
                                             </div>
                                         </div>
 
                                         <div className="pt-4">
                                             <a
-                                                href="https://wa.me/918422923924"
+                                                href="https://wa.me/918097923924"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center space-x-3 px-8 py-4 rounded-full bg-[#25D366]/10 text-[#25D366] font-bold border border-[#25D366]/30 hover:bg-[#25D366] hover:text-white transition-colors"

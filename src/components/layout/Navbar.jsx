@@ -20,7 +20,7 @@ const Navbar = () => {
     const [visible, setVisible] = useState(true)
     const location = useLocation()
     const { scrollY } = useScroll()
-    const { currentTheme, setCurrentTheme, activeTheme, themes } = useTheme()
+    const { activeTheme } = useTheme()
 
     // Handle scroll visibility and background
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -51,26 +51,7 @@ const Navbar = () => {
         }
     }, [isOpen])
 
-    const ThemeSwitcher = ({ mobile = false }) => (
-        <div className={`flex items-center space-x-2 ${mobile ? 'mt-8' : ''}`}>
-            {!mobile && (
-                <span className="text-[9px] font-black uppercase tracking-[0.3em] opacity-40 mr-2">
-                    Palettes
-                </span>
-            )}
-            <div className={`flex items-center space-x-3 bg-brand-bg-alt/20 backdrop-blur-md px-4 py-2 rounded-full border border-brand-text/5 ${mobile ? 'flex-wrap justify-center gap-3' : ''}`}>
-                {themes.map((theme) => (
-                    <button
-                        key={theme.id}
-                        onClick={() => setCurrentTheme(theme.id)}
-                        className={`w-5 h-5 rounded-full border-2 transition-all transform hover:scale-125 ${currentTheme === theme.id ? 'border-brand-text scale-110 shadow-lg' : 'border-white/20'}`}
-                        style={{ backgroundColor: theme.color }}
-                        title={theme.name}
-                    />
-                ))}
-            </div>
-        </div>
-    )
+
 
     return (
         <motion.header
@@ -121,7 +102,7 @@ const Navbar = () => {
                 </nav>
 
                 <div className="hidden md:flex items-center space-x-6">
-                    <ThemeSwitcher />
+
                     <Link
                         to="/contact"
                         className="bg-brand-text text-brand-bg px-8 py-3 rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-brand-red-light hover:text-white hover:shadow-[0_15px_30px_rgba(192,0,0,0.25)] transition-all transform hover:-translate-y-1"
@@ -171,7 +152,7 @@ const Navbar = () => {
                             ))}
                         </ul>
 
-                        <ThemeSwitcher mobile />
+
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
