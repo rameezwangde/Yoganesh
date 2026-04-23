@@ -35,33 +35,7 @@ const divisionData = {
         title: 'Health Institute',
         img: healthHeroV2,
         tagline: 'Clinical Precision. Human Performance.',
-        overview: 'Our Health Institute operates at the intersection of medical science, academic excellence, and human performance. We provide medical-grade assessments, university-accredited yoga education, and guided rehabilitation to ensure your body functions at its peak clinical potential.',
-        programs: [
-            {
-                name: 'Biomechanical Analysis',
-                time: '90 Min Session',
-                desc: 'Comprehensive movement screening using advanced sensors to identify muscle imbalances and joint dysfunction.',
-                markers: ['Kinetic Chain Mapping', 'Joint Load Analysis', 'Neural Latency Test'],
-                img: serviceBiomechanicalImg,
-                size: 'large'
-            },
-            {
-                name: 'Clinical Physiotherapy',
-                time: 'Mon-Sat',
-                desc: 'Evidence-based injury recovery and prevention protocols tailored to your specific kinetic chain.',
-                markers: ['Acoustic Wave Therapy', 'Myofascial Triggering'],
-                img: servicePhysioImg,
-                size: 'medium'
-            },
-            {
-                name: 'Metabolic Structuring',
-                time: 'Wed & Fri',
-                desc: 'Personalized nutritional counseling based on metabolic evaluation and blood chemistry analysis.',
-                markers: ['Blood Chemistry', 'VO2 Optimization'],
-                img: healthUniversityImg,
-                size: 'small'
-            }
-        ],
+        overview: 'Our Health Institute is a premier academic center for University Yoga Courses. We offer comprehensive educational pathways including Diploma, Certificate, Teacher Training, Under Graduate, and Post Graduate programs, merging clinical precision with traditional yogic mastery.',
         universityCourses: [
             { name: 'Diploma Courses', levels: 'Foundation to Mastery', icon: '📜' },
             { name: 'Certificate Courses', levels: 'Clinical Specialization', icon: '🏅' },
@@ -79,7 +53,6 @@ const divisionData = {
         who: 'Healthcare professionals, athletes seeking peak optimization, and individuals requiring specialized clinical guidance.',
         navItems: [
             { id: 'overview', label: 'Overview' },
-            { id: 'programs', label: 'Services' },
             { id: 'courses', label: 'Courses' },
             { id: 'benefits', label: 'Why Us' },
             { id: 'enquiry', label: 'Contact' }
